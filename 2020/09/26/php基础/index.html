@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/coo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/32X32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/16X16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"ey404.github.io","root":"/","scheme":"Gemini","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="开始：12345678&lt;?php	echo &amp;#x27;hello,world&amp;#x27;;a?&gt;&lt;?php表示程序开始，?&gt;表示程序结束。每行代码必须以分号;结尾。echo是php的输出函数。    变量：12345定义：$变量名&#x3D;值；例如：$demo &#x3D; 1;变量命名规则 ：以字母或者下划线开头， 后面跟任意数量（含0个）的字母，数字和下划线基本操作：①赋值:$demo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php基础">
+<meta property="og:url" content="https://ey404.github.io/2020/09/26/php%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="HuiのBlog">
+<meta property="og:description" content="开始：12345678&lt;?php	echo &amp;#x27;hello,world&amp;#x27;;a?&gt;&lt;?php表示程序开始，?&gt;表示程序结束。每行代码必须以分号;结尾。echo是php的输出函数。    变量：12345定义：$变量名&#x3D;值；例如：$demo &#x3D; 1;变量命名规则 ：以字母或者下划线开头， 后面跟任意数量（含0个）的字母，数字和下划线基本操作：①赋值:$demo">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://ey404.github.io/2020/09/26/img/1.png">
+<meta property="og:image" content="https://ey404.github.io/2020/09/26/php%E5%9F%BA%E7%A1%80/7.png">
+<meta property="og:image" content="https://ey404.github.io/2020/09/26/php%E5%9F%BA%E7%A1%80/4-1577062402843.png">
+<meta property="og:image" content="https://ey404.github.io/2020/09/26/php%E5%9F%BA%E7%A1%80/5.png">
+<meta property="article:published_time" content="2020-09-26T07:47:09.000Z">
+<meta property="article:modified_time" content="2020-09-26T08:05:51.272Z">
+<meta property="article:author" content="Hui">
+<meta property="article:tag" content="PHP">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ey404.github.io/2020/09/26/img/1.png">
+
+
+<link rel="canonical" href="https://ey404.github.io/2020/09/26/php%E5%9F%BA%E7%A1%80/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>php基础 | HuiのBlog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">HuiのBlog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Insist ON</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags<span class="badge">1</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories<span class="badge">1</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives<span class="badge">2</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">开始：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">变量：</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E4%BC%A0%E5%80%BC%E6%96%B9%E5%BC%8F%EF%BC%9A%E5%8F%AA%E6%9C%892%E7%A7%8D-gt-%E5%80%BC%E4%BC%A0%E9%80%92%E5%92%8C-%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">变量的传值方式：只有2种&#x3D;&gt; 值传递和 引用传递</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%80%BC%E4%BC%A0%E9%80%92%EF%BC%9A"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">值传递：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E4%B8%A4%E4%B8%AA%E5%8F%98%E9%87%8F%E5%80%BC%E7%9B%B8%E7%AD%89%EF%BC%8C%E4%B8%94%E4%BA%92%E7%9B%B8%E7%8B%AC%E7%AB%8B%EF%BC%8C%E4%BA%92%E4%B8%8D%E5%BD%B1%E5%93%8D"><span class="nav-number">2.0.0.3.</span> <span class="nav-text">两个变量值相等，且互相独立，互不影响</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92%EF%BC%9A"><span class="nav-number">2.0.0.4.</span> <span class="nav-text">引用传递：</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">3.</span> <span class="nav-text">字符串:</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8D%95%E5%BC%95%E5%8F%B7"><span class="nav-number">3.0.1.</span> <span class="nav-text">单引号</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8F%8C%E5%BC%95%E5%8F%B7"><span class="nav-number">3.0.2.</span> <span class="nav-text">双引号</span></a></li></ol></li></ol></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Hui"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Hui</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://ey404.github.io/2020/09/26/php%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Hui">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HuiのBlog">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          php基础
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2020-09-26 15:47:09 / Modified: 16:05:51" itemprop="dateCreated datePublished" datetime="2020-09-26T15:47:09+08:00">2020-09-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">编程语言</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="开始："><a href="#开始：" class="headerlink" title="开始："></a>开始：</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;hello,world&#x27;</span>;a</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"><span class="meta">&lt;?php</span>表示程序开始，<span class="meta">?&gt;</span>表示程序结束。</span><br><span class="line">每行代码必须以分号;结尾。</span><br><span class="line"><span class="keyword">echo</span>是php的输出函数。</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="变量："><a href="#变量：" class="headerlink" title="变量："></a>变量：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">定义：$变量名=值；例如：<span class="variable">$demo</span> = 1;</span><br><span class="line">变量命名规则 ：以字母或者下划线开头， 后面跟任意数量（含0个）的字母，数字和下划线</span><br><span class="line">基本操作：①赋值:<span class="variable">$demo</span> = 1;</span><br><span class="line">		②取值:<span class="variable">$demo1</span> = <span class="variable">$demo</span>;<span class="built_in">echo</span> <span class="variable">$demo1</span>;</span><br><span class="line">		③判断变量是否存在。存在返回值1，不存在返回值空。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://ey404.github.io/2020/09/26/img/1.png" alt="1"></p>
+<h6 id="变量的传值方式：只有2种-gt-值传递和-引用传递"><a href="#变量的传值方式：只有2种-gt-值传递和-引用传递" class="headerlink" title="变量的传值方式：只有2种=&gt; 值传递和 引用传递"></a>变量的传值方式：只有2种=&gt; 值传递和 引用传递</h6><h6 id="值传递："><a href="#值传递：" class="headerlink" title="值传递："></a>值传递：</h6><h6 id="两个变量值相等，且互相独立，互不影响"><a href="#两个变量值相等，且互相独立，互不影响" class="headerlink" title="两个变量值相等，且互相独立，互不影响"></a>两个变量值相等，且互相独立，互不影响</h6><p><img src="/2020/09/26/php%E5%9F%BA%E7%A1%80/7.png" alt="3"></p>
+<h6 id="引用传递："><a href="#引用传递：" class="headerlink" title="引用传递："></a>引用传递：</h6><p>两个变量指向一个数据空间，对其中任何一个变量操作，改变了数据，另一个变量也会更改。</p>
+<p><img src="/2020/09/26/php%E5%9F%BA%E7%A1%80/4-1577062402843.png" alt="4"></p>
+<p> <strong>预定义变量：php 中预先定义好的变量。</strong></p>
+<p>主要有：**$_GET, $_POST, $_REQUEST, $_SERVER, $GLOBALS ， 均是 数组**</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$_GET 一个包含所有PHP 从客户浏览器接受的GET变量的数组</span><br><span class="line"></span><br><span class="line">$_POST 一个包含所有PHP 从客户浏览器接受的POST变量的数组</span><br><span class="line">用法与GET一样 $data = $_POST[&#x27;数据名称&#x27;]；</span><br><span class="line"></span><br><span class="line">$_REQUEST $_GET变量和$_POST变量数据的“合集”：即，它里面同时存储了这两种数据。</span><br><span class="line">用法与POST 和 GET 一样  $data =$_REQUEST[‘数据项名称’];</span><br><span class="line"></span><br><span class="line">$_SERVER 一个存放Web服务器变量的数组 ，它代表在一次浏览网页的过程中的浏览器端的一些信息或服务器端的一些信息</span><br><span class="line">可以通过 print_r($_SERVER)查看内容：</span><br><span class="line"></span><br><span class="line">$GLOBALS 一个存储了我们自己定义的所有“全局变量”的数组</span><br><span class="line">$GLOBALS[&#x27;全局变量名&#x27;]</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串:"></a>字符串:</h3><h5 id="单引号"><a href="#单引号" class="headerlink" title="单引号"></a>单引号</h5><p>变量和转义的序列都不会进行转义</p>
+<h5 id="双引号"><a href="#双引号" class="headerlink" title="双引号"></a>双引号</h5><p>PHP会处理双引号括起来的字符串、变量以及转义序列</p>
+<p><img src="/2020/09/26/php%E5%9F%BA%E7%A1%80/5.png" alt="5"></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/PHP/" rel="tag"># PHP</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/09/26/mysql%E5%87%BD%E6%95%B0/" rel="prev" title="">
+                  <i class="fa fa-chevron-left"></i> 
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+  
+  
+  
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hui</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
