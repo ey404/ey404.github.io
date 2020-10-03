@@ -37,12 +37,9 @@
     <url>/2020/09/26/php%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
     <content><![CDATA[<h1 id="PHP面向对象"><a href="#PHP面向对象" class="headerlink" title="PHP面向对象"></a>PHP面向对象</h1><h4 id="类和对象的关系"><a href="#类和对象的关系" class="headerlink" title="类和对象的关系"></a>类和对象的关系</h4><h5 id="1、类的概念"><a href="#1、类的概念" class="headerlink" title="1、类的概念"></a>1、类的概念</h5><p>✔类是由相同属性和方法构成</p>
 <p>✔一个类可以产生千千万万个对象</p>
-<h5 id="2、对象的概念"><a href="#2、对象的概念" class="headerlink" title="2、对象的概念"></a>2、对象的概念</h5><p>✔对象也是属性(特征)和方法(行为)构成的</p>
+<h5 id><a href="#" class="headerlink" title></a><a id="more"></a></h5><p>2、对象的概念</p>
+<p>✔对象也是属性(特征)和方法(行为)构成的</p>
 <p>✔先有类，后有对象</p>
-<a id="more"></a>
-
-
-
 <h4 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h4><h5 id="1、举例说明"><a href="#1、举例说明" class="headerlink" title="1、举例说明"></a>1、举例说明</h5><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//定义Student类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</span><br><span class="line">	<span class="comment">//成员属性</span></span><br><span class="line">	<span class="keyword">public</span> $name = <span class="string">&quot;a&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> $age = <span class="number">1</span>;</span><br><span class="line">	<span class="comment">//成员方法</span></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">showInfo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;<span class="subst">&#123;$this-&gt;name&#125;</span>的年龄是<span class="subst">&#123;$this-&gt;age&#125;</span>岁&quot;</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
