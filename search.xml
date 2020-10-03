@@ -5,7 +5,7 @@
     <url>/2020/09/26/php%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h3 id="开始："><a href="#开始：" class="headerlink" title="开始："></a>开始：</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;hello,world&#x27;</span>;a</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"><span class="meta">&lt;?php</span>表示程序开始，<span class="meta">?&gt;</span>表示程序结束。</span><br><span class="line">每行代码必须以分号;结尾。</span><br><span class="line"><span class="keyword">echo</span>是php的输出函数。</span><br></pre></td></tr></table></figure>
 
-
+<a id="more"></a>
 
 <h3 id="变量："><a href="#变量：" class="headerlink" title="变量："></a>变量：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">定义：$变量名=值；例如：<span class="variable">$demo</span> = 1;</span><br><span class="line">变量命名规则 ：以字母或者下划线开头， 后面跟任意数量（含0个）的字母，数字和下划线</span><br><span class="line">基本操作：①赋值:<span class="variable">$demo</span> = 1;</span><br><span class="line">		②取值:<span class="variable">$demo1</span> = <span class="variable">$demo</span>;<span class="built_in">echo</span> <span class="variable">$demo1</span>;</span><br><span class="line">		③判断变量是否存在。存在返回值1，不存在返回值空。</span><br></pre></td></tr></table></figure>
 
@@ -39,6 +39,10 @@
 <p>✔一个类可以产生千千万万个对象</p>
 <h5 id="2、对象的概念"><a href="#2、对象的概念" class="headerlink" title="2、对象的概念"></a>2、对象的概念</h5><p>✔对象也是属性(特征)和方法(行为)构成的</p>
 <p>✔先有类，后有对象</p>
+<a id="more"></a>
+
+
+
 <h4 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h4><h5 id="1、举例说明"><a href="#1、举例说明" class="headerlink" title="1、举例说明"></a>1、举例说明</h5><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//定义Student类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</span><br><span class="line">	<span class="comment">//成员属性</span></span><br><span class="line">	<span class="keyword">public</span> $name = <span class="string">&quot;a&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> $age = <span class="number">1</span>;</span><br><span class="line">	<span class="comment">//成员方法</span></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">showInfo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;<span class="subst">&#123;$this-&gt;name&#125;</span>的年龄是<span class="subst">&#123;$this-&gt;age&#125;</span>岁&quot;</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
