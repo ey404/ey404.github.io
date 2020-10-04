@@ -1,3 +1,10 @@
+.bg_content {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
 :root {
   --body-bg-color: #eee;
   --content-bg-color: #fff;
@@ -2282,6 +2289,13 @@ pre code {
   color: #fc6423;
   border-bottom: none;
   border-bottom: 1px solid #fc6423;
+}
+.bg_content {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }
 .category-all-page .category-all-title {
   text-align: center;
