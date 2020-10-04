@@ -75,10 +75,10 @@
 
 <h3 id="变量："><a href="#变量：" class="headerlink" title="变量："></a>变量：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">定义：$变量名=值；例如：<span class="variable">$demo</span> = 1;</span><br><span class="line">变量命名规则 ：以字母或者下划线开头， 后面跟任意数量（含0个）的字母，数字和下划线</span><br><span class="line">基本操作：①赋值:<span class="variable">$demo</span> = 1;</span><br><span class="line">		②取值:<span class="variable">$demo1</span> = <span class="variable">$demo</span>;<span class="built_in">echo</span> <span class="variable">$demo1</span>;</span><br><span class="line">		③判断变量是否存在。存在返回值1，不存在返回值空。</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://ey404.github.io/2020/09/26/img/1.png" alt="1"></p>
-<h6 id="变量的传值方式：只有2种-gt-值传递和-引用传递"><a href="#变量的传值方式：只有2种-gt-值传递和-引用传递" class="headerlink" title="变量的传值方式：只有2种=&gt; 值传递和 引用传递"></a>变量的传值方式：只有2种=&gt; 值传递和 引用传递</h6><h6 id="值传递："><a href="#值传递：" class="headerlink" title="值传递："></a>值传递：</h6><h6 id="两个变量值相等，且互相独立，互不影响"><a href="#两个变量值相等，且互相独立，互不影响" class="headerlink" title="两个变量值相等，且互相独立，互不影响"></a>两个变量值相等，且互相独立，互不影响</h6><p><img src="/2020/09/26/php%E5%9F%BA%E7%A1%80/7.png" alt="3"></p>
+<p><img src="/2020/09/26/php%E5%9F%BA%E7%A1%80/1.PNG" alt="1"></p>
+<h6 id="变量的传值方式：只有2种-gt-值传递和-引用传递"><a href="#变量的传值方式：只有2种-gt-值传递和-引用传递" class="headerlink" title="变量的传值方式：只有2种=&gt; 值传递和 引用传递"></a>变量的传值方式：只有2种=&gt; 值传递和 引用传递</h6><h6 id="值传递："><a href="#值传递：" class="headerlink" title="值传递："></a>值传递：</h6><h6 id="两个变量值相等，且互相独立，互不影响"><a href="#两个变量值相等，且互相独立，互不影响" class="headerlink" title="两个变量值相等，且互相独立，互不影响"></a>两个变量值相等，且互相独立，互不影响</h6><p><img src="/2020/09/26/php%E5%9F%BA%E7%A1%80/7.PNG" alt="3"></p>
 <h6 id="引用传递："><a href="#引用传递：" class="headerlink" title="引用传递："></a>引用传递：</h6><p>两个变量指向一个数据空间，对其中任何一个变量操作，改变了数据，另一个变量也会更改。</p>
-<p><img src="/2020/09/26/php%E5%9F%BA%E7%A1%80/4-1577062402843.png" alt="4"></p>
+<p><img src="/2020/09/26/php%E5%9F%BA%E7%A1%80/4-1577062402843.PNG" alt="4"></p>
 <p> <strong>预定义变量：php 中预先定义好的变量。</strong></p>
 <p>主要有：**$_GET, $_POST, $_REQUEST, $_SERVER, $GLOBALS ， 均是 数组**</p>
 <figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">$_GET 一个包含所有PHP 从客户浏览器接受的GET变量的数组</span><br><span class="line"></span><br><span class="line">$_POST 一个包含所有PHP 从客户浏览器接受的POST变量的数组</span><br><span class="line">用法与GET一样 $data = $_POST[&#x27;数据名称&#x27;]；</span><br><span class="line"></span><br><span class="line">$_REQUEST $_GET变量和$_POST变量数据的“合集”：即，它里面同时存储了这两种数据。</span><br><span class="line">用法与POST 和 GET 一样  $data =$_REQUEST[‘数据项名称’];</span><br><span class="line"></span><br><span class="line">$_SERVER 一个存放Web服务器变量的数组 ，它代表在一次浏览网页的过程中的浏览器端的一些信息或服务器端的一些信息</span><br><span class="line">可以通过 print_r($_SERVER)查看内容：</span><br><span class="line"></span><br><span class="line">$GLOBALS 一个存储了我们自己定义的所有“全局变量”的数组</span><br><span class="line">$GLOBALS[&#x27;全局变量名&#x27;]</span><br></pre></td></tr></table></figure>
@@ -89,7 +89,7 @@
 
 <h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串:"></a>字符串:</h3><h5 id="单引号"><a href="#单引号" class="headerlink" title="单引号"></a>单引号</h5><p>变量和转义的序列都不会进行转义</p>
 <h5 id="双引号"><a href="#双引号" class="headerlink" title="双引号"></a>双引号</h5><p>PHP会处理双引号括起来的字符串、变量以及转义序列</p>
-<p><img src="/2020/09/26/php%E5%9F%BA%E7%A1%80/5.png" alt="5"></p>
+<p><img src="/2020/09/26/php%E5%9F%BA%E7%A1%80/5.PNG" alt="5"></p>
 ]]></content>
       <categories>
         <category>编程语言</category>
