@@ -3,10 +3,13 @@
   <entry>
     <title>php函数</title>
     <url>/2020/10/03/php%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h1 id="PHP函数"><a href="#PHP函数" class="headerlink" title="PHP函数"></a>PHP函数</h1><h2 id="addcslashes-—-以-C-语言风格使用反斜线转义字符串中的字符"><a href="#addcslashes-—-以-C-语言风格使用反斜线转义字符串中的字符" class="headerlink" title="addcslashes — 以 C 语言风格使用反斜线转义字符串中的字符"></a>addcslashes — 以 C 语言风格使用反斜线转义字符串中的字符</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">echo</span> addcslashes(<span class="string">&#x27;foo[]&#x27;</span>,<span class="string">&#x27;A..z&#x27;</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<p><img src="/2020/10/03/php%E5%87%BD%E6%95%B0/b.jpg" alt="b"></p>
+<a id="more"></a>
+
+<h1 id="PHP函数"><a href="#PHP函数" class="headerlink" title="PHP函数"></a>PHP函数</h1><h2 id="addcslashes-—-以-C-语言风格使用反斜线转义字符串中的字符"><a href="#addcslashes-—-以-C-语言风格使用反斜线转义字符串中的字符" class="headerlink" title="addcslashes — 以 C 语言风格使用反斜线转义字符串中的字符"></a>addcslashes — 以 C 语言风格使用反斜线转义字符串中的字符</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">echo</span> addcslashes(<span class="string">&#x27;foo[]&#x27;</span>,<span class="string">&#x27;A..z&#x27;</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="/2020/10/03/php%E5%87%BD%E6%95%B0/27.PNG" alt="27"></p>
-<a id="more"></a>
+<!--more-->
 
 
 
@@ -69,9 +72,12 @@
   <entry>
     <title>php基础</title>
     <url>/2020/09/26/php%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h3 id="开始："><a href="#开始：" class="headerlink" title="开始："></a>开始：</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;hello,world&#x27;</span>;a</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"><span class="meta">&lt;?php</span>表示程序开始，<span class="meta">?&gt;</span>表示程序结束。</span><br><span class="line">每行代码必须以分号;结尾。</span><br><span class="line"><span class="keyword">echo</span>是php的输出函数。</span><br></pre></td></tr></table></figure>
-
+    <content><![CDATA[<p><img src="/2020/09/26/php%E5%9F%BA%E7%A1%80/c.jpg" alt="c"></p>
 <a id="more"></a>
+
+<h1 id="PHP基础"><a href="#PHP基础" class="headerlink" title="PHP基础"></a>PHP基础</h1><h3 id="开始："><a href="#开始：" class="headerlink" title="开始："></a>开始：</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;hello,world&#x27;</span>;a</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"><span class="meta">&lt;?php</span>表示程序开始，<span class="meta">?&gt;</span>表示程序结束。</span><br><span class="line">每行代码必须以分号;结尾。</span><br><span class="line"><span class="keyword">echo</span>是php的输出函数。</span><br></pre></td></tr></table></figure>
+
+<!-- more -->
 
 <h3 id="变量："><a href="#变量：" class="headerlink" title="变量："></a>变量：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">定义：$变量名=值；例如：<span class="variable">$demo</span> = 1;</span><br><span class="line">变量命名规则 ：以字母或者下划线开头， 后面跟任意数量（含0个）的字母，数字和下划线</span><br><span class="line">基本操作：①赋值:<span class="variable">$demo</span> = 1;</span><br><span class="line">		②取值:<span class="variable">$demo1</span> = <span class="variable">$demo</span>;<span class="built_in">echo</span> <span class="variable">$demo1</span>;</span><br><span class="line">		③判断变量是否存在。存在返回值1，不存在返回值空。</span><br></pre></td></tr></table></figure>
 
@@ -101,9 +107,14 @@
   <entry>
     <title>php面向对象</title>
     <url>/2020/09/26/php%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<h1 id="PHP面向对象"><a href="#PHP面向对象" class="headerlink" title="PHP面向对象"></a>PHP面向对象</h1><h4 id="类和对象的关系"><a href="#类和对象的关系" class="headerlink" title="类和对象的关系"></a>类和对象的关系</h4><h5 id="1、类的概念"><a href="#1、类的概念" class="headerlink" title="1、类的概念"></a>1、类的概念</h5><p>✔类是由相同属性和方法构成</p>
+    <content><![CDATA[<p><img src="/2020/09/26/php%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/a.jpg" alt="a"></p>
+<a id="more"></a>
+
+
+
+<h1 id="PHP面向对象"><a href="#PHP面向对象" class="headerlink" title="PHP面向对象"></a>PHP面向对象</h1><h4 id="类和对象的关系"><a href="#类和对象的关系" class="headerlink" title="类和对象的关系"></a>类和对象的关系</h4><h5 id="1、类的概念"><a href="#1、类的概念" class="headerlink" title="1、类的概念"></a>1、类的概念</h5><p>✔类是由相同属性和方法构成</p>
 <p>✔一个类可以产生千千万万个对象</p>
-<h5 id><a href="#" class="headerlink" title></a><a id="more"></a></h5><p>2、对象的概念</p>
+<p>2、对象的概念</p>
 <p>✔对象也是属性(特征)和方法(行为)构成的</p>
 <p>✔先有类，后有对象</p>
 <h4 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h4><h5 id="1、举例说明"><a href="#1、举例说明" class="headerlink" title="1、举例说明"></a>1、举例说明</h5><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//定义Student类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</span><br><span class="line">	<span class="comment">//成员属性</span></span><br><span class="line">	<span class="keyword">public</span> $name = <span class="string">&quot;a&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> $age = <span class="number">1</span>;</span><br><span class="line">	<span class="comment">//成员方法</span></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">showInfo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;<span class="subst">&#123;$this-&gt;name&#125;</span>的年龄是<span class="subst">&#123;$this-&gt;age&#125;</span>岁&quot;</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
@@ -138,6 +149,10 @@
 
 <h5 id="3、举例说明-1"><a href="#3、举例说明-1" class="headerlink" title="3、举例说明"></a>3、举例说明</h5><p>注意：对象不能单独存在，对象必须归属于哪个类。没有类，一定没有对象</p>
 <h4 id="对象属性的操作"><a href="#对象属性的操作" class="headerlink" title="对象属性的操作"></a>对象属性的操作</h4><h5 id="1、对象属性的操作：增加、删除、修改、读取"><a href="#1、对象属性的操作：增加、删除、修改、读取" class="headerlink" title="1、对象属性的操作：增加、删除、修改、读取"></a>1、对象属性的操作：增加、删除、修改、读取</h5><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//定义一个Student类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</span><br><span class="line">	<span class="comment">//成员属性:对象属性</span></span><br><span class="line">	<span class="keyword">public</span> $name = <span class="string">&quot;a&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> $age = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//类的实例</span></span><br><span class="line">$obj = <span class="keyword">new</span> Student();</span><br><span class="line"><span class="comment">//(1)修改对象的属性：对已存在的属性重新赋值</span></span><br><span class="line"><span class="comment">//$obj-&gt;$name表示访问$name变量的属性</span></span><br><span class="line"><span class="comment">//$obj访问属性，属性不加$符号</span></span><br><span class="line">$obj-&gt;name = <span class="string">&quot;b&quot;</span>;</span><br><span class="line">$obj-&gt;age = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//(2)添加属性：给不存在的属性赋值</span></span><br><span class="line">$obj-&gt;edu = <span class="string">&quot;c&quot;</span>;</span><br><span class="line">$obj-&gt;city = <span class="string">&quot;BeiJing&quot;</span>;</span><br><span class="line"><span class="comment">//(3)删除属性</span></span><br><span class="line"><span class="keyword">unset</span>($obj-&gt;edu,$obj-&gt;city);</span><br><span class="line"><span class="comment">//(4)读取对象属性值</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;<span class="subst">&#123;$obj-&gt;name&#125;</span>的年龄是<span class="subst">&#123;$obj-&gt;age&#125;</span>岁&quot;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
 
 
 
