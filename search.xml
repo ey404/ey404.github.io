@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>php函数</title>
+    <title>PHP函数</title>
     <url>/2020/10/03/php%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<p><img src="/2020/10/03/php%E5%87%BD%E6%95%B0/b.jpg" alt="b"></p>
 <a id="more"></a>
@@ -62,11 +62,12 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>PHP,函数</tag>
+        <tag>PHP</tag>
+        <tag>函数</tag>
       </tags>
   </entry>
   <entry>
-    <title>php基础</title>
+    <title>PHP基础</title>
     <url>/2020/09/26/php%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<p><img src="/2020/09/26/php%E5%9F%BA%E7%A1%80/c.jpg" alt="c"></p>
 <a id="more"></a>
@@ -633,7 +634,7 @@
       </tags>
   </entry>
   <entry>
-    <title>php面向对象</title>
+    <title>PHP面向对象</title>
     <url>/2020/09/26/php%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
     <content><![CDATA[<p><img src="/2020/09/26/php%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/a.jpg" alt="a"></p>
 <a id="more"></a>
@@ -1004,6 +1005,7 @@
       </categories>
       <tags>
         <tag>PHP</tag>
+        <tag>面向对象</tag>
       </tags>
   </entry>
 </search>
