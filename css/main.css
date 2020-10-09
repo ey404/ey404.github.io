@@ -24,10 +24,10 @@
   --btn-default-hover-bg: #222;
   --btn-default-hover-color: #fff;
   --btn-default-hover-border-color: #222;
-  --highlight-background: #2b303b;
-  --highlight-foreground: #c0c5ce;
-  --highlight-gutter-background: #393e49;
-  --highlight-gutter-foreground: #b1b6bf;
+  --highlight-background: #2b2b2b;
+  --highlight-foreground: #f8f8f2;
+  --highlight-gutter-background: #3f3f3e;
+  --highlight-gutter-foreground: #e3e3de;
 }
 html {
   line-height: 1.15; /* 1 */
@@ -368,17 +368,17 @@ td {
   top: -5px;
   transform: rotate(-45deg);
 }
-/* Ocean Dark Theme */
-/* https://github.com/gavsiu */
-/* Original theme - https://github.com/chriskempson/base16 */
+/* a11y-dark theme */
+/* Based on the Tomorrow Night Eighties theme: https://github.com/isagalaev/highlight.js/blob/master/src/styles/tomorrow-night-eighties.css */
+/* @author: ericwbailey */
 
-/* Ocean Comment */
+/* Comment */
 .hljs-comment,
 .hljs-quote {
-  color: #65737e;
+  color: #d4d0ab;
 }
 
-/* Ocean Red */
+/* Red */
 .hljs-variable,
 .hljs-template-variable,
 .hljs-tag,
@@ -387,10 +387,10 @@ td {
 .hljs-selector-class,
 .hljs-regexp,
 .hljs-deletion {
-  color: #bf616a;
+  color: #ffa07a;
 }
 
-/* Ocean Orange */
+/* Orange */
 .hljs-number,
 .hljs-built_in,
 .hljs-builtin-name,
@@ -399,39 +399,39 @@ td {
 .hljs-params,
 .hljs-meta,
 .hljs-link {
-  color: #d08770;
+  color: #f5ab35;
 }
 
-/* Ocean Yellow */
+/* Yellow */
 .hljs-attribute {
-  color: #ebcb8b;
+  color: #ffd700;
 }
 
-/* Ocean Green */
+/* Green */
 .hljs-string,
 .hljs-symbol,
 .hljs-bullet,
 .hljs-addition {
-  color: #a3be8c;
+  color: #abe338;
 }
 
-/* Ocean Blue */
+/* Blue */
 .hljs-title,
 .hljs-section {
-  color: #8fa1b3;
+  color: #00e0e0;
 }
 
-/* Ocean Purple */
+/* Purple */
 .hljs-keyword,
 .hljs-selector-tag {
-  color: #b48ead;
+  color: #dcc6e0;
 }
 
 .hljs {
   display: block;
   overflow-x: auto;
-  background: #2b303b;
-  color: #c0c5ce;
+  background: #2b2b2b;
+  color: #f8f8f2;
   padding: 0.5em;
 }
 
@@ -441,6 +441,31 @@ td {
 
 .hljs-strong {
   font-weight: bold;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .hljs-addition,
+  .hljs-attribute,
+  .hljs-built_in,
+  .hljs-builtin-name,
+  .hljs-bullet,
+  .hljs-comment,
+  .hljs-link,
+  .hljs-literal,
+  .hljs-meta,
+  .hljs-number,
+  .hljs-params,
+  .hljs-string,
+  .hljs-symbol,
+  .hljs-type,
+  .hljs-quote {
+        color: highlight;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag {
+        font-weight: bold;
+    }
 }
 
 code,
