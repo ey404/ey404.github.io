@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/coo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/20201006090752397_easyicon_net_32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/20201006090727662_easyicon_net_16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"ey404.github.io","root":"/","scheme":"Gemini","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta property="og:type" content="article">
+<meta property="og:title" content="Upload-labs通关笔记">
+<meta property="og:url" content="https://ey404.github.io/2020/10/23/Upload-labs%E9%80%9A%E5%85%B3%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Hui&#39;s Blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/bz1.jpg">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220158338.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220215601.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221049267.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220651159.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221208589.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220825829.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221604088.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221427410.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020223052144.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020223033471.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021220855332.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021220937946.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221216989.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221206692.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221523966.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221609821.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221721305.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221857626.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021222129072.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021222348939.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021223210264.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021223257857.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021223427062.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021224920223.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225033720.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021224644694.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225107502.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225919035.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225848280.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023141519268.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023141301726.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023142226024.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023143023208.png">
+<meta property="og:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023142550074.png">
+<meta property="article:published_time" content="2020-10-23T06:47:06.000Z">
+<meta property="article:modified_time" content="2020-10-23T07:19:26.529Z">
+<meta property="article:author" content="Hui">
+<meta property="article:tag" content="文件上传">
+<meta property="article:tag" content="Web">
+<meta property="article:tag" content="CTF">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/ey0rt/hexo_img/raw/master/image/bz1.jpg">
+
+
+<link rel="canonical" href="https://ey404.github.io/2020/10/23/Upload-labs%E9%80%9A%E5%85%B3%E7%AC%94%E8%AE%B0/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Upload-labs通关笔记 | Hui's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+   <script type="text/javascript" src="/js/mouse.js"></script>
+   
+<link rel="alternate" href="/atom.xml" title="Hui's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+	<div class="bg_content">
+	<canvas id="canvas"></canvas>
+	</div>
+  <div class="headband"></div>
+  <a href="https://ey404.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#fff; color:#151513; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hui's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签<span class="badge">6</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>分类<span class="badge">2</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档<span class="badge">5</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Upload-labs"><span class="nav-text">Upload-labs</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#pass-01"><span class="nav-text">pass-01</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pass-02"><span class="nav-text">Pass-02</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pass-03"><span class="nav-text">Pass-03</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pass-04"><span class="nav-text">Pass-04</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pass-05"><span class="nav-text">Pass-05</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pass-06"><span class="nav-text">Pass-06</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pass-07"><span class="nav-text">Pass-07</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pass-08"><span class="nav-text">Pass-08</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pass-09"><span class="nav-text">Pass-09</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pass-10"><span class="nav-text">Pass-10</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pass-11"><span class="nav-text">Pass-11</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pass-12"><span class="nav-text">Pass-12</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pass-13"><span class="nav-text">Pass-13</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pass-14"><span class="nav-text">Pass-14</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pass-15"><span class="nav-text">Pass-15</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pass-16"><span class="nav-text">Pass-16</span></a></li></ol></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Hui"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Hui</p>
+  <div class="site-description" itemprop="description">种一棵树最好的时间是十年前
+其次是现在</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://www.ywboy.cn/" title="http:&#x2F;&#x2F;www.ywboy.cn&#x2F;" rel="noopener" target="_blank">Tao</a>
+        </li>
+    </ul>
+  </div>
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://ey404.github.io/2020/10/23/Upload-labs%E9%80%9A%E5%85%B3%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Hui">
+      <meta itemprop="description" content="种一棵树最好的时间是十年前
+其次是现在">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hui's Blog">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Upload-labs通关笔记
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2020-10-23 14:47:06 / 修改时间：15:19:26" itemprop="dateCreated datePublished" datetime="2020-10-23T14:47:06+08:00">2020-10-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Web%E5%AE%89%E5%85%A8/" itemprop="url" rel="index"><span itemprop="name">Web安全</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/bz1.jpg" alt="image-20201020220158338"></p>
+<a id="more"></a>
+<h1 id="Upload-labs"><a href="#Upload-labs" class="headerlink" title="Upload-labs"></a>Upload-labs</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/c0ny1/upload-labs">项目地址</a></p>
+<p><code>Pass01-16</code></p>
+</blockquote>
+<h2 id="pass-01"><a href="#pass-01" class="headerlink" title="pass-01"></a>pass-01</h2><p><code>F12前端修改 console控制台执行 文件上传成功</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220158338.png" alt="bz1"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220215601.png" alt="image-20201020220215601"></p>
+<h2 id="Pass-02"><a href="#Pass-02" class="headerlink" title="Pass-02"></a>Pass-02</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221049267.png" alt="image-20201020220651159"></p>
+<p>修改<code>content-type</code> 绕过</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220651159.png" alt="image-20201020220825829"></p>
+<h2 id="Pass-03"><a href="#Pass-03" class="headerlink" title="Pass-03"></a>Pass-03</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221208589.png" alt="image-20201020221049267"></p>
+<p><code>phtml绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220825829.png" alt="image-20201020221208589"></p>
+<h2 id="Pass-04"><a href="#Pass-04" class="headerlink" title="Pass-04"></a>Pass-04</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221604088.png" alt="image-20201020221427410"></p>
+<p><code>上传 .htaccess绕过</code></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute"><span class="nomarkup">SetHandler</span></span> application/x-httpd-php</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221427410.png" alt="image-20201020221604088"></p>
+<p><code>这样所有的文件都会被解析成php</code></p>
+<h2 id="Pass-05"><a href="#Pass-05" class="headerlink" title="Pass-05"></a>Pass-05</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020223052144.png" alt="image-20201020223052144"></p>
+<p><code>后缀名中加空绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020223033471.png" alt="image-20201020223033471"></p>
+<h2 id="Pass-06"><a href="#Pass-06" class="headerlink" title="Pass-06"></a>Pass-06</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021220855332.png" alt="image-20201021220855332"></p>
+<p><code>文件名大小写绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021220937946.png" alt="image-20201021220937946"></p>
+<h2 id="Pass-07"><a href="#Pass-07" class="headerlink" title="Pass-07"></a>Pass-07</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221216989.png" alt="image-20201021221216989"></p>
+<p><code>后缀名加空绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221206692.png" alt="image-20201021221206692"></p>
+<h2 id="Pass-08"><a href="#Pass-08" class="headerlink" title="Pass-08"></a>Pass-08</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221523966.png" alt="image-20201021221523966"></p>
+<p><code>后缀名加 . 绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221609821.png" alt="image-20201021221609821"></p>
+<h2 id="Pass-09"><a href="#Pass-09" class="headerlink" title="Pass-09"></a>Pass-09</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221721305.png" alt="image-20201021221721305"></p>
+<p><code>::$DATA 绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221857626.png" alt="image-20201021221857626"></p>
+<h2 id="Pass-10"><a href="#Pass-10" class="headerlink" title="Pass-10"></a>Pass-10</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021222129072.png" alt="image-20201021222129072"></p>
+<p><code>构造 .(空格). 绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021222348939.png" alt="image-20201021222348939"></p>
+<h2 id="Pass-11"><a href="#Pass-11" class="headerlink" title="Pass-11"></a>Pass-11</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021223210264.png" alt="image-20201021223210264"></p>
+<p><code>构造后缀名双写绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021223257857.png" alt="image-20201021223257857"></p>
+<h2 id="Pass-12"><a href="#Pass-12" class="headerlink" title="Pass-12"></a>Pass-12</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021223427062.png" alt="image-20201021223427062"></p>
+<p><code>get方式 %00 截断绕过 </code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021224920223.png" alt="image-20201021224644694"></p>
+<h2 id="Pass-13"><a href="#Pass-13" class="headerlink" title="Pass-13"></a>Pass-13</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225033720.png" alt="image-20201021224920223"></p>
+<p><code>post %00截断</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021224644694.png" alt="image-20201021225033720"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225107502.png" alt="image-20201021225107502"></p>
+<h2 id="Pass-14"><a href="#Pass-14" class="headerlink" title="Pass-14"></a>Pass-14</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225919035.png" alt="image-20201021225848280"></p>
+<p><code>生成图片木马上传</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225848280.png" alt="image-20201021225919035"></p>
+<h2 id="Pass-15"><a href="#Pass-15" class="headerlink" title="Pass-15"></a>Pass-15</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023141519268.png" alt="image-20201023141301726"></p>
+<p><code>这一关用 getimagesize获取文件类型</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023141301726.png" alt="image-20201023141519268"></p>
+<blockquote>
+<p>如果上传的不是图像，<code>getimagesize()</code>就会返回<code>FALSE</code> 这里继续用<code>图片马</code>+<code>GIF89A</code>文件头绕过</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023142226024.png" alt="image-20201023142226024"></p>
+<h2 id="Pass-16"><a href="#Pass-16" class="headerlink" title="Pass-16"></a>Pass-16</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023143023208.png" alt="image-20201023142550074"></p>
+<p><code>这一关用php_exif模块来判断类型，继续用图片马即可绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023142550074.png" alt="image-20201023143023208"></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Hui
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://ey404.github.io/2020/10/23/Upload-labs%E9%80%9A%E5%85%B3%E7%AC%94%E8%AE%B0/" title="Upload-labs通关笔记">https://ey404.github.io/2020/10/23/Upload-labs通关笔记/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" rel="tag"><i class="fa fa-tag"># 文件上传</i></a>
+              <a href="/tags/Web/" rel="tag"><i class="fa fa-tag"># Web</i></a>
+              <a href="/tags/CTF/" rel="tag"><i class="fa fa-tag"># CTF</i></a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/10/03/php%E5%87%BD%E6%95%B0/" rel="prev" title="PHP函数">
+                  <i class="fa fa-chevron-left"></i> PHP函数
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/10/23/%E7%BD%91%E9%A1%B5%E6%94%BB%E9%98%B2Web%E7%AC%94%E8%AE%B0/" rel="next" title="网页攻防Web笔记">
+                  网页攻防Web笔记 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+  
+  
+  
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hui</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+
+  	
+<script type="text/javascript" src="/js/canvas-nest.min.js"></script>
+</body>
+</html>

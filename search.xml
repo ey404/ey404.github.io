@@ -1,6 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Upload-labs通关笔记</title>
+    <url>/2020/10/23/Upload-labs%E9%80%9A%E5%85%B3%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/bz1.jpg" alt="image-20201020220158338"></p>
+<a id="more"></a>
+<h1 id="Upload-labs"><a href="#Upload-labs" class="headerlink" title="Upload-labs"></a>Upload-labs</h1><blockquote>
+<p><a href="https://github.com/c0ny1/upload-labs">项目地址</a></p>
+<p><code>Pass01-16</code></p>
+</blockquote>
+<h2 id="pass-01"><a href="#pass-01" class="headerlink" title="pass-01"></a>pass-01</h2><p><code>F12前端修改 console控制台执行 文件上传成功</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220158338.png" alt="bz1"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220215601.png" alt="image-20201020220215601"></p>
+<h2 id="Pass-02"><a href="#Pass-02" class="headerlink" title="Pass-02"></a>Pass-02</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221049267.png" alt="image-20201020220651159"></p>
+<p>修改<code>content-type</code> 绕过</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220651159.png" alt="image-20201020220825829"></p>
+<h2 id="Pass-03"><a href="#Pass-03" class="headerlink" title="Pass-03"></a>Pass-03</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221208589.png" alt="image-20201020221049267"></p>
+<p><code>phtml绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220825829.png" alt="image-20201020221208589"></p>
+<h2 id="Pass-04"><a href="#Pass-04" class="headerlink" title="Pass-04"></a>Pass-04</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221604088.png" alt="image-20201020221427410"></p>
+<p><code>上传 .htaccess绕过</code></p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute"><span class="nomarkup">SetHandler</span></span> application/x-httpd-php</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221427410.png" alt="image-20201020221604088"></p>
+<p><code>这样所有的文件都会被解析成php</code></p>
+<h2 id="Pass-05"><a href="#Pass-05" class="headerlink" title="Pass-05"></a>Pass-05</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020223052144.png" alt="image-20201020223052144"></p>
+<p><code>后缀名中加空绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020223033471.png" alt="image-20201020223033471"></p>
+<h2 id="Pass-06"><a href="#Pass-06" class="headerlink" title="Pass-06"></a>Pass-06</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021220855332.png" alt="image-20201021220855332"></p>
+<p><code>文件名大小写绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021220937946.png" alt="image-20201021220937946"></p>
+<h2 id="Pass-07"><a href="#Pass-07" class="headerlink" title="Pass-07"></a>Pass-07</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221216989.png" alt="image-20201021221216989"></p>
+<p><code>后缀名加空绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221206692.png" alt="image-20201021221206692"></p>
+<h2 id="Pass-08"><a href="#Pass-08" class="headerlink" title="Pass-08"></a>Pass-08</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221523966.png" alt="image-20201021221523966"></p>
+<p><code>后缀名加 . 绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221609821.png" alt="image-20201021221609821"></p>
+<h2 id="Pass-09"><a href="#Pass-09" class="headerlink" title="Pass-09"></a>Pass-09</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221721305.png" alt="image-20201021221721305"></p>
+<p><code>::$DATA 绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221857626.png" alt="image-20201021221857626"></p>
+<h2 id="Pass-10"><a href="#Pass-10" class="headerlink" title="Pass-10"></a>Pass-10</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021222129072.png" alt="image-20201021222129072"></p>
+<p><code>构造 .(空格). 绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021222348939.png" alt="image-20201021222348939"></p>
+<h2 id="Pass-11"><a href="#Pass-11" class="headerlink" title="Pass-11"></a>Pass-11</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021223210264.png" alt="image-20201021223210264"></p>
+<p><code>构造后缀名双写绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021223257857.png" alt="image-20201021223257857"></p>
+<h2 id="Pass-12"><a href="#Pass-12" class="headerlink" title="Pass-12"></a>Pass-12</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021223427062.png" alt="image-20201021223427062"></p>
+<p><code>get方式 %00 截断绕过 </code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021224920223.png" alt="image-20201021224644694"></p>
+<h2 id="Pass-13"><a href="#Pass-13" class="headerlink" title="Pass-13"></a>Pass-13</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225033720.png" alt="image-20201021224920223"></p>
+<p><code>post %00截断</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021224644694.png" alt="image-20201021225033720"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225107502.png" alt="image-20201021225107502"></p>
+<h2 id="Pass-14"><a href="#Pass-14" class="headerlink" title="Pass-14"></a>Pass-14</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225919035.png" alt="image-20201021225848280"></p>
+<p><code>生成图片木马上传</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225848280.png" alt="image-20201021225919035"></p>
+<h2 id="Pass-15"><a href="#Pass-15" class="headerlink" title="Pass-15"></a>Pass-15</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023141519268.png" alt="image-20201023141301726"></p>
+<p><code>这一关用 getimagesize获取文件类型</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023141301726.png" alt="image-20201023141519268"></p>
+<blockquote>
+<p>如果上传的不是图像，<code>getimagesize()</code>就会返回<code>FALSE</code> 这里继续用<code>图片马</code>+<code>GIF89A</code>文件头绕过</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023142226024.png" alt="image-20201023142226024"></p>
+<h2 id="Pass-16"><a href="#Pass-16" class="headerlink" title="Pass-16"></a>Pass-16</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023143023208.png" alt="image-20201023142550074"></p>
+<p><code>这一关用php_exif模块来判断类型，继续用图片马即可绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023142550074.png" alt="image-20201023143023208"></p>
+]]></content>
+      <categories>
+        <category>Web安全</category>
+      </categories>
+      <tags>
+        <tag>文件上传</tag>
+        <tag>Web</tag>
+        <tag>CTF</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PHP函数</title>
     <url>/2020/10/03/php%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/b.jpg" alt="31"></p>
@@ -1055,6 +1130,171 @@
       <tags>
         <tag>PHP</tag>
         <tag>面向对象</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网页攻防Web笔记</title>
+    <url>/2020/10/23/%E7%BD%91%E9%A1%B5%E6%94%BB%E9%98%B2Web%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/backgroup.jpg" alt="image-20201022220303416"></p>
+<a id="more"></a>
+
+<h1 id="网页攻防Web"><a href="#网页攻防Web" class="headerlink" title="网页攻防Web"></a>网页攻防Web</h1><blockquote>
+<p><a href="https://oj.x10sec.org/">项目地址</a></p>
+</blockquote>
+<h2 id="PHP弱类型"><a href="#PHP弱类型" class="headerlink" title="PHP弱类型"></a>PHP弱类型</h2><ul>
+<li>题目：</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022193722982.png" alt="image-20201022193722982"></p>
+<ul>
+<li>分析：</li>
+</ul>
+<blockquote>
+<p>此题考的PHP<code>弱类型</code>绕过</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">	$a = <span class="number">1</span>;</span><br><span class="line">	$b = <span class="string">&#x27;1a&#x27;</span>;</span><br><span class="line">	$a == $b; <span class="comment">//true</span></span><br><span class="line">	$a === $b; <span class="comment">//false</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>== 在进行比较的时候会先把字符串类型转换成相同再比较</p>
+<p>=== 在进行比较的时候 会先判断两种字符串的类型是否相等再比较</p>
+</blockquote>
+<ul>
+<li><p>解题：</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022194232509.png" alt="backgroup"></p>
+</li>
+</ul>
+<h2 id="什么是头信息"><a href="#什么是头信息" class="headerlink" title="什么是头信息"></a>什么是头信息</h2><ul>
+<li>题目：</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022195400857.png" alt="image-20201022194232509"></p>
+<ul>
+<li>分析：</li>
+</ul>
+<blockquote>
+<p>根据题目得知<code>F12</code>查看头文件内容</p>
+</blockquote>
+<ul>
+<li>解题</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022200014135.png" alt="image-20201022195556792"></p>
+<h2 id="什么是源代码"><a href="#什么是源代码" class="headerlink" title="什么是源代码"></a>什么是源代码</h2><ul>
+<li>题目</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022195705963.png" alt="image-20201022195705963"></p>
+<ul>
+<li>分析</li>
+</ul>
+<blockquote>
+<p><code>F12查看源代码</code></p>
+</blockquote>
+<ul>
+<li>解题</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022200149646.png" alt="image-20201022200014135"></p>
+<blockquote>
+<p><strong>或者</strong>：</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022200216491.png" alt="image-20201022200149646"></p>
+<h2 id="什么是GET"><a href="#什么是GET" class="headerlink" title="什么是GET"></a>什么是GET</h2><ul>
+<li>题目</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022200342707.png" alt="image-20201022200342707"></p>
+<ul>
+<li>分析</li>
+</ul>
+<blockquote>
+<p>根据题目提示直接GET提交参数</p>
+</blockquote>
+<ul>
+<li>解题</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022200608947.png" alt="image-20201022200608947"></p>
+<h2 id="什么是POST"><a href="#什么是POST" class="headerlink" title="什么是POST"></a>什么是POST</h2><ul>
+<li>题目</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022200716195.png" alt="image-20201022200216491"></p>
+<ul>
+<li>分析</li>
+</ul>
+<blockquote>
+<p>用hackbar<code>POST</code> 提交参数即可</p>
+</blockquote>
+<ul>
+<li>解题</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022200953219.png" alt="image-20201022200953219"></p>
+<h2 id="网页跳转方式一"><a href="#网页跳转方式一" class="headerlink" title="网页跳转方式一"></a>网页跳转方式一</h2><ul>
+<li>题目</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022201241113.png" alt="image-20201022200716195"></p>
+<ul>
+<li>分析</li>
+</ul>
+<blockquote>
+<p>根据题目提示<code>F12</code>查看源代码</p>
+</blockquote>
+<ul>
+<li>解题</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022201125238.png" alt="image-20201022203949592"></p>
+<h2 id="MD5简单碰撞器"><a href="#MD5简单碰撞器" class="headerlink" title="MD5简单碰撞器"></a>MD5简单碰撞器</h2><ul>
+<li>题目：</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022203949592.png" alt="image-20201022201241113"></p>
+<ul>
+<li>分析</li>
+</ul>
+<blockquote>
+<p>如果md的值是0e开头的 那么就与其它0e开头的md5值是相同的</p>
+</blockquote>
+<p><code>代码测试</code>：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$a = md5(<span class="string">&#x27;s1665632922a&#x27;</span>); <span class="comment">// = 0e731198061491163073197128363787</span></span><br><span class="line">$b = md5(<span class="string">&#x27;s878926199a&#x27;</span>); <span class="comment">// = 0e545993274517709034328855841020</span></span><br><span class="line">var_dump($a == $b);	<span class="comment">// true</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>根据源代码分析得知: </p>
+<p>构造一个用户名为<code>admin</code> 密码为<code>s878926199a</code>(经过md5加密后0e开头) 即可绕过</p>
+</blockquote>
+<ul>
+<li>解题</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022205001206.png" alt="image-20201022201125238"></p>
+<h2 id="本地的诱惑"><a href="#本地的诱惑" class="headerlink" title="本地的诱惑"></a>本地的诱惑</h2><ul>
+<li>题目：</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022215639305.png" alt="image-20201022205001206"></p>
+<ul>
+<li>分析：</li>
+</ul>
+<blockquote>
+<p>根据题目得知需要从本地访问</p>
+<p>Burp抓包 构造一个<code>X-Forwarded-For</code>头 </p>
+</blockquote>
+<ul>
+<li>解题</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022215839435.png" alt="image-20201022215839435"></p>
+<h2 id="比较数字大小"><a href="#比较数字大小" class="headerlink" title="比较数字大小"></a>比较数字大小</h2><ul>
+<li>题目</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022220034885.png" alt="image-20201022215639305"></p>
+<ul>
+<li>分析</li>
+</ul>
+<blockquote>
+<p>根据题目得知只要比服务器上的数字大就好了</p>
+<p>F12修改</p>
+</blockquote>
+<ul>
+<li>解题</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022220249885.png" alt="image-20201022220249885"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022220303416.png" alt="image-20201022220034885"></p>
+]]></content>
+      <categories>
+        <category>Web安全</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+        <tag>PHP</tag>
       </tags>
   </entry>
 </search>
