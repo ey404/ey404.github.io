@@ -67,12 +67,12 @@
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023142550074.png" alt="image-20201023143023208"></p>
 ]]></content>
       <categories>
-        <category>Web安全</category>
+        <category>文件上传</category>
       </categories>
       <tags>
-        <tag>文件上传</tag>
-        <tag>Web</tag>
         <tag>CTF</tag>
+        <tag>Web安全</tag>
+        <tag>上传绕过</tag>
       </tags>
   </entry>
   <entry>
@@ -1290,11 +1290,10 @@
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022220303416.png" alt="image-20201022220034885"></p>
 ]]></content>
       <categories>
-        <category>Web安全</category>
+        <category>CTF</category>
       </categories>
       <tags>
-        <tag>Web</tag>
-        <tag>PHP</tag>
+        <tag>Web安全</tag>
       </tags>
   </entry>
 </search>
