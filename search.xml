@@ -70,15 +70,15 @@
         <category>文件上传</category>
       </categories>
       <tags>
-        <tag>CTF</tag>
         <tag>Web安全</tag>
         <tag>上传绕过</tag>
+        <tag>CTF</tag>
       </tags>
   </entry>
   <entry>
     <title>PHP函数</title>
     <url>/2020/10/03/php%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/b.jpg" alt="31"></p>
+    <content><![CDATA[<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/wallhaven-8x3v7y.jpg" alt="wallhaven-8x3v7y"></p>
 <a id="more"></a>
 
 <h1 id="PHP函数"><a href="#PHP函数" class="headerlink" title="PHP函数"></a>PHP函数</h1><h2 id="addcslashes-—-以-C-语言风格使用反斜线转义字符串中的字符"><a href="#addcslashes-—-以-C-语言风格使用反斜线转义字符串中的字符" class="headerlink" title="addcslashes — 以 C 语言风格使用反斜线转义字符串中的字符"></a>addcslashes — 以 C 语言风格使用反斜线转义字符串中的字符</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">echo</span> addcslashes(<span class="string">&#x27;foo[]&#x27;</span>,<span class="string">&#x27;A..z&#x27;</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
@@ -192,6 +192,170 @@
       <tags>
         <tag>PHP</tag>
         <tag>函数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网页攻防Web笔记</title>
+    <url>/2020/10/23/%E7%BD%91%E9%A1%B5%E6%94%BB%E9%98%B2Web%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/backgroup.jpg" alt="image-20201022220303416"></p>
+<a id="more"></a>
+
+<h1 id="网页攻防Web"><a href="#网页攻防Web" class="headerlink" title="网页攻防Web"></a>网页攻防Web</h1><blockquote>
+<p><a href="https://oj.x10sec.org/">项目地址</a></p>
+</blockquote>
+<h2 id="PHP弱类型"><a href="#PHP弱类型" class="headerlink" title="PHP弱类型"></a>PHP弱类型</h2><ul>
+<li>题目：</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022193722982.png" alt="image-20201022193722982"></p>
+<ul>
+<li>分析：</li>
+</ul>
+<blockquote>
+<p>此题考的PHP<code>弱类型</code>绕过</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">	$a = <span class="number">1</span>;</span><br><span class="line">	$b = <span class="string">&#x27;1a&#x27;</span>;</span><br><span class="line">	$a == $b; <span class="comment">//true</span></span><br><span class="line">	$a === $b; <span class="comment">//false</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>== 在进行比较的时候会先把字符串类型转换成相同再比较</p>
+<p>=== 在进行比较的时候 会先判断两种字符串的类型是否相等再比较</p>
+</blockquote>
+<ul>
+<li><p>解题：</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022194232509.png" alt="backgroup"></p>
+</li>
+</ul>
+<h2 id="什么是头信息"><a href="#什么是头信息" class="headerlink" title="什么是头信息"></a>什么是头信息</h2><ul>
+<li>题目：</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022195400857.png" alt="image-20201022194232509"></p>
+<ul>
+<li>分析：</li>
+</ul>
+<blockquote>
+<p>根据题目得知<code>F12</code>查看头文件内容</p>
+</blockquote>
+<ul>
+<li>解题</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022200014135.png" alt="image-20201022195556792"></p>
+<h2 id="什么是源代码"><a href="#什么是源代码" class="headerlink" title="什么是源代码"></a>什么是源代码</h2><ul>
+<li>题目</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022195705963.png" alt="image-20201022195705963"></p>
+<ul>
+<li>分析</li>
+</ul>
+<blockquote>
+<p><code>F12查看源代码</code></p>
+</blockquote>
+<ul>
+<li>解题</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022200149646.png" alt="image-20201022200014135"></p>
+<blockquote>
+<p><strong>或者</strong>：</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022200216491.png" alt="image-20201022200149646"></p>
+<h2 id="什么是GET"><a href="#什么是GET" class="headerlink" title="什么是GET"></a>什么是GET</h2><ul>
+<li>题目</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022200342707.png" alt="image-20201022200342707"></p>
+<ul>
+<li>分析</li>
+</ul>
+<blockquote>
+<p>根据题目提示直接GET提交参数</p>
+</blockquote>
+<ul>
+<li>解题</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022200608947.png" alt="image-20201022200608947"></p>
+<h2 id="什么是POST"><a href="#什么是POST" class="headerlink" title="什么是POST"></a>什么是POST</h2><ul>
+<li>题目</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022200716195.png" alt="image-20201022200216491"></p>
+<ul>
+<li>分析</li>
+</ul>
+<blockquote>
+<p>用hackbar<code>POST</code> 提交参数即可</p>
+</blockquote>
+<ul>
+<li>解题</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022200953219.png" alt="image-20201022200953219"></p>
+<h2 id="网页跳转方式一"><a href="#网页跳转方式一" class="headerlink" title="网页跳转方式一"></a>网页跳转方式一</h2><ul>
+<li>题目</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022201241113.png" alt="image-20201022200716195"></p>
+<ul>
+<li>分析</li>
+</ul>
+<blockquote>
+<p>根据题目提示<code>F12</code>查看源代码</p>
+</blockquote>
+<ul>
+<li>解题</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022201125238.png" alt="image-20201022203949592"></p>
+<h2 id="MD5简单碰撞器"><a href="#MD5简单碰撞器" class="headerlink" title="MD5简单碰撞器"></a>MD5简单碰撞器</h2><ul>
+<li>题目：</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022203949592.png" alt="image-20201022201241113"></p>
+<ul>
+<li>分析</li>
+</ul>
+<blockquote>
+<p>如果md的值是0e开头的 那么就与其它0e开头的md5值是相同的</p>
+</blockquote>
+<p><code>代码测试</code>：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$a = md5(<span class="string">&#x27;s1665632922a&#x27;</span>); <span class="comment">// = 0e731198061491163073197128363787</span></span><br><span class="line">$b = md5(<span class="string">&#x27;s878926199a&#x27;</span>); <span class="comment">// = 0e545993274517709034328855841020</span></span><br><span class="line">var_dump($a == $b);	<span class="comment">// true</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>根据源代码分析得知: </p>
+<p>构造一个用户名为<code>admin</code> 密码为<code>s878926199a</code>(经过md5加密后0e开头) 即可绕过</p>
+</blockquote>
+<ul>
+<li>解题</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022205001206.png" alt="image-20201022201125238"></p>
+<h2 id="本地的诱惑"><a href="#本地的诱惑" class="headerlink" title="本地的诱惑"></a>本地的诱惑</h2><ul>
+<li>题目：</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022215639305.png" alt="image-20201022205001206"></p>
+<ul>
+<li>分析：</li>
+</ul>
+<blockquote>
+<p>根据题目得知需要从本地访问</p>
+<p>Burp抓包 构造一个<code>X-Forwarded-For</code>头 </p>
+</blockquote>
+<ul>
+<li>解题</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022215839435.png" alt="image-20201022215839435"></p>
+<h2 id="比较数字大小"><a href="#比较数字大小" class="headerlink" title="比较数字大小"></a>比较数字大小</h2><ul>
+<li>题目</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022220034885.png" alt="image-20201022215639305"></p>
+<ul>
+<li>分析</li>
+</ul>
+<blockquote>
+<p>根据题目得知只要比服务器上的数字大就好了</p>
+<p>F12修改</p>
+</blockquote>
+<ul>
+<li>解题</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022220249885.png" alt="image-20201022220249885"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022220303416.png" alt="image-20201022220034885"></p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>Web安全</tag>
       </tags>
   </entry>
   <entry>
@@ -662,11 +826,11 @@
 <h4 id="8-2-2说明："><a href="#8-2-2说明：" class="headerlink" title="8.2.2说明："></a>8.2.2说明：</h4><p><code>1</code>.函数的调用者把实际的数据传递给函数的形参，这个时候的形参只能在函数内使用。</p>
 <p><code>2</code>.函数在运行代码时会新建一个新空间来运行函数内的代码</p>
 <p><code>3</code>.运行代码后，如果有返回值，把结果返回给函数的调用者，这个时候运行函数的这个新的空间销毁</p>
-<h4 id="8-2-3图解："><a href="#8-2-3图解：" class="headerlink" title="8.2.3图解："></a>8.2.3图解：</h4><p><img src="/2020/09/26/php%E5%9F%BA%E7%A1%80/sss.png" alt="sss"></p>
+<h4 id="8-2-3图解："><a href="#8-2-3图解：" class="headerlink" title="8.2.3图解："></a>8.2.3图解：</h4><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/sss.png" alt="sss"></p>
 <h4 id="8-2-4其他说明：引用传递"><a href="#8-2-4其他说明：引用传递" class="headerlink" title="8.2.4其他说明：引用传递"></a>8.2.4其他说明：引用传递</h4><p><code>说明</code>：有的函数可以直接使用全局变量，这个时候是引用传递</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$a = <span class="number">6</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">abc</span>(<span class="params">&amp;$a</span>)</span>&#123;</span><br><span class="line">	$a=<span class="number">3</span>;</span><br><span class="line">	<span class="keyword">echo</span> $a;</span><br><span class="line">&#125;</span><br><span class="line">abc($a);</span><br><span class="line"><span class="keyword">echo</span> $a;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/aaa.png" alt="aaa"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/aaa-1603460098432.png" alt="aaa"></p>
 <h3 id="8-3函数的封装性"><a href="#8-3函数的封装性" class="headerlink" title="8.3函数的封装性"></a>8.3函数的封装性</h3><h4 id="8-3-2封装的好处"><a href="#8-3-2封装的好处" class="headerlink" title="8.3.2封装的好处"></a>8.3.2封装的好处</h4><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/dsfsfdsf.png" alt="dsfsfdsf"></p>
 <h3 id="8-4可变函数"><a href="#8-4可变函数" class="headerlink" title="8.4可变函数"></a>8.4可变函数</h3><p><code>说明</code>：就是一个变量如果加上括号，PHP的系统会解析成函数，这个变量的值必须是一个函数的名，否则报错，未定义了。</p>
 <p><code>案例</code>：</p>
@@ -763,7 +927,7 @@
   <entry>
     <title>PHP面向对象</title>
     <url>/2020/09/26/php%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/aaa.jpg" alt="aa"></p>
+    <content><![CDATA[<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/bz2.jpg" alt="bz2"></p>
 <a id="more"></a>
 
 
@@ -889,7 +1053,7 @@
 <p>✔成员方法、静态方法可以不加权限控制符，默认为 public。建议都要加权限。</p>
 <h5 id="3、举例说明-类的封装性"><a href="#3、举例说明-类的封装性" class="headerlink" title="3、举例说明(类的封装性)"></a>3、举例说明(类的封装性)</h5><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Book</span></span>&#123;</span><br><span class="line">	<span class="comment">//类常量定义</span></span><br><span class="line">	<span class="keyword">const</span> COMPANY = <span class="string">&quot;&lt;h2&gt;Title&lt;/h2&gt;&quot;</span>;</span><br><span class="line">	<span class="comment">//私有的静态的保存数量的属性</span></span><br><span class="line">	<span class="keyword">private</span> <span class="built_in">static</span> $count = <span class="number">0</span>;</span><br><span class="line">	<span class="comment">//私有的图书属性</span></span><br><span class="line">	<span class="keyword">private</span> $name;</span><br><span class="line">	<span class="keyword">private</span> $author;</span><br><span class="line">	<span class="keyword">private</span> $price;</span><br><span class="line">	<span class="comment">//构造方法：对象初始化</span></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params">$arr</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">$this</span>-&gt;name = $arr[<span class="string">&#x27;name&#x27;</span>];</span><br><span class="line">		<span class="keyword">$this</span>-&gt;author = $arr[<span class="string">&#x27;author&#x27;</span>];</span><br><span class="line">		<span class="keyword">$this</span>-&gt;price = $arr[<span class="string">&#x27;price&#x27;</span>];</span><br><span class="line">		<span class="built_in">self</span>::$count++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//水平线</span></span><br><span class="line">	<span class="keyword">protected</span> <span class="built_in">static</span> <span class="function"><span class="keyword">function</span> <span class="title">showLine</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">&quot;&lt;hr /&gt;&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//公共的自我显示的方法</span></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">showInfo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		$str = <span class="built_in">self</span>::COMPANY;</span><br><span class="line">		$str .= <span class="built_in">self</span>::showLine();</span><br><span class="line">		$str .= <span class="string">&quot;Book Name: <span class="subst">&#123;$this-&gt;name&#125;</span>&quot;</span>;</span><br><span class="line">		$str .= <span class="string">&quot;&lt;br&gt; author: <span class="subst">&#123;$this-&gt;name&#125;</span>&quot;</span>;</span><br><span class="line">		$str .= <span class="string">&quot;&lt;br&gt; price: <span class="subst">&#123;$this-&gt;price&#125;</span>&quot;</span>;</span><br><span class="line">		$str .= <span class="string">&quot;&lt;br&gt; There are &quot;</span>.<span class="built_in">self</span>::$count.<span class="string">&quot;Book now&quot;</span>;</span><br><span class="line">		<span class="keyword">return</span> $str;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//创建第一个对象</span></span><br><span class="line">$arr = <span class="keyword">array</span>(</span><br><span class="line">	<span class="string">&#x27;name&#x27;</span> =&gt; <span class="string">&#x27;PHP从入门到放弃&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;author&#x27;</span> =&gt; <span class="string">&#x27;张三&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;price&#x27;</span> =&gt; <span class="string">&#x27;100.00&#x27;</span>,</span><br><span class="line">);</span><br><span class="line">$obj1 = <span class="keyword">new</span> Book($arr);</span><br><span class="line"><span class="keyword">echo</span> $obj1-&gt;showInfo();</span><br><span class="line"><span class="comment">//创建第二个对象</span></span><br><span class="line">$arr2 = <span class="keyword">array</span>(</span><br><span class="line">	<span class="string">&#x27;name&#x27;</span> =&gt; <span class="string">&#x27;Mysql 从入门到跑路&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;author&#x27;</span> =&gt; <span class="string">&#x27;李四&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;price&#x27;</span> =&gt; <span class="string">&#x27;200.00&#x27;</span>,</span><br><span class="line">);</span><br><span class="line">$obj2 = <span class="keyword">new</span> Book($arr2);</span><br><span class="line"><span class="keyword">echo</span> $obj2-&gt;showInfo();</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/Snipaste_2020-01-12_14-52-16.png" alt="Snipaste_2020-01-12_14-52-16"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023211842309.png" alt="image-20201023211732593"></p>
 <h4 id="类的继承性"><a href="#类的继承性" class="headerlink" title="类的继承性"></a>类的继承性</h4><h5 id="1、继承的相关概念"><a href="#1、继承的相关概念" class="headerlink" title="1、继承的相关概念"></a>1、继承的相关概念</h5><p>✔继承：如果一个 B 类拥有了 A 类的所有特征信息，则我们就认为 B 类继承了 A 类</p>
 <p>✔为什么继承？继承是为了实现功能的升级和扩展。</p>
 <p>✔如果项目需要升级和扩展功能， 不能直接修改原类</p>
@@ -899,16 +1063,16 @@
 
 <h5 id="3、单继承的简单演示"><a href="#3、单继承的简单演示" class="headerlink" title="3、单继承的简单演示"></a>3、单继承的简单演示</h5><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</span><br><span class="line">	<span class="keyword">const</span> TITLE = <span class="string">&quot;&lt;h2&gt;Title&lt;/h2&gt;&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="built_in">static</span> $count = <span class="number">60</span>;</span><br><span class="line">	<span class="keyword">public</span> $name = <span class="string">&quot;a&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> $age = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">showInfo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		$str = <span class="built_in">self</span>::TITLE;</span><br><span class="line">		$str .= <span class="string">&quot;<span class="subst">&#123;$this-&gt;name&#125;</span>的年龄是<span class="subst">&#123;$this-&gt;age&#125;</span>岁&quot;</span>;</span><br><span class="line">		$str .= <span class="string">&quot;&lt;br&gt;一共有&quot;</span>.<span class="built_in">self</span>::$count.<span class="string">&quot;个学生&quot;</span>;</span><br><span class="line">		<span class="keyword">echo</span> $str;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//定义一个学生类，并继承学生类</span></span><br><span class="line"><span class="comment">//继承：将父类的所有内容全部拿过来，一个不剩的(除private权限外)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ItcastStudent</span> <span class="keyword">extends</span> <span class="title">Student</span></span>&#123;&#125;</span><br><span class="line"><span class="comment">//创建学生类对象</span></span><br><span class="line">$obj = <span class="keyword">new</span> ItcastStudent;</span><br><span class="line">$obj-&gt;showInfo();</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/465646.PNG" alt="465646"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023211732593.png" alt="image-20201023211842309"></p>
 <h5 id="4、构造方法和析构方法的继承"><a href="#4、构造方法和析构方法的继承" class="headerlink" title="4、构造方法和析构方法的继承"></a>4、构造方法和析构方法的继承</h5><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//定义一个Student类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</span><br><span class="line">	<span class="comment">//私有的成员属性</span></span><br><span class="line">	<span class="keyword">private</span> $name;</span><br><span class="line">	<span class="keyword">private</span> $age;</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params">$name2,$age2</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">$this</span>-&gt;name = $name2;</span><br><span class="line">		<span class="keyword">$this</span>-&gt;age = $age2;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//公共的自我显示的方法</span></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">showInfo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;<span class="subst">&#123;$this-&gt;name&#125;</span>的年龄是<span class="subst">&#123;$this-&gt;age&#125;</span>岁!&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//定义一个ItcastStudent类，并继承Student类</span></span><br><span class="line"><span class="comment">//继承：将父类的所有内容全部拿过来，一个不剩的(除private权限外)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ItcastStudet</span> <span class="keyword">extends</span> <span class="title">Student</span></span>&#123;&#125;</span><br><span class="line"><span class="comment">//创建学生类对象</span></span><br><span class="line">$obj = <span class="keyword">new</span> ItcastStudet(<span class="string">&quot;a&quot;</span>,<span class="number">1</span>);</span><br><span class="line">$obj-&gt;showInfo();</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/49449494.PNG" alt="49449494"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023211912704.png" alt="image-20201023211912704"></p>
 <h5 id="5、parent关键字"><a href="#5、parent关键字" class="headerlink" title="5、parent关键字"></a>5、parent关键字</h5><p>✔self 代表当前类，parent 代表父类</p>
 <p>✔self 可以调用本类的内容：类常量、静态属性、静态方法、成员方法；</p>
 <p>✔parent 可以调用父类的内容：类常量、静态属性、静态方法、成员方法；</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//定义一个Student类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</span><br><span class="line">	<span class="keyword">const</span> TITLE = <span class="string">&quot;Title&quot;</span>;</span><br><span class="line">	<span class="keyword">protected</span> <span class="built_in">static</span> $db_host = <span class="string">&quot;localhost&quot;</span>;</span><br><span class="line">	<span class="keyword">protected</span> <span class="built_in">static</span> <span class="function"><span class="keyword">function</span> <span class="title">readMe</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">&quot;这是静态方法&quot;</span>.<span class="keyword">__METHOD__</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">showInfo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">&quot;这是成员方法&quot;</span>.<span class="keyword">__METHOD__</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//定义一个ItStudent类继承Student类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ItStudent</span> <span class="keyword">extends</span> <span class="title">Student</span></span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">intro</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">&quot;这是成员方法&quot;</span>.<span class="keyword">__METHOD__</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">show</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		$str = <span class="string">&quot;父类的常量：&quot;</span>.<span class="built_in">parent</span>::TITLE;</span><br><span class="line">		$str .= <span class="string">&quot;&lt;br&gt;子类的常量&quot;</span>.<span class="built_in">self</span>::TITLE;</span><br><span class="line">		$str .= <span class="string">&quot;&lt;br&gt;父类的静态属性：&quot;</span>.<span class="built_in">parent</span>::$db_host;</span><br><span class="line">		$str .= <span class="string">&quot;&lt;br&gt;子类的静态属性：&quot;</span>.<span class="built_in">self</span>::$db_host;</span><br><span class="line">		$str .= <span class="string">&quot;&lt;br&gt;父类的静态方法：&quot;</span>.<span class="built_in">parent</span>::readMe();</span><br><span class="line">		$str .= <span class="string">&quot;&lt;br&gt;子类的静态方法：&quot;</span>.<span class="built_in">self</span>::readMe();</span><br><span class="line">		<span class="keyword">echo</span> $str;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">$obj = <span class="keyword">new</span> ItStudent;</span><br><span class="line">$obj-&gt;show();</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/4165456.PNG" alt="4165456"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023211943931.png" alt="image-20201023211943931"></p>
 <h4 id="类的多态"><a href="#类的多态" class="headerlink" title="类的多态"></a>类的多态</h4><h5 id="1、什么是类的多态"><a href="#1、什么是类的多态" class="headerlink" title="1、什么是类的多态"></a>1、什么是类的多态</h5><p>✔类的多态，就是的类的多种形态</p>
 <p>✔类的多态，主要指方法重载和方法重写；</p>
 <p>✔方法重写：父类有一个方法，在子类用同样的名称再定义一次</p>
@@ -968,7 +1132,6 @@
 <p>✔函数的内容包含两方面</p>
 <p>构建类文件的真实路径；</p>
 <p>判断并包含类文件代码；</p>
-<h5 id="3、举例说明-5"><a href="#3、举例说明-5" class="headerlink" title="3、举例说明"></a>3、举例说明</h5><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/Snipaste_2020-01-12_16-02-21.png" alt="Snipaste_2020-01-12_16-02-21"></p>
 <h4 id="自定义类文件加载函数"><a href="#自定义类文件加载函数" class="headerlink" title="自定义类文件加载函数"></a>自定义类文件加载函数</h4><h5 id="1、描述"><a href="#1、描述" class="headerlink" title="1、描述"></a>1、描述</h5><p>✔__autoload()有点局限性，如果类文件位于不同的目录，类文件名命名方式也不尽相同</p>
 <p>✔自定义类文件加载函数：spl_autoload_register()，主要应用在项目中，可以应对不同的情况</p>
 <p>✔每个函数就是一种类文件的加载规则。</p>
@@ -1005,7 +1168,7 @@
 <p>✔一私：私有的构造方法，阻止类外 new 对象；</p>
 <p>✔一私：私有的克隆方法，阻止类外 clone 对象；</p>
 <p>✔一公：公共的静态的创建对象的方法。</p>
-<h5 id="3、举例说明-6"><a href="#3、举例说明-6" class="headerlink" title="3、举例说明"></a>3、举例说明</h5><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//创建单例的Db类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Db</span></span>&#123;</span><br><span class="line">	<span class="comment">//私有的静态保存对象的属性</span></span><br><span class="line">	<span class="keyword">private</span> <span class="built_in">static</span> $obj = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="comment">//私有的构造方法：阻止类外new对象</span></span><br><span class="line">	<span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">	<span class="comment">//私有的克隆方法：阻止类外clone对象</span></span><br><span class="line">	<span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">__clone</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">	<span class="comment">//公共的静态的创建对象的方法</span></span><br><span class="line">	<span class="keyword">public</span> <span class="built_in">static</span> <span class="function"><span class="keyword">function</span> <span class="title">getInstance</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="comment">//判断当前对象是否存在</span></span><br><span class="line">		<span class="keyword">if</span>(!<span class="built_in">self</span>::$obj <span class="keyword">instanceof</span> <span class="built_in">self</span>)&#123;</span><br><span class="line">			<span class="comment">//如果对象不存在，则创建它</span></span><br><span class="line">			<span class="built_in">self</span>::$obj = <span class="keyword">new</span> <span class="built_in">self</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//返回当前对象</span></span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">self</span>::$obj;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//创建Db类的对象</span></span><br><span class="line">$db1 = Db::getInstance();</span><br><span class="line">$db2 = Db::getInstance();</span><br><span class="line">var_dump($db1,$db2);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="3、举例说明-5"><a href="#3、举例说明-5" class="headerlink" title="3、举例说明"></a>3、举例说明</h5><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//创建单例的Db类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Db</span></span>&#123;</span><br><span class="line">	<span class="comment">//私有的静态保存对象的属性</span></span><br><span class="line">	<span class="keyword">private</span> <span class="built_in">static</span> $obj = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="comment">//私有的构造方法：阻止类外new对象</span></span><br><span class="line">	<span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">	<span class="comment">//私有的克隆方法：阻止类外clone对象</span></span><br><span class="line">	<span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">__clone</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">	<span class="comment">//公共的静态的创建对象的方法</span></span><br><span class="line">	<span class="keyword">public</span> <span class="built_in">static</span> <span class="function"><span class="keyword">function</span> <span class="title">getInstance</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="comment">//判断当前对象是否存在</span></span><br><span class="line">		<span class="keyword">if</span>(!<span class="built_in">self</span>::$obj <span class="keyword">instanceof</span> <span class="built_in">self</span>)&#123;</span><br><span class="line">			<span class="comment">//如果对象不存在，则创建它</span></span><br><span class="line">			<span class="built_in">self</span>::$obj = <span class="keyword">new</span> <span class="built_in">self</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//返回当前对象</span></span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">self</span>::$obj;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//创建Db类的对象</span></span><br><span class="line">$db1 = Db::getInstance();</span><br><span class="line">$db2 = Db::getInstance();</span><br><span class="line">var_dump($db1,$db2);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/Snipaste_2020-01-12_16-52-57-1578819198358.png" alt="Snipaste_2020-01-12_16-52-57"></p>
 <h5 id="4、instanceof关键字"><a href="#4、instanceof关键字" class="headerlink" title="4、instanceof关键字"></a>4、instanceof关键字</h5><p>✔描述：判断一个对象是不是某个类产生的对象</p>
@@ -1034,8 +1197,7 @@
 <h4 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h4><h5 id="1、什么是重载"><a href="#1、什么是重载" class="headerlink" title="1、什么是重载"></a>1、什么是重载</h5><p>✔PHP 所提供的”重载”（overloading）是指动态地”创建”类属性和方法。我们是通过魔术方法来实现的</p>
 <p>✔所有的重载方法都必须被声明为 public。</p>
 <p>✔这些魔术方法的参数都不能通过引用传递</p>
-<h5 id="2、属性重载"><a href="#2、属性重载" class="headerlink" title="2、属性重载"></a>2、属性重载</h5><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/Snipaste_2020-01-13_13-56-56.png" alt="Snipaste_2020-01-13_13-56-56"></p>
-<p>(1) __set()</p>
+<h5 id="2、属性重载"><a href="#2、属性重载" class="headerlink" title="2、属性重载"></a>2、属性重载</h5><p>(1) __set()</p>
 <p>✔描述:在给不可访问属性赋值时，__set()会被调用</p>
 <p>✔语法:public void __set(string $name,mixed $value)</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//定义Student类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> $name;</span><br><span class="line">	<span class="keyword">private</span> $age;</span><br><span class="line">	<span class="comment">//当给不可访问的属性赋值时， __set()会自动调用</span></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__set</span>(<span class="params">$name,$value</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">$this</span>-&gt;$name = $value;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//创建Student类</span></span><br><span class="line">$obj = <span class="keyword">new</span> Student();</span><br><span class="line"><span class="comment">//给不可访问的属性赋值</span></span><br><span class="line">$obj-&gt;name = <span class="string">&quot;a&quot;</span>;</span><br><span class="line">$obj-&gt;age = <span class="number">1</span>;</span><br><span class="line">var_dump($obj);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
@@ -1130,170 +1292,6 @@
       <tags>
         <tag>PHP</tag>
         <tag>面向对象</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>网页攻防Web笔记</title>
-    <url>/2020/10/23/%E7%BD%91%E9%A1%B5%E6%94%BB%E9%98%B2Web%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/backgroup.jpg" alt="image-20201022220303416"></p>
-<a id="more"></a>
-
-<h1 id="网页攻防Web"><a href="#网页攻防Web" class="headerlink" title="网页攻防Web"></a>网页攻防Web</h1><blockquote>
-<p><a href="https://oj.x10sec.org/">项目地址</a></p>
-</blockquote>
-<h2 id="PHP弱类型"><a href="#PHP弱类型" class="headerlink" title="PHP弱类型"></a>PHP弱类型</h2><ul>
-<li>题目：</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022193722982.png" alt="image-20201022193722982"></p>
-<ul>
-<li>分析：</li>
-</ul>
-<blockquote>
-<p>此题考的PHP<code>弱类型</code>绕过</p>
-</blockquote>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">	$a = <span class="number">1</span>;</span><br><span class="line">	$b = <span class="string">&#x27;1a&#x27;</span>;</span><br><span class="line">	$a == $b; <span class="comment">//true</span></span><br><span class="line">	$a === $b; <span class="comment">//false</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>== 在进行比较的时候会先把字符串类型转换成相同再比较</p>
-<p>=== 在进行比较的时候 会先判断两种字符串的类型是否相等再比较</p>
-</blockquote>
-<ul>
-<li><p>解题：</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022194232509.png" alt="backgroup"></p>
-</li>
-</ul>
-<h2 id="什么是头信息"><a href="#什么是头信息" class="headerlink" title="什么是头信息"></a>什么是头信息</h2><ul>
-<li>题目：</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022195400857.png" alt="image-20201022194232509"></p>
-<ul>
-<li>分析：</li>
-</ul>
-<blockquote>
-<p>根据题目得知<code>F12</code>查看头文件内容</p>
-</blockquote>
-<ul>
-<li>解题</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022200014135.png" alt="image-20201022195556792"></p>
-<h2 id="什么是源代码"><a href="#什么是源代码" class="headerlink" title="什么是源代码"></a>什么是源代码</h2><ul>
-<li>题目</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022195705963.png" alt="image-20201022195705963"></p>
-<ul>
-<li>分析</li>
-</ul>
-<blockquote>
-<p><code>F12查看源代码</code></p>
-</blockquote>
-<ul>
-<li>解题</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022200149646.png" alt="image-20201022200014135"></p>
-<blockquote>
-<p><strong>或者</strong>：</p>
-</blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022200216491.png" alt="image-20201022200149646"></p>
-<h2 id="什么是GET"><a href="#什么是GET" class="headerlink" title="什么是GET"></a>什么是GET</h2><ul>
-<li>题目</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022200342707.png" alt="image-20201022200342707"></p>
-<ul>
-<li>分析</li>
-</ul>
-<blockquote>
-<p>根据题目提示直接GET提交参数</p>
-</blockquote>
-<ul>
-<li>解题</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022200608947.png" alt="image-20201022200608947"></p>
-<h2 id="什么是POST"><a href="#什么是POST" class="headerlink" title="什么是POST"></a>什么是POST</h2><ul>
-<li>题目</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022200716195.png" alt="image-20201022200216491"></p>
-<ul>
-<li>分析</li>
-</ul>
-<blockquote>
-<p>用hackbar<code>POST</code> 提交参数即可</p>
-</blockquote>
-<ul>
-<li>解题</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022200953219.png" alt="image-20201022200953219"></p>
-<h2 id="网页跳转方式一"><a href="#网页跳转方式一" class="headerlink" title="网页跳转方式一"></a>网页跳转方式一</h2><ul>
-<li>题目</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022201241113.png" alt="image-20201022200716195"></p>
-<ul>
-<li>分析</li>
-</ul>
-<blockquote>
-<p>根据题目提示<code>F12</code>查看源代码</p>
-</blockquote>
-<ul>
-<li>解题</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022201125238.png" alt="image-20201022203949592"></p>
-<h2 id="MD5简单碰撞器"><a href="#MD5简单碰撞器" class="headerlink" title="MD5简单碰撞器"></a>MD5简单碰撞器</h2><ul>
-<li>题目：</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022203949592.png" alt="image-20201022201241113"></p>
-<ul>
-<li>分析</li>
-</ul>
-<blockquote>
-<p>如果md的值是0e开头的 那么就与其它0e开头的md5值是相同的</p>
-</blockquote>
-<p><code>代码测试</code>：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$a = md5(<span class="string">&#x27;s1665632922a&#x27;</span>); <span class="comment">// = 0e731198061491163073197128363787</span></span><br><span class="line">$b = md5(<span class="string">&#x27;s878926199a&#x27;</span>); <span class="comment">// = 0e545993274517709034328855841020</span></span><br><span class="line">var_dump($a == $b);	<span class="comment">// true</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>根据源代码分析得知: </p>
-<p>构造一个用户名为<code>admin</code> 密码为<code>s878926199a</code>(经过md5加密后0e开头) 即可绕过</p>
-</blockquote>
-<ul>
-<li>解题</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022205001206.png" alt="image-20201022201125238"></p>
-<h2 id="本地的诱惑"><a href="#本地的诱惑" class="headerlink" title="本地的诱惑"></a>本地的诱惑</h2><ul>
-<li>题目：</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022215639305.png" alt="image-20201022205001206"></p>
-<ul>
-<li>分析：</li>
-</ul>
-<blockquote>
-<p>根据题目得知需要从本地访问</p>
-<p>Burp抓包 构造一个<code>X-Forwarded-For</code>头 </p>
-</blockquote>
-<ul>
-<li>解题</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022215839435.png" alt="image-20201022215839435"></p>
-<h2 id="比较数字大小"><a href="#比较数字大小" class="headerlink" title="比较数字大小"></a>比较数字大小</h2><ul>
-<li>题目</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022220034885.png" alt="image-20201022215639305"></p>
-<ul>
-<li>分析</li>
-</ul>
-<blockquote>
-<p>根据题目得知只要比服务器上的数字大就好了</p>
-<p>F12修改</p>
-</blockquote>
-<ul>
-<li>解题</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022220249885.png" alt="image-20201022220249885"></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022220303416.png" alt="image-20201022220034885"></p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
-      <tags>
-        <tag>Web安全</tag>
       </tags>
   </entry>
 </search>
