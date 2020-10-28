@@ -8,19 +8,19 @@
 <p><code>Pass01-16</code></p>
 </blockquote>
 <h2 id="pass-01"><a href="#pass-01" class="headerlink" title="pass-01"></a>pass-01</h2><p><code>F12前端修改 console控制台执行 文件上传成功</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220158338.png" alt="bz1"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220158338.png" alt="image-20201020220158338"></p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220215601.png" alt="image-20201020220215601"></p>
-<h2 id="Pass-02"><a href="#Pass-02" class="headerlink" title="Pass-02"></a>Pass-02</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221049267.png" alt="image-20201020220651159"></p>
+<h2 id="Pass-02"><a href="#Pass-02" class="headerlink" title="Pass-02"></a>Pass-02</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220651159.png" alt="image-20201020220651159"></p>
 <p>修改<code>content-type</code> 绕过</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220651159.png" alt="image-20201020220825829"></p>
-<h2 id="Pass-03"><a href="#Pass-03" class="headerlink" title="Pass-03"></a>Pass-03</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221208589.png" alt="image-20201020221049267"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220825829.png" alt="image-20201020220825829"></p>
+<h2 id="Pass-03"><a href="#Pass-03" class="headerlink" title="Pass-03"></a>Pass-03</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221049267.png" alt="image-20201020221049267"></p>
 <p><code>phtml绕过</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220825829.png" alt="image-20201020221208589"></p>
-<h2 id="Pass-04"><a href="#Pass-04" class="headerlink" title="Pass-04"></a>Pass-04</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221604088.png" alt="image-20201020221427410"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221208589.png" alt="image-20201020221208589"></p>
+<h2 id="Pass-04"><a href="#Pass-04" class="headerlink" title="Pass-04"></a>Pass-04</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221427410.png" alt="image-20201020221427410"></p>
 <p><code>上传 .htaccess绕过</code></p>
 <figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute"><span class="nomarkup">SetHandler</span></span> application/x-httpd-php</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221427410.png" alt="image-20201020221604088"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221604088.png" alt="image-20201020221604088"></p>
 <p><code>这样所有的文件都会被解析成php</code></p>
 <h2 id="Pass-05"><a href="#Pass-05" class="headerlink" title="Pass-05"></a>Pass-05</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020223052144.png" alt="image-20201020223052144"></p>
 <p><code>后缀名中加空绕过</code></p>
@@ -45,24 +45,24 @@
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021223257857.png" alt="image-20201021223257857"></p>
 <h2 id="Pass-12"><a href="#Pass-12" class="headerlink" title="Pass-12"></a>Pass-12</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021223427062.png" alt="image-20201021223427062"></p>
 <p><code>get方式 %00 截断绕过 </code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021224920223.png" alt="image-20201021224644694"></p>
-<h2 id="Pass-13"><a href="#Pass-13" class="headerlink" title="Pass-13"></a>Pass-13</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225033720.png" alt="image-20201021224920223"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021224644694.png" alt="image-20201021224644694"></p>
+<h2 id="Pass-13"><a href="#Pass-13" class="headerlink" title="Pass-13"></a>Pass-13</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021224920223.png" alt="image-20201021224920223"></p>
 <p><code>post %00截断</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021224644694.png" alt="image-20201021225033720"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225033720.png" alt="image-20201021225033720"></p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225107502.png" alt="image-20201021225107502"></p>
-<h2 id="Pass-14"><a href="#Pass-14" class="headerlink" title="Pass-14"></a>Pass-14</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225919035.png" alt="image-20201021225848280"></p>
+<h2 id="Pass-14"><a href="#Pass-14" class="headerlink" title="Pass-14"></a>Pass-14</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225848280.png" alt="image-20201021225848280"></p>
 <p><code>生成图片木马上传</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225848280.png" alt="image-20201021225919035"></p>
-<h2 id="Pass-15"><a href="#Pass-15" class="headerlink" title="Pass-15"></a>Pass-15</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023141519268.png" alt="image-20201023141301726"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225919035.png" alt="image-20201021225919035"></p>
+<h2 id="Pass-15"><a href="#Pass-15" class="headerlink" title="Pass-15"></a>Pass-15</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023141301726.png" alt="image-20201023141301726"></p>
 <p><code>这一关用 getimagesize获取文件类型</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023141301726.png" alt="image-20201023141519268"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023141519268.png" alt="image-20201023141519268"></p>
 <blockquote>
 <p>如果上传的不是图像，<code>getimagesize()</code>就会返回<code>FALSE</code> 这里继续用<code>图片马</code>+<code>GIF89A</code>文件头绕过</p>
 </blockquote>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023142226024.png" alt="image-20201023142226024"></p>
-<h2 id="Pass-16"><a href="#Pass-16" class="headerlink" title="Pass-16"></a>Pass-16</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023143023208.png" alt="image-20201023142550074"></p>
+<h2 id="Pass-16"><a href="#Pass-16" class="headerlink" title="Pass-16"></a>Pass-16</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023142550074.png" alt="image-20201023142550074"></p>
 <p><code>这一关用php_exif模块来判断类型，继续用图片马即可绕过</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023142550074.png" alt="image-20201023143023208"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023143023208.png" alt="image-20201023143023208"></p>
 ]]></content>
       <categories>
         <category>文件上传</category>
@@ -106,11 +106,11 @@
 <li>2 用<code>notepad++</code> 打开zip文件也可以看到flag</li>
 </ul>
 </blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023084230175.png" alt="image-20201023083545230"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023083545230.png" alt="image-20201023083545230"></p>
 <h2 id="详情信息"><a href="#详情信息" class="headerlink" title="详情信息"></a>详情信息</h2><ul>
 <li>题目</li>
 </ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023083545230.png" alt="image-20201023084230175"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023084230175.png" alt="image-20201023084230175"></p>
 <ul>
 <li>分析</li>
 </ul>
@@ -134,11 +134,11 @@
 <ul>
 <li>解题</li>
 </ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023085336904.png" alt="image-20201023085238620"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023085238620.png" alt="image-20201023085238620"></p>
 <h2 id="看不见的字"><a href="#看不见的字" class="headerlink" title="看不见的字"></a>看不见的字</h2><ul>
 <li>题目</li>
 </ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023085238620.png" alt="image-20201023085336904"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023085336904.png" alt="image-20201023085336904"></p>
 <ul>
 <li>分析</li>
 </ul>
@@ -183,11 +183,11 @@
 <ul>
 <li>解题</li>
 </ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023102057079.png" alt="image-20201023210330888"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023210330888.png" alt="image-20201023210330888"></p>
 <h2 id="╯°□°）╯︵-┻━┻"><a href="#╯°□°）╯︵-┻━┻" class="headerlink" title="(╯°□°）╯︵ ┻━┻"></a>(╯°□°）╯︵ ┻━┻</h2><ul>
 <li>题目</li>
 </ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023103250479.png" alt="image-20201023102057079"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023102057079.png" alt="image-20201023102057079"></p>
 <ul>
 <li>分析</li>
 </ul>
@@ -197,11 +197,11 @@
 <ul>
 <li>解题</li>
 </ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023110320416.png" alt="image-20201023103250479"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023103250479.png" alt="image-20201023103250479"></p>
 <h2 id="第四扩展FS"><a href="#第四扩展FS" class="headerlink" title="第四扩展FS"></a>第四扩展FS</h2><ul>
 <li>题目</li>
 </ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023210330888.png" alt="image-20201023110320416"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023110320416.png" alt="image-20201023110320416"></p>
 <ul>
 <li>分析</li>
 </ul>
@@ -213,17 +213,17 @@
 <ul>
 <li><code>先用binwalk分解jpg图片，发现有个zip压缩包</code></li>
 </ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023110930017.png" alt="image-20201023111405561"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023111405561.png" alt="image-20201023111405561"></p>
 <ul>
 <li><code>zip压缩包有密码，通过查看windows图片属性发现有密码</code></li>
 </ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023111405561.png" alt="image-20201023111601665"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023111601665.png" alt="image-20201023111601665"></p>
 </li>
 </ul>
-<p>  <img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023112122001.png" alt="image-20201023110930017"></p>
+<p>  <img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023110930017.png" alt="image-20201023110930017"></p>
 <ul>
 <li><p><code>解压出来一个file.txt 根据提示频率，统计一下字符出现频率</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023111601665.png" alt="image-20201023112122001"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023112122001.png" alt="image-20201023112122001"></p>
 <blockquote>
 <p>拼接起来就是flag</p>
 </blockquote>
@@ -232,7 +232,7 @@
 <h2 id="welcome"><a href="#welcome" class="headerlink" title="welcome"></a>welcome</h2><ul>
 <li>题目：</li>
 </ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027101223399.png" alt="image-20201023205332257"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023205332257.png" alt="image-20201023205332257"></p>
 <ul>
 <li>分析</li>
 </ul>
@@ -245,34 +245,34 @@
 <blockquote>
 <p>StegSolve 打开，Stereogram设置offset，当offset为80时，flag出来了</p>
 </blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027101344345.png" alt="image-20201023205546654"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023205546654.png" alt="image-20201023205546654"></p>
 <h2 id="流量分析"><a href="#流量分析" class="headerlink" title="流量分析"></a>流量分析</h2><ul>
 <li>题目</li>
 </ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027101428717.png" alt="image-20201027101223399"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027101223399.png" alt="image-20201027101223399"></p>
 <ul>
 <li>分析</li>
 </ul>
 <blockquote>
 <p>下载解压出来一个数据包</p>
 </blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027102317635.png" alt="image-20201027101344345"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027101344345.png" alt="image-20201027101344345"></p>
 <blockquote>
 <p>把IMF文件导出来</p>
 </blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027101601185.png" alt="image-20201027101428717"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027101428717.png" alt="image-20201027101428717"></p>
 <blockquote>
 <p>浏览了一下发现有一封邮件里包含了base64</p>
 </blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027102928181.png" alt="image-20201027101601185"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027101601185.png" alt="image-20201027101601185"></p>
 <blockquote>
-<p>把这段base64拿去解密，发现是png头部，把解密内容改名成一个png文件</p>
+<p>把这段base64拿去解密，发现是png头部，把解密内容导入到png文件</p>
 </blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027103134777.png" alt="image-20201027102317635"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027102317635.png" alt="image-20201027102317635"></p>
 <blockquote>
-<p>打开图片发现了一段rsa密钥</p>
+<p>打开png图片发现了一段rsa密钥</p>
 </blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027103114114.png" alt="image-20201027102418154"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027102418154.png" alt="image-20201027102418154"></p>
 <blockquote>
 <p>拿到网上识别一下，根据提示，补全RSA</p>
 <p>这里有个坑 识别的话可能有些字符会识别不出来，需要自己补充！</p>
@@ -285,30 +285,100 @@
 <blockquote>
 <p>现在数据包里是没有http协议的</p>
 </blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027103211560.png" alt="image-20201027102928181"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027102928181.png" alt="image-20201027102928181"></p>
 <blockquote>
 <p>将密钥导入</p>
 </blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027103311569.png" alt="image-20201027103134777"></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027103337099.png" alt="image-20201027103114114"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027103134777.png" alt="image-20201027103134777"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027103114114.png" alt="image-20201027103114114"></p>
 <blockquote>
 <p>导出来后http协议包出来了</p>
 </blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023205332257.png" alt="image-20201027103211560"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027103211560.png" alt="image-20201027103211560"></p>
 <blockquote>
 <p>追踪流一下就可以拿到flag了</p>
 </blockquote>
 <ul>
 <li>解题</li>
 </ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023205546654.png" alt="image-20201027103311569"></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027102418154.png" alt="image-20201027103337099"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027103311569.png" alt="image-20201027103311569"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027103337099.png" alt="image-20201027103337099"></p>
 ]]></content>
       <categories>
         <category>CTF</category>
       </categories>
       <tags>
         <tag>安全杂项</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>攻防世界-Web2</title>
+    <url>/2020/10/26/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C-Web2/</url>
+    <content><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$miwen=<span class="string">&quot;a1zLbgQsCESEIqRLwuQAyMwLyq2L5VwBxqGA3RQAyumZ0tmMvSGM2ZwB4tws&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">encode</span>(<span class="params">$str</span>)</span>&#123;</span><br><span class="line">    $_o=strrev($str);</span><br><span class="line">    <span class="comment">// echo $_o;</span></span><br><span class="line">        </span><br><span class="line">    <span class="keyword">for</span>($_0=<span class="number">0</span>;$_0&lt;strlen($_o);$_0++)&#123;</span><br><span class="line">       </span><br><span class="line">        $_c=substr($_o,$_0,<span class="number">1</span>);</span><br><span class="line">        $__=ord($_c)+<span class="number">1</span>;</span><br><span class="line">        $_c=chr($__);</span><br><span class="line">        $_=$_.$_c;   </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">return</span> str_rot13(strrev(base64_encode($_)));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">highlight_file(<span class="keyword">__FILE__</span>);</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">   逆向加密算法，解密$miwen就是flag</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><ul>
+<li>代码中所用到的函数</li>
+</ul>
+<blockquote>
+<p>strrev — 反转字符串</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103355812.png" alt="image-20201024103134851"></p>
+<blockquote>
+<p>strlen — 获取字符串长度</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103134851.png" alt="image-20201024103355812"></p>
+<blockquote>
+<p>substr — 返回字符串的子串</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103500156.png" alt="image-20201024103238196"></p>
+<blockquote>
+<p>ord — 转换字符串第一个字节为 0-255 之间的值</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103238196.png" alt="image-20201024103500156"></p>
+<blockquote>
+<p>chr — 返回指定的字符</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103723312.png" alt="image-20201024103723312"></p>
+<blockquote>
+<p>str_rot13 — 对字符串执行 ROT13 转换</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103828672.png" alt="image-20201024103828672"></p>
+<ul>
+<li><p>代码结构分析</p>
+<ul>
+<li><p>对<code>$str</code>字符串进行反转 并且赋值给 <code>$_o</code></p>
+</li>
+<li><p>一个<code>for</code>循环 遍历了变量<code>$_o</code></p>
+<p>依次取变量<code>$_o</code>的第<code>$_0</code>个值并赋值给变量<code>$c</code></p>
+<p>把变量<code>$c</code> 转换为<em>ASCII码</em> + 1 并赋值给变量 <code>$__</code></p>
+<p>再将变量<code>$__</code>转换回字符 并赋值给变量 <code>$c</code></p>
+<p>循环结束将结果拼接起来 并赋值给 变量<code>$_</code></p>
+</li>
+<li><p>按顺序对变量<code>$_</code> base64加密字符串–&gt;strrev反转字符串–&gt;str_rot13加密字符串</p>
+</li>
+</ul>
+</li>
+<li><p>解题思路</p>
+<p>把加密算法逆向算出来就行了</p>
+</li>
+</ul>
+<h2 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">	$miwen = <span class="string">&quot;a1zLbgQsCESEIqRLwuQAyMwLyq2L5VwBxqGA3RQAyumZ0tmMvSGM2ZwB4tws&quot;</span>;</span><br><span class="line">	$str = base64_decode(strrev(str_rot13($miwen)));</span><br><span class="line">	$flag = <span class="string">&quot;&quot;</span>;</span><br><span class="line">	<span class="keyword">for</span>($a=<span class="number">0</span>;$a&lt;strlen($str);$a++)&#123;</span><br><span class="line">		$b=substr($str,$a,<span class="number">1</span>);</span><br><span class="line">		$o=ord($b)<span class="number">-1</span>;</span><br><span class="line">		$c=chr($o);</span><br><span class="line">		$flag=$flag.$c;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">echo</span> strrev($flag);</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>​    <img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024111206112.png" alt="image-20201024111206112"></p>
+<p>​      </p>
+<p>​      </p>
+<p>​      </p>
+<p>​      </p>
+<p>​      </p>
+<p>​      </p>
+<p>​      </p>
+<p>​      </p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>Web安全</tag>
       </tags>
   </entry>
   <entry>
@@ -489,107 +559,37 @@
       </tags>
   </entry>
   <entry>
-    <title>攻防世界-Web2</title>
-    <url>/2020/10/26/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C-Web2/</url>
-    <content><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$miwen=<span class="string">&quot;a1zLbgQsCESEIqRLwuQAyMwLyq2L5VwBxqGA3RQAyumZ0tmMvSGM2ZwB4tws&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">encode</span>(<span class="params">$str</span>)</span>&#123;</span><br><span class="line">    $_o=strrev($str);</span><br><span class="line">    <span class="comment">// echo $_o;</span></span><br><span class="line">        </span><br><span class="line">    <span class="keyword">for</span>($_0=<span class="number">0</span>;$_0&lt;strlen($_o);$_0++)&#123;</span><br><span class="line">       </span><br><span class="line">        $_c=substr($_o,$_0,<span class="number">1</span>);</span><br><span class="line">        $__=ord($_c)+<span class="number">1</span>;</span><br><span class="line">        $_c=chr($__);</span><br><span class="line">        $_=$_.$_c;   </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">return</span> str_rot13(strrev(base64_encode($_)));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">highlight_file(<span class="keyword">__FILE__</span>);</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">   逆向加密算法，解密$miwen就是flag</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><ul>
-<li>代码中所用到的函数</li>
-</ul>
-<blockquote>
-<p>strrev — 反转字符串</p>
-</blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103355812.png" alt="image-20201024103134851"></p>
-<blockquote>
-<p>strlen — 获取字符串长度</p>
-</blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103134851.png" alt="image-20201024103355812"></p>
-<blockquote>
-<p>substr — 返回字符串的子串</p>
-</blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103500156.png" alt="image-20201024103238196"></p>
-<blockquote>
-<p>ord — 转换字符串第一个字节为 0-255 之间的值</p>
-</blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103238196.png" alt="image-20201024103500156"></p>
-<blockquote>
-<p>chr — 返回指定的字符</p>
-</blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103723312.png" alt="image-20201024103723312"></p>
-<blockquote>
-<p>str_rot13 — 对字符串执行 ROT13 转换</p>
-</blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103828672.png" alt="image-20201024103828672"></p>
-<ul>
-<li><p>代码结构分析</p>
-<ul>
-<li><p>对<code>$str</code>字符串进行反转 并且赋值给 <code>$_o</code></p>
-</li>
-<li><p>一个<code>for</code>循环 遍历了变量<code>$_o</code></p>
-<p>依次取变量<code>$_o</code>的第<code>$_0</code>个值并赋值给变量<code>$c</code></p>
-<p>把变量<code>$c</code> 转换为<em>ASCII码</em> + 1 并赋值给变量 <code>$__</code></p>
-<p>再将变量<code>$__</code>转换回字符 并赋值给变量 <code>$c</code></p>
-<p>循环结束将结果拼接起来 并赋值给 变量<code>$_</code></p>
-</li>
-<li><p>按顺序对变量<code>$_</code> base64加密字符串–&gt;strrev反转字符串–&gt;str_rot13加密字符串</p>
-</li>
-</ul>
-</li>
-<li><p>解题思路</p>
-<p>把加密算法逆向算出来就行了</p>
-</li>
-</ul>
-<h2 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">	$miwen = <span class="string">&quot;a1zLbgQsCESEIqRLwuQAyMwLyq2L5VwBxqGA3RQAyumZ0tmMvSGM2ZwB4tws&quot;</span>;</span><br><span class="line">	$str = base64_decode(strrev(str_rot13($miwen)));</span><br><span class="line">	$flag = <span class="string">&quot;&quot;</span>;</span><br><span class="line">	<span class="keyword">for</span>($a=<span class="number">0</span>;$a&lt;strlen($str);$a++)&#123;</span><br><span class="line">		$b=substr($str,$a,<span class="number">1</span>);</span><br><span class="line">		$o=ord($b)<span class="number">-1</span>;</span><br><span class="line">		$c=chr($o);</span><br><span class="line">		$flag=$flag.$c;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">echo</span> strrev($flag);</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>​    <img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024111206112.png" alt="image-20201024111206112"></p>
-<p>​      </p>
-<p>​      </p>
-<p>​      </p>
-<p>​      </p>
-<p>​      </p>
-<p>​      </p>
-<p>​      </p>
-<p>​      </p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
-      <tags>
-        <tag>Web安全</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PHP基础</title>
     <url>/2020/09/26/php%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h2 id="第一章-PHP基础语法"><a href="#第一章-PHP基础语法" class="headerlink" title="第一章 PHP基础语法"></a>第一章 PHP基础语法</h2><h3 id="PHP标示符"><a href="#PHP标示符" class="headerlink" title="PHP标示符"></a>PHP标示符</h3><h4 id="标准标示符"><a href="#标准标示符" class="headerlink" title="标准标示符"></a>标准标示符</h4><p><code>语法</code>: <?php code;?></p>
+    <content><![CDATA[<h2 id="第一章-PHP基础语法"><a href="#第一章-PHP基础语法" class="headerlink" title="第一章 PHP基础语法"></a>第一章 PHP基础语法</h2><h3 id="1-1PHP标示符"><a href="#1-1PHP标示符" class="headerlink" title="1.1PHP标示符"></a>1.1PHP标示符</h3><h4 id="1-1-1标准标示符"><a href="#1-1-1标准标示符" class="headerlink" title="1.1.1标准标示符"></a>1.1.1标准标示符</h4><p><code>语法</code>: <?php code;?></p>
 <p><code>说明</code>：PHP语言自己的标示符，推荐使用，如果当前PHP标示符里面只有PHP代码，结束的标示符(?&gt;)可以省略。</p>
 <p><code>案例</code>:</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">	<span class="comment">//这个就是标准的标识符，如果只有PHP代码，后门结束符号可以省略</span></span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;Hello,world!&#x27;</span>;</span><br></pre></td></tr></table></figure>
 
-<h4 id="短标签风格"><a href="#短标签风格" class="headerlink" title="短标签风格"></a>短标签风格</h4><p><code>语法</code>: <? Code ;?></p>
+<h4 id="1-1-2短标签风格"><a href="#1-1-2短标签风格" class="headerlink" title="1.1.2短标签风格"></a>1.1.2短标签风格</h4><p><code>语法</code>: <? Code ;?></p>
 <p><code>说明</code>:这种风格的方法是默认不开启的，需要在php.ini中开启次功能，所以不推荐使用。</p>
 <p><code>案例:</code></p>
 <figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="attr">short_open_tag</span> = <span class="literal">ON</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916143645398.png" alt="image-20200916143208816"></p>
-<h4 id="script风格"><a href="#script风格" class="headerlink" title="script风格"></a>script风格</h4><p><code>语法</code>:<script language="php">code;</script></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916143208816.png" alt="image-20200916143208816"></p>
+<h4 id="1-1-3script风格"><a href="#1-1-3script风格" class="headerlink" title="1.1.3script风格"></a>1.1.3script风格</h4><p><code>语法</code>:<script language="php">code;</script></p>
 <p><code>说明</code>：模仿jsp的风格</p>
 <p><code>案例</code>:</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&lt;script language=<span class="string">&quot;php&quot;</span>&gt;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&quot;Hello world!;</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="asp风格"><a href="#asp风格" class="headerlink" title="asp风格"></a>asp风格</h4><p><code>语法</code>:&lt;%code; %&gt;</p>
+<h4 id="1-1-4asp风格"><a href="#1-1-4asp风格" class="headerlink" title="1.1.4asp风格"></a>1.1.4asp风格</h4><p><code>语法</code>:&lt;%code; %&gt;</p>
 <p><code>说明</code>:这种风格的方法默认是不能使用的，需要php.ini中开启次功能</p>
 <figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="attr">asp_tags</span> = <span class="literal">ON</span></span><br></pre></td></tr></table></figure>
 
 <p><code>案例:</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916144620130.png" alt="image-20200916143645398"></p>
-<h3 id="PHP分割指令–分号"><a href="#PHP分割指令–分号" class="headerlink" title="PHP分割指令–分号"></a>PHP分割指令–分号</h3><p><code>说明</code>：在PHP语言中语句分为两大类，一种是控制型语句，这种语句只是定义当前代码是如何运行的方式，如：流程控制语句、定义函数、定义类等，所以这种控制语句是不写分号结束的；另一种就是功能语句，如：变量声明、输出、调用函数、声明对象等，只要是功能语句必须使用分号结束。</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916143645398.png" alt="image-20200916143645398"></p>
+<h3 id="1-2PHP分割指令–分号"><a href="#1-2PHP分割指令–分号" class="headerlink" title="1.2PHP分割指令–分号"></a>1.2PHP分割指令–分号</h3><p><code>说明</code>：在PHP语言中语句分为两大类，一种是控制型语句，这种语句只是定义当前代码是如何运行的方式，如：流程控制语句、定义函数、定义类等，所以这种控制语句是不写分号结束的；另一种就是功能语句，如：变量声明、输出、调用函数、声明对象等，只要是功能语句必须使用分号结束。</p>
 <p><code>案例：</code></p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">	<span class="comment">//分割指令</span></span><br><span class="line">    $a = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;Hellow world!&#x27;</span></span><br><span class="line">	<span class="comment">//如果是最后一行了可以不用号</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="PHP程序注释"><a href="#PHP程序注释" class="headerlink" title="PHP程序注释"></a>PHP程序注释</h3><p><code>说明：</code>注释是可以对当前文件或者当前某些代码进行说明的方式，也可以在调试代码时使用，把某些代码直接注释掉而不是删除。</p>
+<h3 id="1-3PHP程序注释"><a href="#1-3PHP程序注释" class="headerlink" title="1.3PHP程序注释"></a>1.3PHP程序注释</h3><p><code>说明：</code>注释是可以对当前文件或者当前某些代码进行说明的方式，也可以在调试代码时使用，把某些代码直接注释掉而不是删除。</p>
 <p>注释分为两类：单行注释和多行注释</p>
 <p><code>单行注释</code>：</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">//双左斜杠注释</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;Hellow world&#x27;</span>;</span><br><span class="line"><span class="comment"># 单行注释</span></span><br><span class="line"><span class="comment"># 单行注释</span></span><br><span class="line"><span class="comment"># 单行注释</span></span><br></pre></td></tr></table></figure>
@@ -599,14 +599,14 @@
 
 
 
-<h3 id="html和php的混合模式"><a href="#html和php的混合模式" class="headerlink" title="html和php的混合模式"></a>html和php的混合模式</h3><p><code>说明</code>：php的代码是不能写入到HTML中的，需要用PHP的标示符隔开，PHP代码只能在PHP文件中执行，不能写到其他语言文件中，html代码可以写到PHP文件中，直接写入到PHP文件中的方式不再推荐使用，可以使用引入的方式把html文件引入php文件中来执行。</p>
+<h3 id="1-4html和php的混合模式"><a href="#1-4html和php的混合模式" class="headerlink" title="1.4html和php的混合模式"></a>1.4html和php的混合模式</h3><p><code>说明</code>：php的代码是不能写入到HTML中的，需要用PHP的标示符隔开，PHP代码只能在PHP文件中执行，不能写到其他语言文件中，html代码可以写到PHP文件中，直接写入到PHP文件中的方式不再推荐使用，可以使用引入的方式把html文件引入php文件中来执行。</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">?php</span></span></span><br><span class="line"><span class="tag">	$<span class="attr">title</span> = <span class="string">&#x27;This is Title&#x27;</span>;</span></span><br><span class="line"><span class="tag">?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hmtl</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;<span class="name">?php</span> <span class="attr">echo</span> $<span class="attr">title</span>;?&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="第二章-PHP变量"><a href="#第二章-PHP变量" class="headerlink" title="第二章 PHP变量"></a>第二章 PHP变量</h2><h3 id="变量的介绍"><a href="#变量的介绍" class="headerlink" title="变量的介绍"></a>变量的介绍</h3><p><code>说明</code>：可以存储变化的量（数据）的空间，可以变化的量是通过上下文来绝定，所以称为“弱类型语言”。</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916145549121.png" alt="image-20200916144620130"></p>
-<h3 id="变量的声明"><a href="#变量的声明" class="headerlink" title="变量的声明"></a>变量的声明</h3><p><code>说明</code>：变量的声明是有“$”来进行定义的声明的，在内存需要定义变量并赋值。</p>
+<h2 id="第二章-PHP变量"><a href="#第二章-PHP变量" class="headerlink" title="第二章 PHP变量"></a>第二章 PHP变量</h2><h3 id="2-1变量的介绍"><a href="#2-1变量的介绍" class="headerlink" title="2.1变量的介绍"></a>2.1变量的介绍</h3><p><code>说明</code>：可以存储变化的量（数据）的空间，可以变化的量是通过上下文来绝定，所以称为“弱类型语言”。</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916144620130.png" alt="image-20200916144620130"></p>
+<h3 id="2-2变量的声明"><a href="#2-2变量的声明" class="headerlink" title="2.2变量的声明"></a>2.2变量的声明</h3><p><code>说明</code>：变量的声明是有“$”来进行定义的声明的，在内存需要定义变量并赋值。</p>
 <p><code>语法</code>：$变量名 = 量;</p>
 <p><code>注意</code>：变量名是数字(0-9)、字母(a-zA-Z)、下划线组成的且不能以数字开头的定义方式</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//变量的声明</span></span><br><span class="line">$name = <span class="string">&quot;Y&quot;</span>;</span><br><span class="line">$age = <span class="number">3</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
@@ -615,40 +615,40 @@
 
 
 
-<h3 id="可变变量"><a href="#可变变量" class="headerlink" title="可变变量"></a>可变变量</h3><p><code>说明</code>：可以把某个变量的追当成另一个变量的名来使用，这个时候的好处是减少变量的定义，节省内存空间。</p>
+<h3 id="2-3可变变量"><a href="#2-3可变变量" class="headerlink" title="2.3可变变量"></a>2.3可变变量</h3><p><code>说明</code>：可以把某个变量的追当成另一个变量的名来使用，这个时候的好处是减少变量的定义，节省内存空间。</p>
 <p><code>案例</code>:</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//可变变量</span></span><br><span class="line">$name = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">$$name = <span class="string">&#x27;world&#x27;</span>;</span><br><span class="line"><span class="comment">//$name 的值hello，在它的前面在加$s返回，就会找$name里值当成变量名</span></span><br><span class="line">$$$name = <span class="string">&#x27;你好！&#x27;</span>;</span><br><span class="line"><span class="keyword">echo</span> $hello;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;&lt;br&gt;&#x27;</span>;</span><br><span class="line"><span class="keyword">echo</span> $name.$&#123;$name&#125;.$&#123;$&#123;$name&#125;&#125;;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="变量的传值方式"><a href="#变量的传值方式" class="headerlink" title="变量的传值方式"></a>变量的传值方式</h3><h4 id="值传递"><a href="#值传递" class="headerlink" title="值传递"></a>值传递</h4><p><code>说明</code>：把一个变量的值“复制”一份，然后在赋值给另一个变量，这个时候的两个变量是没有任何关系的。</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916145811922.png" alt="image-20200916145549121"></p>
+<h3 id="2-4变量的传值方式"><a href="#2-4变量的传值方式" class="headerlink" title="2.4变量的传值方式"></a>2.4变量的传值方式</h3><h4 id="2-4-1值传递"><a href="#2-4-1值传递" class="headerlink" title="2.4.1值传递"></a>2.4.1值传递</h4><p><code>说明</code>：把一个变量的值“复制”一份，然后在赋值给另一个变量，这个时候的两个变量是没有任何关系的。</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916145549121.png" alt="image-20200916145549121"></p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//值传递</span></span><br><span class="line">$name = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">$a = $name;</span><br><span class="line"><span class="keyword">echo</span> $name,$a;</span><br><span class="line"></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;&lt;br&gt;&#x27;</span>;</span><br><span class="line">$name = <span class="string">&#x27;b&#x27;</span>;</span><br><span class="line"><span class="keyword">echo</span> $name,$a;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916150112226.png" alt="image-20200916145811922"></p>
-<h4 id="引用传递"><a href="#引用传递" class="headerlink" title="引用传递"></a>引用传递</h4><p><code>说明</code>:说明：把一个变量的值的空间地址给另一个变量，这个时候的两个变量公用一个数据空间，指向同一个地址，这个的两个变量值有关系的</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916145811922.png" alt="image-20200916145811922"></p>
+<h4 id="2-4-2引用传递"><a href="#2-4-2引用传递" class="headerlink" title="2.4.2引用传递"></a>2.4.2引用传递</h4><p><code>说明</code>:说明：把一个变量的值的空间地址给另一个变量，这个时候的两个变量公用一个数据空间，指向同一个地址，这个的两个变量值有关系的</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//引用传递</span></span><br><span class="line">$age = <span class="number">18</span>;</span><br><span class="line">$zsage = &amp;$age;</span><br><span class="line"><span class="keyword">echo</span> $age,$zsage;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;&lt;br&gt;&#x27;</span>;</span><br><span class="line">$age = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">echo</span> $age,$zsage;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;&lt;br&gt;&#x27;</span>;</span><br><span class="line"><span class="keyword">unset</span>($age);</span><br><span class="line"><span class="keyword">echo</span> $age,$zsage;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916161726228.png" alt="image-20200916150112226"></p>
-<h3 id="变量的范围"><a href="#变量的范围" class="headerlink" title="变量的范围"></a>变量的范围</h3><p><code>说明</code>：在PHP中变量分为三种访问的方式（范围），局部变量、全局变量、静态变量</p>
-<h4 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h4><p><code>说明</code>：在函数外定义的变量的就称为“全局变量”，正常情况只能在函数外使用</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916150112226.png" alt="image-20200916150112226"></p>
+<h3 id="2-5变量的范围"><a href="#2-5变量的范围" class="headerlink" title="2.5变量的范围"></a>2.5变量的范围</h3><p><code>说明</code>：在PHP中变量分为三种访问的方式（范围），局部变量、全局变量、静态变量</p>
+<h4 id="2-5-1全局变量"><a href="#2-5-1全局变量" class="headerlink" title="2.5.1全局变量"></a>2.5.1全局变量</h4><p><code>说明</code>：在函数外定义的变量的就称为“全局变量”，正常情况只能在函数外使用</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//全局变量</span></span><br><span class="line">$name = <span class="string">&#x27;admin&#x27;</span>;</span><br><span class="line"><span class="comment">//全局变量，不能在函数内部使用，原因是存储位置不一样</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">user</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">echo</span> $name; <span class="comment">//不能使用全局变量</span></span><br><span class="line">&#125;</span><br><span class="line">user();</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h4><p><code>说明</code>:在函数内定义的变量就称为“局部变量”，正常情况只能在函数内部使用。</p>
+<h4 id="2-5-2局部变量"><a href="#2-5-2局部变量" class="headerlink" title="2.5.2局部变量"></a>2.5.2局部变量</h4><p><code>说明</code>:在函数内定义的变量就称为“局部变量”，正常情况只能在函数内部使用。</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//局部变量</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">user</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="comment">//echo $name;		//不能使用全局变量</span></span><br><span class="line">	$name2 = <span class="string">&#x27;admin&#x27;</span>;	<span class="comment">//局部变量不能再外部使用</span></span><br><span class="line">	<span class="keyword">echo</span> $name2;</span><br><span class="line">&#125;</span><br><span class="line">user();</span><br><span class="line"><span class="keyword">echo</span> $name2;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="静态变量"><a href="#静态变量" class="headerlink" title="静态变量"></a>静态变量</h4><p><code>说明</code>：正常情况下变量是在运行完当前页面后进行销毁的（PHP自己的特性），如果不想销毁可以使用静态变量</p>
+<h4 id="2-5-3静态变量"><a href="#2-5-3静态变量" class="headerlink" title="2.5.3静态变量"></a>2.5.3静态变量</h4><p><code>说明</code>：正常情况下变量是在运行完当前页面后进行销毁的（PHP自己的特性），如果不想销毁可以使用静态变量</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//静态变量</span></span><br><span class="line">$age = <span class="number">18</span>;</span><br><span class="line">$age++;</span><br><span class="line"><span class="keyword">echo</span> $age.<span class="string">&quot;&lt;br&gt;&quot;</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">age1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">static</span> $age = <span class="number">18</span>;<span class="comment">//static就是静态变量的声明方式，静态变量声明后运行完当前也页面不再销毁这个变量，而是保留。</span></span><br><span class="line">	<span class="keyword">echo</span> $age.<span class="string">&quot;&lt;br&gt;&quot;</span>;</span><br><span class="line">	$age++;</span><br><span class="line">&#125;</span><br><span class="line">age1(); <span class="comment">//18</span></span><br><span class="line">age1(); <span class="comment">//19</span></span><br><span class="line">age1(); <span class="comment">//20</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h4 id="全局转局部或局部转全局"><a href="#全局转局部或局部转全局" class="headerlink" title="全局转局部或局部转全局"></a>全局转局部或局部转全局</h4><p><code>说明</code>：局部变量可以在函数内声明为全局变量，这个时候局部就可以在函数外使用，声明方式：$GLOBALS和global</p>
+<h4 id="2-5-4全局转局部或局部转全局"><a href="#2-5-4全局转局部或局部转全局" class="headerlink" title="2.5.4全局转局部或局部转全局"></a>2.5.4全局转局部或局部转全局</h4><p><code>说明</code>：局部变量可以在函数内声明为全局变量，这个时候局部就可以在函数外使用，声明方式：$GLOBALS和global</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//局部转全局</span></span><br><span class="line"><span class="comment">//global $sex; 这种方式不行</span></span><br><span class="line"><span class="comment">//global $sex = &#x27;boy&#x27;; 这种方式不行</span></span><br><span class="line">$sex = <span class="string">&#x27;boy&#x27;</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">admin</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">global</span> $name,$sex;</span><br><span class="line">	$name = <span class="string">&#x27;admin&#x27;</span>;</span><br><span class="line">	<span class="keyword">echo</span> $sex;</span><br><span class="line">&#125;</span><br><span class="line">admin();</span><br><span class="line"><span class="keyword">echo</span> $name;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="变量常用的5个函数"><a href="#变量常用的5个函数" class="headerlink" title="变量常用的5个函数"></a>变量常用的5个函数</h3><p><code>isset()</code>：判断变量是否存在</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916165011283.png" alt="image-20200916161726228"></p>
+<h3 id="2-6变量常用的5个函数"><a href="#2-6变量常用的5个函数" class="headerlink" title="2.6变量常用的5个函数"></a>2.6变量常用的5个函数</h3><p><code>isset()</code>：判断变量是否存在</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916161726228.png" alt="image-20200916161726228"></p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">//isset(); 检测变量是否存在</span></span><br><span class="line">$name = <span class="string">&#x27;admin&#x27;</span>;</span><br><span class="line">$res = <span class="keyword">isset</span>($name,$age);</span><br><span class="line">var_dump($res);</span><br><span class="line"><span class="comment">//目的是防止用户访问当前页面，如果访问会查不到username下标，结果会报错</span></span><br><span class="line">$userName = <span class="keyword">isset</span>($_GET[<span class="string">&#x27;username&#x27;</span>]) ? $_GET[<span class="string">&#x27;username&#x27;</span>] : <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">isset</span>($name,$age))&#123;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;存在&#x27;</span>;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	<span class="keyword">echo</span><span class="string">&#x27;不存在&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
@@ -659,88 +659,89 @@
 
 
 <p><code>Empty()</code>；判断变量是否为空</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916170108836.png" alt="image-20200916165011283"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916165011283.png" alt="image-20200916165011283"></p>
 <p><code>Echo</code>：输出打印值，不能输出复合和特殊的数据类型的值</p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916170000023.png" alt="image-20200916170000023"></p>
 <p><code>Var_dump</code>()：输出打印值、类型、长度，打印复合或特殊类型的值</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916170213397.png" alt="image-20200916170108836"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916170108836.png" alt="image-20200916170108836"></p>
 <h2 id="第三章-预定义变量"><a href="#第三章-预定义变量" class="headerlink" title="第三章 预定义变量"></a>第三章 预定义变量</h2><p><code>说明</code>：就是PHP系统内置的提供给使用的变量，这个变量一般都是超全局变量，超全局的说明就是没有作用域的限制有的还可以跨页面。</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916170903591.png" alt="image-20200916170213397"></p>
-<h3 id="GLOBALS"><a href="#GLOBALS" class="headerlink" title="$GLOBALS"></a>$GLOBALS</h3><p><code>说明</code>：globals是PHP内置的可以自动获取当前页面中的所有变量的内容。</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916170213397.png" alt="image-20200916170213397"></p>
+<h3 id="3-1-GLOBALS"><a href="#3-1-GLOBALS" class="headerlink" title="3.1$GLOBALS"></a>3.1$GLOBALS</h3><p><code>说明</code>：globals是PHP内置的可以自动获取当前页面中的所有变量的内容。</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line">$name = <span class="string">&#x27;admin&#x27;</span>;</span><br><span class="line">$age = <span class="number">18</span>;</span><br><span class="line">$sex = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">var_dump($GLOBALS);</span><br><span class="line"><span class="keyword">echo</span> $GLOBALS[<span class="string">&#x27;name&#x27;</span>];</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916170939511.png" alt="image-20200916170903591"></p>
-<h3 id="SERVER"><a href="#SERVER" class="headerlink" title="$_SERVER"></a>$_SERVER</h3><p><code>说明</code>：server会自动获取服务器和客户端的信息</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916172048400.png" alt="image-20200916170939511"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916170903591.png" alt="image-20200916170903591"></p>
+<h3 id="3-2-SERVER"><a href="#3-2-SERVER" class="headerlink" title="3.2$_SERVER"></a>3.2$_SERVER</h3><p><code>说明</code>：server会自动获取服务器和客户端的信息</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916170939511.png" alt="image-20200916170939511"></p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;&lt;table border=1&gt;&#x27;</span>;</span><br><span class="line"><span class="keyword">foreach</span> ($_SERVER <span class="keyword">as</span> $key =&gt; $value)&#123;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;&lt;tr&gt;&#x27;</span>;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;&lt;td&gt;&#x27;</span>.$key.<span class="string">&#x27;&lt;/td&gt;&lt;td&gt;&#x27;</span>.$value.<span class="string">&#x27;&lt;/td&gt;&#x27;</span>;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;&lt;/tr&gt;&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;&lt;/table&gt;&#x27;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="FILES"><a href="#FILES" class="headerlink" title="$_FILES"></a>$_FILES</h3><p><code>说明</code>：获取上传文件的信息</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916194617870.png" alt="image-20200916172048400"></p>
+<h3 id="3-3-FILES"><a href="#3-3-FILES" class="headerlink" title="3.3$_FILES"></a>3.3$_FILES</h3><p><code>说明</code>：获取上传文件的信息</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916172048400.png" alt="image-20200916172048400"></p>
 <p>Name：图片的名称</p>
 <p>Type：图片的类型</p>
 <p>Tmp_name：文件的临时文件夹和临时名称</p>
 <p>Error：错误信息</p>
 <p>Size：文件的大小</p>
-<h3 id="GET：URL方式传递数据"><a href="#GET：URL方式传递数据" class="headerlink" title="$_GET：URL方式传递数据"></a>$_GET：URL方式传递数据</h3><p><code>说明</code>：其实就是浏览器的地址栏传递方式，</p>
+<h3 id="3-4-GET：URL方式传递数据"><a href="#3-4-GET：URL方式传递数据" class="headerlink" title="3.4$_GET：URL方式传递数据"></a>3.4$_GET：URL方式传递数据</h3><p><code>说明</code>：其实就是浏览器的地址栏传递方式，</p>
 <p><code>传递方式</code>：URL地址?参数1=值1&amp;参数2=值2……………………………</p>
 <p><code>传递形式</code>：表单的get方式和超链接方式</p>
-<h3 id="POST-HTTP-POST方式传递数据"><a href="#POST-HTTP-POST方式传递数据" class="headerlink" title="$_POST: HTTP POST方式传递数据"></a>$_POST: HTTP POST方式传递数据</h3><h3 id="REQUEST"><a href="#REQUEST" class="headerlink" title="$_REQUEST"></a>$_REQUEST</h3><h2 id="第四章-常量"><a href="#第四章-常量" class="headerlink" title="第四章 常量"></a>第四章 常量</h2><p><code>说明</code>：常量一旦定义，里面的值和常量是不能改变和销毁的，而且常量名不能重复。</p>
-<h3 id="常量的定义"><a href="#常量的定义" class="headerlink" title="常量的定义"></a>常量的定义</h3><p><code>语法</code>：define(常量名,常量值); 不能定义复合数据</p>
+<h3 id="3-5-POST-HTTP-POST方式传递数据"><a href="#3-5-POST-HTTP-POST方式传递数据" class="headerlink" title="3.5$_POST: HTTP POST方式传递数据"></a>3.5$_POST: HTTP POST方式传递数据</h3><h3 id="3-6-REQUEST"><a href="#3-6-REQUEST" class="headerlink" title="3.6$_REQUEST"></a>3.6$_REQUEST</h3><h2 id="第四章-常量"><a href="#第四章-常量" class="headerlink" title="第四章 常量"></a>第四章 常量</h2><p><code>说明</code>：常量一旦定义，里面的值和常量是不能改变和销毁的，而且常量名不能重复。</p>
+<h3 id="4-1常量的定义"><a href="#4-1常量的定义" class="headerlink" title="4.1常量的定义"></a>4.1常量的定义</h3><p><code>语法</code>：define(常量名,常量值); 不能定义复合数据</p>
 <p><code>5.xPHP版本</code>：const来定义复合的数据，如：数组</p>
 <p><code>7.0PHP版本</code>：define可以定义复合的数据，如：数组</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//常量的定义</span></span><br><span class="line">define(<span class="string">&#x27;NAME&#x27;</span>,<span class="string">&#x27;admin&#x27;</span>);</span><br><span class="line">define(<span class="string">&#x27;PI&#x27;</span>,<span class="number">3.14</span>);</span><br><span class="line"><span class="comment">//const定义方式</span></span><br><span class="line"><span class="comment">//const ARR = array(1,2,3,4);</span></span><br><span class="line"><span class="keyword">const</span> STR = <span class="string">&#x27;admin&#x27;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="访问常量"><a href="#访问常量" class="headerlink" title="访问常量"></a>访问常量</h3><p><code>说明</code>：直接使用常量名就可以了</p>
+<h3 id="4-2访问常量"><a href="#4-2访问常量" class="headerlink" title="4.2访问常量"></a>4.2访问常量</h3><p><code>说明</code>：直接使用常量名就可以了</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">define(<span class="string">&#x27;NAME&#x27;</span>,<span class="string">&#x27;admin&#x27;</span>);</span><br><span class="line"><span class="keyword">echo</span> NAME;</span><br><span class="line">define(<span class="string">&#x27;PI&#x27;</span>,<span class="number">3.14</span>);</span><br><span class="line"><span class="keyword">echo</span> PI;</span><br><span class="line"><span class="comment">//const定义方式</span></span><br><span class="line"><span class="keyword">const</span> STR = <span class="string">&#x27;admin&#x27;</span>;</span><br><span class="line">var_dump(STR);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916194636398.png" alt="image-20200916194617870"></p>
-<h3 id="魔术常量–预定义常量"><a href="#魔术常量–预定义常量" class="headerlink" title="魔术常量–预定义常量"></a>魔术常量–预定义常量</h3><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916195358777.png" alt="image-20200916194636398"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916194617870.png" alt="image-20200916194617870"></p>
+<h3 id="4-3魔术常量–预定义常量"><a href="#4-3魔术常量–预定义常量" class="headerlink" title="4.3魔术常量–预定义常量"></a>4.3魔术常量–预定义常量</h3><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916194636398.png" alt="image-20200916194636398"></p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//__CLASS__: 获取当前类名</span></span><br><span class="line"><span class="comment">//文件名：getUserClass.php</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">getUser</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">index</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">include</span> <span class="string">&#x27;./index.html&#x27;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">include</span> <span class="string">&#x27;./index.html&#x27;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
 <p><code>产生随机数的函数</code>：rand()</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917153846319.png" alt="image-20200916195358777"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200916195358777.png" alt="image-20200916195358777"></p>
 <h2 id="第五章数据类型"><a href="#第五章数据类型" class="headerlink" title="第五章数据类型"></a>第五章数据类型</h2><p><code>说明</code>：就是PHP能存储数据格式，PHP提供8种数据类型</p>
 <p><code>标量类型</code>：int float string boolean</p>
 <p><code>复合类型</code>：array object</p>
 <p><code>特殊</code>：null resource</p>
-<h3 id="字符串类型-string"><a href="#字符串类型-string" class="headerlink" title="字符串类型-string"></a>字符串类型-string</h3><p><code>说明</code>：字符串类型就是把任何的数据加上引号（单引号和双引号）就是字符串了。</p>
+<h3 id="5-1字符串类型-string"><a href="#5-1字符串类型-string" class="headerlink" title="5.1字符串类型-string"></a>5.1字符串类型-string</h3><p><code>说明</code>：字符串类型就是把任何的数据加上引号（单引号和双引号）就是字符串了。</p>
 <p><code>如</code>：$name = ‘admin’;  $name = “admin”;</p>
-<h4 id="单引号"><a href="#单引号" class="headerlink" title="单引号"></a>单引号</h4><h4 id="双引号"><a href="#双引号" class="headerlink" title="双引号"></a>双引号</h4><h4 id="单引号和双引号的区别"><a href="#单引号和双引号的区别" class="headerlink" title="单引号和双引号的区别"></a>单引号和双引号的区别</h4><p><code>1</code>.双引号可以解析变量，如：$name=”$admin”;  </p>
+<h4 id="5-1-1单引号"><a href="#5-1-1单引号" class="headerlink" title="5.1.1单引号"></a>5.1.1单引号</h4><h4 id="5-1-2双引号"><a href="#5-1-2双引号" class="headerlink" title="5.1.2双引号"></a>5.1.2双引号</h4><h4 id="5-1-3单引号和双引号的区别"><a href="#5-1-3单引号和双引号的区别" class="headerlink" title="5.1.3单引号和双引号的区别"></a>5.1.3单引号和双引号的区别</h4><p><code>1</code>.双引号可以解析变量，如：$name=”$admin”;  </p>
 <p><code>2</code>.单引号不能解析变量</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//单引号和双引号的区别</span></span><br><span class="line">$name = <span class="string">&quot;h&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;用户名为:<span class="subst">&#123;$name&#125;</span>&quot;</span>.<span class="string">&quot;&lt;br&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;用户名为:&#123;$name&#125;&#x27;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917153953229.png" alt="image-20200917153846319"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917153846319.png" alt="image-20200917153846319"></p>
 <p><code>3</code>.转义字符的多少，双引号转义的字符多，单引号只有两个（‘, \）</p>
 <p><code>双引号转义字符</code>：</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917154640410.png" alt="image-20200917153953229"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917153953229.png" alt="image-20200917153953229"></p>
 <p><code>单引号</code>的转义字符：只有<code>‘</code>本身和<code>\\</code></p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//转义字符：\,目的就是让一些特殊字符失去在php中本身意义</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;用户名\为:\&quot;<span class="subst">&#123;$name&#125;</span>\&quot; \n价格为： \$j&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;用户名为:\\\&#x27;&#123;$name&#125;&#x27;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="Heredoc"><a href="#Heredoc" class="headerlink" title="Heredoc"></a>Heredoc</h4><p><code>说明</code>：双引号的定界符写法</p>
-<h4 id="Nowdoc"><a href="#Nowdoc" class="headerlink" title="Nowdoc"></a>Nowdoc</h4><p><code>说明</code>：单引号的定界符写法</p>
-<h3 id="字符串的常用函数"><a href="#字符串的常用函数" class="headerlink" title="字符串的常用函数"></a>字符串的常用函数</h3><h4 id="字符串分解和合并"><a href="#字符串分解和合并" class="headerlink" title="字符串分解和合并"></a>字符串分解和合并</h4><p><code>说明</code>：在PHP中提供了两个函数可以对字符串进行“拆分”和“组合-数组”,作用是如多选框有多少个值</p>
+<h4 id="5-1-4Heredoc"><a href="#5-1-4Heredoc" class="headerlink" title="5.1.4Heredoc"></a>5.1.4Heredoc</h4><p><code>说明</code>：双引号的定界符写法</p>
+<h4 id="5-1-5Nowdoc"><a href="#5-1-5Nowdoc" class="headerlink" title="5.1.5Nowdoc"></a>5.1.5Nowdoc</h4><p><code>说明</code>：单引号的定界符写法</p>
+<h3 id="5-2字符串的常用函数"><a href="#5-2字符串的常用函数" class="headerlink" title="5.2字符串的常用函数"></a>5.2字符串的常用函数</h3><h4 id="5-2-1字符串分解和合并"><a href="#5-2-1字符串分解和合并" class="headerlink" title="5.2.1字符串分解和合并"></a>5.2.1字符串分解和合并</h4><p><code>说明</code>：在PHP中提供了两个函数可以对字符串进行“拆分”和“组合-数组”,作用是如多选框有多少个值</p>
 <p><code>Explode</code>：把字符串通过一个分割字符进行分割成数组</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917154640410.png" alt="image-20200917154640410"></p>
 <p><code>Implode</code>：把一维数组转换成字符串</p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917155059541.png" alt="5.2.2去除字符串的空格"></p>
-<h4 id="去除字符串的空格"><a href="#去除字符串的空格" class="headerlink" title="去除字符串的空格"></a>去除字符串的空格</h4><p><code>ltrim()</code>：去除字符串左边的空白字符</p>
+<h4 id="5-2-2去除字符串的空格"><a href="#5-2-2去除字符串的空格" class="headerlink" title="5.2.2去除字符串的空格"></a>5.2.2去除字符串的空格</h4><p><code>ltrim()</code>：去除字符串左边的空白字符</p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917155231119.png" alt="image-20200917155231119"></p>
 <p><code>rtrim()</code>：去除字符串右边的空白字符</p>
-<p><img src="/2020/09/26/php%E5%9F%BA%E7%A1%80/image-20200917155313630.png" alt="image-20200917155313630"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917155313630.png" alt="image-20200917155313630"></p>
 <p><code>trim()</code>：去除字符串两边的空白字符</p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917155404156.png" alt="image-20200917155404156"></p>
-<h4 id="字符串替换"><a href="#字符串替换" class="headerlink" title="字符串替换"></a>字符串替换</h4><p> <code>substr_replace</code></p>
+<h4 id="5-2-3字符串替换"><a href="#5-2-3字符串替换" class="headerlink" title="5.2.3字符串替换"></a>5.2.3字符串替换</h4><p> <code>substr_replace</code></p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917155553458.png" alt="image-20200917155553458"></p>
-<h4 id="子字符串查找替换"><a href="#子字符串查找替换" class="headerlink" title="子字符串查找替换"></a>子字符串查找替换</h4><p><code>str_replace</code></p>
+<h4 id="5-2-4子字符串查找替换"><a href="#5-2-4子字符串查找替换" class="headerlink" title="5.2.4子字符串查找替换"></a>5.2.4子字符串查找替换</h4><p><code>str_replace</code></p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917155705314.png" alt="image-20200917155705314"></p>
-<h4 id="字符串截取"><a href="#字符串截取" class="headerlink" title="字符串截取"></a>字符串截取</h4><p><code>substr</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917160635594.png" alt="image-20200917155802767"></p>
-<h3 id="整数型–int"><a href="#整数型–int" class="headerlink" title="整数型–int"></a>整数型–int</h3><p><code>说明</code>：是负数和0和整数的集合，在PHP中存储整数为10进制、八进制、十六进制</p>
+<h4 id="5-2-5字符串截取"><a href="#5-2-5字符串截取" class="headerlink" title="5.2.5字符串截取"></a>5.2.5字符串截取</h4><p><code>substr</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917155802767.png" alt="image-20200917155802767"></p>
+<h3 id="5-3整数型–int"><a href="#5-3整数型–int" class="headerlink" title="5.3整数型–int"></a>5.3整数型–int</h3><p><code>说明</code>：是负数和0和整数的集合，在PHP中存储整数为10进制、八进制、十六进制</p>
 <p><code>语法</code>：$var = 整数数字;</p>
 <p><code>八进制的写法</code>：在数字之前加0，就是八进制，数字是有0-7</p>
 <p><code>十六位进制的写法</code>：在数字前面加0x，数字为：0-f 0123456789abcdef</p>
@@ -748,29 +749,29 @@
 <p><code>二进制</code>：只有0和1  一共32位  0000 0000 0000 0000 0000 0000 0000 0000=&gt;0</p>
 <p><code>PHP最大的存储数值为</code>：21亿，PHP_INT_MAX</p>
 <p><code>PHP最大的位数为</code>：14位,一个数值占多少位置：PHP_INT_SIZE</p>
-<h3 id="浮点型–float"><a href="#浮点型–float" class="headerlink" title="浮点型–float"></a>浮点型–float</h3><p><code>说明</code>：小数,浮点型（也叫浮点数 float，双精度数 double 或实数 real）</p>
+<h3 id="5-4浮点型–float"><a href="#5-4浮点型–float" class="headerlink" title="5.4浮点型–float"></a>5.4浮点型–float</h3><p><code>说明</code>：小数,浮点型（也叫浮点数 float，双精度数 double 或实数 real）</p>
 <p>PHP中的小数有两种表现形式：普通的小数和科学计数法</p>
-<h3 id="布尔类型–boolean"><a href="#布尔类型–boolean" class="headerlink" title="布尔类型–boolean"></a>布尔类型–boolean</h3><p><code>说明</code>：在PHP中布尔型的数据只有两个值：true和false</p>
+<h3 id="5-5布尔类型–boolean"><a href="#5-5布尔类型–boolean" class="headerlink" title="5.5布尔类型–boolean"></a>5.5布尔类型–boolean</h3><p><code>说明</code>：在PHP中布尔型的数据只有两个值：true和false</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">//布尔型</span></span><br><span class="line">$bool = <span class="literal">true</span>;</span><br><span class="line">$bool = <span class="literal">false</span>;</span><br><span class="line">var_dump($bool);</span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="数组–array"><a href="#数组–array" class="headerlink" title="数组–array"></a>数组–array</h3><p><code>说明</code>：一组数据的集合，就是数组</p>
+<h3 id="5-6数组–array"><a href="#5-6数组–array" class="headerlink" title="5.6数组–array"></a>5.6数组–array</h3><p><code>说明</code>：一组数据的集合，就是数组</p>
 <p><code>$变量</code> = array(元素，元素，元素…….);</p>
-<h3 id="对象–object"><a href="#对象–object" class="headerlink" title="对象–object"></a>对象–object</h3><p><code>说明</code>：世间万物皆为“对象”;</p>
-<h3 id="空–null"><a href="#空–null" class="headerlink" title="空–null"></a>空–null</h3><p><code>说明</code>：特殊的 NULL 值表示一个变量没有值。NULL 类型唯一可能的值就是 NULL。</p>
-<h3 id="资源–resource"><a href="#资源–resource" class="headerlink" title="资源–resource"></a>资源–resource</h3><p><code>说明</code>：就是引用PHP外部的内容，这个时候的类型的就是资源。资源是通过专门的函数来建立和使用的</p>
+<h3 id="5-7对象–object"><a href="#5-7对象–object" class="headerlink" title="5.7对象–object"></a>5.7对象–object</h3><p><code>说明</code>：世间万物皆为“对象”;</p>
+<h3 id="5-8空–null"><a href="#5-8空–null" class="headerlink" title="5.8空–null"></a>5.8空–null</h3><p><code>说明</code>：特殊的 NULL 值表示一个变量没有值。NULL 类型唯一可能的值就是 NULL。</p>
+<h3 id="5-9资源–resource"><a href="#5-9资源–resource" class="headerlink" title="5.9资源–resource"></a>5.9资源–resource</h3><p><code>说明</code>：就是引用PHP外部的内容，这个时候的类型的就是资源。资源是通过专门的函数来建立和使用的</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$link = mysql_connect(<span class="string">&#x27;localhost&#x27;</span>,<span class="string">&#x27;root&#x27;</span>,<span class="string">&#x27;password&#x27;</span>);</span><br><span class="line">$var_dump($link);</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="手册中的类型–用于说明需要某种类型的数据"><a href="#手册中的类型–用于说明需要某种类型的数据" class="headerlink" title="手册中的类型–用于说明需要某种类型的数据"></a>手册中的类型–用于说明需要某种类型的数据</h3><p><code>说明</code>：在PHP中数据类型是可以进制互相转换，如：整型1转换成字符串1</p>
+<h3 id="5-10手册中的类型–用于说明需要某种类型的数据"><a href="#5-10手册中的类型–用于说明需要某种类型的数据" class="headerlink" title="5.10手册中的类型–用于说明需要某种类型的数据"></a>5.10手册中的类型–用于说明需要某种类型的数据</h3><p><code>说明</code>：在PHP中数据类型是可以进制互相转换，如：整型1转换成字符串1</p>
 <p><code>在PHP中分两种转换形式</code>：自动转换和强制转换</p>
-<h3 id="数据类型的转换"><a href="#数据类型的转换" class="headerlink" title="数据类型的转换"></a>数据类型的转换</h3><p>给到特定的写法就会改变原来的类型</p>
+<h3 id="5-11数据类型的转换"><a href="#5-11数据类型的转换" class="headerlink" title="5.11数据类型的转换"></a>5.11数据类型的转换</h3><p>给到特定的写法就会改变原来的类型</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">$num1 = <span class="number">1</span>;</span><br><span class="line">$num2 = <span class="number">2</span>;</span><br><span class="line">$num3 = $num1 . $num2;</span><br><span class="line">var_dump($num3);</span><br><span class="line"><span class="keyword">if</span>($num1)&#123;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;Hello&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="强制转换"><a href="#强制转换" class="headerlink" title="强制转换"></a>强制转换</h4><p>可以使用一些特殊的方式来强制性改变类型</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917155802767.png" alt="image-20200917160635594"></p>
+<h4 id="5-11-2强制转换"><a href="#5-11-2强制转换" class="headerlink" title="5.11.2强制转换"></a>5.11.2强制转换</h4><p>可以使用一些特殊的方式来强制性改变类型</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917160635594.png" alt="image-20200917160635594"></p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//强制转换</span></span><br><span class="line">$num = <span class="number">1</span>;</span><br><span class="line">var_dump((<span class="keyword">string</span>)$num);</span><br><span class="line">$str = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">var_dump((<span class="keyword">float</span>)$str);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
@@ -778,64 +779,64 @@
 <h2 id="第六章-运算符"><a href="#第六章-运算符" class="headerlink" title="第六章 运算符"></a>第六章 运算符</h2><p><code>说明</code>：对操作数进行运算的符号，就是运算符。</p>
 <p><code>表达式</code>：表达式是 PHP 最重要的基石。在 PHP 中，几乎所写的任何东西都是一个表达式。简单但却最精确的定义一个表达式的方式就是”任何有值的东西”。 如：$a = 5; $a = 5 + 3;</p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917160914195.png" alt="image-20200917160914195"></p>
-<h3 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h3><p><code>说明</code>：是+ - * / %</p>
+<h3 id="6-1算数运算符"><a href="#6-1算数运算符" class="headerlink" title="6.1算数运算符"></a>6.1算数运算符</h3><p><code>说明</code>：是+ - * / %</p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917160942096.png" alt="image-20200917160942096"></p>
-<h3 id="赋值运算符–"><a href="#赋值运算符–" class="headerlink" title="赋值运算符–="></a>赋值运算符–=</h3><p><code>说明</code>：就是给变量赋值的作用。</p>
+<h3 id="6-2赋值运算符–"><a href="#6-2赋值运算符–" class="headerlink" title="6.2赋值运算符–="></a>6.2赋值运算符–=</h3><p><code>说明</code>：就是给变量赋值的作用。</p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917161026708.png" alt="image-20200917161026708"></p>
-<h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><p><code>说明</code>：对操作数进行比较，&lt; &lt;= &gt; &gt;= == != === !== ，比较运算符的结果是有真(true)和假(false)</p>
+<h3 id="6-3比较运算符"><a href="#6-3比较运算符" class="headerlink" title="6.3比较运算符"></a>6.3比较运算符</h3><p><code>说明</code>：对操作数进行比较，&lt; &lt;= &gt; &gt;= == != === !== ，比较运算符的结果是有真(true)和假(false)</p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917161104653.png" alt="image-20200917161104653"></p>
-<h3 id="错误抑制符"><a href="#错误抑制符" class="headerlink" title="错误抑制符"></a>错误抑制符</h3><p><code>说明</code>：@，目的屏蔽一些不重要错误。</p>
+<h3 id="6-4错误抑制符"><a href="#6-4错误抑制符" class="headerlink" title="6.4错误抑制符"></a>6.4错误抑制符</h3><p><code>说明</code>：@，目的屏蔽一些不重要错误。</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//错误抑制符</span></span><br><span class="line">$a;</span><br><span class="line"><span class="keyword">echo</span> @$a;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="执行运算符"><a href="#执行运算符" class="headerlink" title="执行运算符"></a>执行运算符</h3><p><code>说明</code>：``，把数据用反引号括起来后，就是执行了</p>
+<h3 id="6-5执行运算符"><a href="#6-5执行运算符" class="headerlink" title="6.5执行运算符"></a>6.5执行运算符</h3><p><code>说明</code>：``，把数据用反引号括起来后，就是执行了</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$output = `ls -al`;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;pre&gt;<span class="subst">$output</span>&lt;/pre&gt;&quot;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="递增递减运算符"><a href="#递增递减运算符" class="headerlink" title="递增递减运算符"></a>递增递减运算符</h3><p><code>说明</code>：自己加一或自己减一，符号：++ –</p>
+<h3 id="6-6递增递减运算符"><a href="#6-6递增递减运算符" class="headerlink" title="6.6递增递减运算符"></a>6.6递增递减运算符</h3><p><code>说明</code>：自己加一或自己减一，符号：++ –</p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917161435040.png" alt="image-20200917161435040"></p>
-<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p><code>说明</code>：逻辑运算符也叫“短路运算符”, 认为写的只判断一边如果达成条件直接结束给结果</p>
+<h3 id="6-7逻辑运算符"><a href="#6-7逻辑运算符" class="headerlink" title="6.7逻辑运算符"></a>6.7逻辑运算符</h3><p><code>说明</code>：逻辑运算符也叫“短路运算符”, 认为写的只判断一边如果达成条件直接结束给结果</p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917161621372.png" alt="image-20200917161621372"></p>
-<h4 id="逻辑或："><a href="#逻辑或：" class="headerlink" title="逻辑或：||"></a>逻辑或：||</h4><p>当两边的操作数其中一边为真，结果就是真。</p>
+<h4 id="6-7-1逻辑或："><a href="#6-7-1逻辑或：" class="headerlink" title="6.7.1逻辑或：||"></a>6.7.1逻辑或：||</h4><p>当两边的操作数其中一边为真，结果就是真。</p>
 <p>当两边的操作数都为假时，结果就是假。</p>
 <p>当前左边的操作数为假时，才去右边判断操作数，如果为真，结果为真，如果为假，结果为假</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$a = <span class="number">1</span>;</span><br><span class="line">$b = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">if</span> ($a &lt; $b || $a == $b)&#123;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;true&#x27;</span>;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;false&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h4 id="逻辑与：-amp-amp"><a href="#逻辑与：-amp-amp" class="headerlink" title="逻辑与：&amp;&amp;"></a>逻辑与：&amp;&amp;</h4><p>当两边的操作数其中一边为假时，结果就是假</p>
+<h4 id="6-7-2逻辑与：-amp-amp"><a href="#6-7-2逻辑与：-amp-amp" class="headerlink" title="6.7.2逻辑与：&amp;&amp;"></a>6.7.2逻辑与：&amp;&amp;</h4><p>当两边的操作数其中一边为假时，结果就是假</p>
 <p>当两边的操作数都为真时，结果就是真</p>
 <p>当左边的操作数为真时，会去判断右边的操作，如果为真，结果为真，如果为假，结果为假。</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//逻辑与</span></span><br><span class="line"><span class="keyword">if</span>($a == $b &amp;&amp; $a &lt; <span class="number">2</span>)&#123;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;true&#x27;</span>;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;false&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h4 id="逻辑非："><a href="#逻辑非：" class="headerlink" title="逻辑非：!"></a>逻辑非：!</h4><p><code>说明</code>：取反，非真即假，非假即真</p>
+<h4 id="6-7-3逻辑非："><a href="#6-7-3逻辑非：" class="headerlink" title="6.7.3逻辑非：!"></a>6.7.3逻辑非：!</h4><p><code>说明</code>：取反，非真即假，非假即真</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//逻辑非</span></span><br><span class="line"><span class="keyword">if</span>(!($a &gt; $b))&#123;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;true&#x27;</span>;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;false&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="字符串连接符"><a href="#字符串连接符" class="headerlink" title="字符串连接符"></a>字符串连接符</h3><p><code>说明</code>：通过(.)或(.=)进行字符串的拼接</p>
+<h3 id="6-8字符串连接符"><a href="#6-8字符串连接符" class="headerlink" title="6.8字符串连接符"></a>6.8字符串连接符</h3><p><code>说明</code>：通过(.)或(.=)进行字符串的拼接</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//字符串连接</span></span><br><span class="line">$name = <span class="string">&#x27;h&#x27;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;Hello &#x27;</span>. $name;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h3><h4 id="位运算符的说明"><a href="#位运算符的说明" class="headerlink" title="位运算符的说明"></a>位运算符的说明</h4><p><code>说明</code>：作为了解的东西，就是对位进行操作，位说的是二进制的每个“位”，二进制共有32位。</p>
-<h4 id="二进制"><a href="#二进制" class="headerlink" title="二进制"></a>二进制</h4><p><code>说明</code>：二进制由0和1构成的一个32位的数字，逢二进一；</p>
-<h4 id="十进制和二进制的转换"><a href="#十进制和二进制的转换" class="headerlink" title="十进制和二进制的转换"></a>十进制和二进制的转换</h4><h3 id="数组运算符"><a href="#数组运算符" class="headerlink" title="数组运算符"></a>数组运算符</h3><p><code>说明</code>：就是对数组进行操作的方式</p>
+<h3 id="6-9位运算符"><a href="#6-9位运算符" class="headerlink" title="6.9位运算符"></a>6.9位运算符</h3><h4 id="6-9-1位运算符的说明"><a href="#6-9-1位运算符的说明" class="headerlink" title="6.9.1位运算符的说明"></a>6.9.1位运算符的说明</h4><p><code>说明</code>：作为了解的东西，就是对位进行操作，位说的是二进制的每个“位”，二进制共有32位。</p>
+<h4 id="6-9-2二进制"><a href="#6-9-2二进制" class="headerlink" title="6.9.2二进制"></a>6.9.2二进制</h4><p><code>说明</code>：二进制由0和1构成的一个32位的数字，逢二进一；</p>
+<h4 id="6-9-3十进制和二进制的转换"><a href="#6-9-3十进制和二进制的转换" class="headerlink" title="6.9.3十进制和二进制的转换"></a>6.9.3十进制和二进制的转换</h4><h3 id="6-10数组运算符"><a href="#6-10数组运算符" class="headerlink" title="6.10数组运算符"></a>6.10数组运算符</h3><p><code>说明</code>：就是对数组进行操作的方式</p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917162430695.png" alt="image-20200917162430695"></p>
 <p>其实就<code>三种</code>：联合（+）、等于（==，===）、不等于（!=,!==）</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$arr1 = <span class="keyword">array</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>);</span><br><span class="line">$arr2 = <span class="keyword">array</span>(<span class="number">5</span>=&gt;<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">0</span>=&gt;<span class="number">9</span>);</span><br><span class="line">var_dump($arr1+$arr2);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;br&gt;&quot;</span>;</span><br><span class="line"></span><br><span class="line">$arr1 = <span class="keyword">array</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>);</span><br><span class="line">$arr2 = <span class="keyword">array</span>(<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;3&#x27;</span>,<span class="string">&#x27;4&#x27;</span>,<span class="string">&#x27;5&#x27;</span>);</span><br><span class="line"><span class="keyword">if</span>($arr1 == $arr2)&#123;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;相等&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h3><p><code>说明</code>：括号优先，赋值最后</p>
+<h3 id="6-11运算符优先级"><a href="#6-11运算符优先级" class="headerlink" title="6.11运算符优先级"></a>6.11运算符优先级</h3><p><code>说明</code>：括号优先，赋值最后</p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917162931299.png" alt="image-20200917162931299"></p>
 <h2 id="第七章-流程控制"><a href="#第七章-流程控制" class="headerlink" title="第七章 流程控制"></a>第七章 流程控制</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917162959562.png" alt="image-20200917162959562"></p>
 <p>在流程控制中分两类：<code>分支结构</code>、<code>循环结构</code></p>
-<h3 id="分支结构—if语句"><a href="#分支结构—if语句" class="headerlink" title="分支结构—if语句"></a>分支结构—if语句</h3><p><code>语法</code>：</p>
+<h3 id="7-1分支结构—if语句"><a href="#7-1分支结构—if语句" class="headerlink" title="7.1分支结构—if语句"></a>7.1分支结构—if语句</h3><p><code>语法</code>：</p>
 <p>If(条件表达式){</p>
 <p>达成条件运行的代码；</p>
 <p>}</p>
@@ -844,7 +845,7 @@
 
 
 
-<h3 id="分支结构—ifelse语句"><a href="#分支结构—ifelse语句" class="headerlink" title="分支结构—ifelse语句"></a>分支结构—ifelse语句</h3><p><code>语法</code>：</p>
+<h3 id="7-2分支结构—ifelse语句"><a href="#7-2分支结构—ifelse语句" class="headerlink" title="7.2分支结构—ifelse语句"></a>7.2分支结构—ifelse语句</h3><p><code>语法</code>：</p>
 <p>If(条件表达式){</p>
 <p>​    达成条件运行的代码；</p>
 <p>}else{</p>
@@ -855,7 +856,7 @@
 
 
 
-<h3 id="分支结构—ifelseif"><a href="#分支结构—ifelseif" class="headerlink" title="分支结构—ifelseif"></a>分支结构—ifelseif</h3><p><code>语法</code>：</p>
+<h3 id="7-3分支结构—ifelseif"><a href="#7-3分支结构—ifelseif" class="headerlink" title="7.3分支结构—ifelseif"></a>7.3分支结构—ifelseif</h3><p><code>语法</code>：</p>
 <p>If(条件表达式1){</p>
 <p>达成条件1运行的代码；</p>
 <p>}elseif(条件表达式2){</p>
@@ -870,7 +871,7 @@
 
 
 
-<h3 id="分支结构—switch语句"><a href="#分支结构—switch语句" class="headerlink" title="分支结构—switch语句"></a>分支结构—switch语句</h3><p><code>语法</code>：</p>
+<h3 id="7-4分支结构—switch语句"><a href="#7-4分支结构—switch语句" class="headerlink" title="7.4分支结构—switch语句"></a>7.4分支结构—switch语句</h3><p><code>语法</code>：</p>
 <p>Switch(表达式){</p>
 <p>​    Case 条件1:</p>
 <p>​    达成条件1运行的语句;</p>
@@ -889,14 +890,14 @@
 
 
 
-<h3 id="分支结构的替代语法"><a href="#分支结构的替代语法" class="headerlink" title="分支结构的替代语法"></a>分支结构的替代语法</h3><p>If的替代语法：</p>
+<h3 id="7-5分支结构的替代语法"><a href="#7-5分支结构的替代语法" class="headerlink" title="7.5分支结构的替代语法"></a>7.5分支结构的替代语法</h3><p>If的替代语法：</p>
 <p>​    If(条件表达式):</p>
 <p>​        运行的代码;</p>
 <p>​        endif;</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>($num &lt;= <span class="number">5</span>):</span><br><span class="line">	<span class="keyword">echo</span> $num;</span><br><span class="line"><span class="keyword">endif</span>;</span><br></pre></td></tr></table></figure>
 
 <p>Ifelse 、Ifelseif、Switch</p>
-<h3 id="循环结构—while循环"><a href="#循环结构—while循环" class="headerlink" title="循环结构—while循环"></a>循环结构—while循环</h3><p><code>语法</code>：</p>
+<h3 id="7-6循环结构—while循环"><a href="#7-6循环结构—while循环" class="headerlink" title="7.6循环结构—while循环"></a>7.6循环结构—while循环</h3><p><code>语法</code>：</p>
 <p>​    变量初始化;</p>
 <p>​    While(条件表达式){</p>
 <p>​        达成条件运行的循环体;</p>
@@ -911,7 +912,7 @@
 
 
 
-<h3 id="循环结构—do-while循环"><a href="#循环结构—do-while循环" class="headerlink" title="循环结构—do..while循环"></a>循环结构—do..while循环</h3><p><code>语法</code>：</p>
+<h3 id="7-7循环结构—do-while循环"><a href="#7-7循环结构—do-while循环" class="headerlink" title="7.7循环结构—do..while循环"></a>7.7循环结构—do..while循环</h3><p><code>语法</code>：</p>
 <p>​    <code>变量的初始化</code>；</p>
 <p>​    Do{</p>
 <p>​        达成条件运行的代码;</p>
@@ -923,7 +924,7 @@
 
 
 
-<h3 id="循环结构—for循环"><a href="#循环结构—for循环" class="headerlink" title="循环结构—for循环"></a>循环结构—for循环</h3><p><code>语法</code>：</p>
+<h3 id="7-8循环结构—for循环"><a href="#7-8循环结构—for循环" class="headerlink" title="7.8循环结构—for循环"></a>7.8循环结构—for循环</h3><p><code>语法</code>：</p>
 <p>​    For(变量初始化;条件表达式;变量的变化){</p>
 <p>​    循环体;</p>
 <p>}</p>
@@ -935,16 +936,16 @@
 
 
 <p><code>图解</code>：</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917171523107.png" alt="image-20200917171306135"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917171306135.png" alt="image-20200917171306135"></p>
 <p><code>案例</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917171306135.png" alt="image-20200917171523107"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917171523107.png" alt="image-20200917171523107"></p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$i=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>($i&lt;=<span class="number">4</span>)</span><br><span class="line">&#123;	</span><br><span class="line">	$j=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>($j&lt;=<span class="number">4</span>)&#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&#x27;*&#x27;</span>;</span><br><span class="line">		$j++;</span><br><span class="line">	&#125;</span><br><span class="line">	$i++;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;&lt;br&gt;&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
 
 
-<h3 id="Break"><a href="#Break" class="headerlink" title="Break"></a>Break</h3><p><code>说明</code>：break的作用是退出（跳出）for、while、dowhile、switch语句</p>
+<h3 id="7-9Break"><a href="#7-9Break" class="headerlink" title="7.9Break"></a>7.9Break</h3><p><code>说明</code>：break的作用是退出（跳出）for、while、dowhile、switch语句</p>
 <p><code>案例</code>：输出1-100，在50的时候退出</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//输出1-100，在50的时候</span></span><br><span class="line"><span class="keyword">for</span>($i=<span class="number">1</span>;$i&lt;=<span class="number">100</span>;$i++)&#123;</span><br><span class="line">	<span class="keyword">echo</span> $i . <span class="string">&#x27;&lt;br&gt;&#x27;</span>;</span><br><span class="line">	<span class="keyword">if</span>($i==<span class="number">50</span>)&#123;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -952,18 +953,18 @@
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917193729829.png" alt="image-20200917193729829"></p>
 <p><code>each()</code>：获取数组中的键值对，并将指针下移。</p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200917193836091.png" alt="image-20200917193836091"></p>
-<h3 id="Continue"><a href="#Continue" class="headerlink" title="Continue"></a>Continue</h3><p><code>说明</code>：跳过某次循环</p>
+<h3 id="7-10Continue"><a href="#7-10Continue" class="headerlink" title="7.10Continue"></a>7.10Continue</h3><p><code>说明</code>：跳过某次循环</p>
 <p><code>案例</code>：输出1-50，然后在第25次时跳过。</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//输出1-50，然后在25次跳过</span></span><br><span class="line"><span class="keyword">for</span>($i=<span class="number">1</span>;$i&lt;=<span class="number">50</span>;$i++)&#123;</span><br><span class="line">	<span class="keyword">if</span>($i==<span class="number">25</span>)&#123;</span><br><span class="line">		<span class="keyword">continue</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">echo</span> $i. <span class="string">&quot;&lt;br&gt;&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="Break和continue区别"><a href="#Break和continue区别" class="headerlink" title="Break和continue区别"></a>Break和continue区别</h3><p>Break是直接结束当前循环，continue是跳过当次循环。</p>
+<h3 id="7-11Break和continue区别"><a href="#7-11Break和continue区别" class="headerlink" title="7.11Break和continue区别"></a>7.11Break和continue区别</h3><p>Break是直接结束当前循环，continue是跳过当次循环。</p>
 <p>这两个用法都有一个设置数字的方式，默认为1； 如：break 数字; continue 数字;</p>
 <p>数字代表退出或者跳过<strong>几个循环</strong>。</p>
 <p>如果循环不够会报致命错误。</p>
-<h3 id="Goto语句"><a href="#Goto语句" class="headerlink" title="Goto语句"></a>Goto语句</h3><p><code>说明</code>：goto语句就是在页面中的不同位置进行跳转.</p>
-<h3 id="Return语句"><a href="#Return语句" class="headerlink" title="Return语句"></a>Return语句</h3><p><code>说明</code>：return可以在函数内使用，也可以在页面中它位置使用。</p>
+<h3 id="7-12Goto语句"><a href="#7-12Goto语句" class="headerlink" title="7.12Goto语句"></a>7.12Goto语句</h3><p><code>说明</code>：goto语句就是在页面中的不同位置进行跳转.</p>
+<h3 id="7-13Return语句"><a href="#7-13Return语句" class="headerlink" title="7.13Return语句"></a>7.13Return语句</h3><p><code>说明</code>：return可以在函数内使用，也可以在页面中它位置使用。</p>
 <p>如果是在函数内使用，作用为停止当前函数的运行，还可以返回函数内的值</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">abc</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;Hello!&#x27;</span>;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;hh&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line">abc();</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -972,7 +973,7 @@
 
 
 
-<h3 id="文件引入（加载）"><a href="#文件引入（加载）" class="headerlink" title="文件引入（加载）"></a>文件引入（加载）</h3><p><code>说明</code>：文件的加载可以是PHP文件可以是HTML文件</p>
+<h3 id="7-14文件引入（加载）"><a href="#7-14文件引入（加载）" class="headerlink" title="7.14文件引入（加载）"></a>7.14文件引入（加载）</h3><p><code>说明</code>：文件的加载可以是PHP文件可以是HTML文件</p>
 <p>加载方式为：<code>include</code>、<code>require</code>、<code>include_once</code>、<code>require_once</code></p>
 <p> 加载进来是两种结果：文件内容加载进来并运行、获取return的数据</p>
 <p> 如果是加载内容：include ‘要加载进来文件的路径’;</p>
@@ -988,8 +989,8 @@
 <p>区别是：<code>错误级别</code>不一样，造成了运行出错后的结果不一样。</p>
 <p>Include如果出现错误，不影响程序的代码运行。</p>
 <p>Require如果出现错误，会影响程序的代码运行，不再往下执行</p>
-<h2 id="第八章-函数"><a href="#第八章-函数" class="headerlink" title="第八章 函数"></a>第八章 函数</h2><h3 id="函数介绍"><a href="#函数介绍" class="headerlink" title="函数介绍"></a>函数介绍</h3><p><code>说明</code>：函数的作用在于对一个功能的封装，封装后在别的页面中引入并调用，可以节省代码量，可以冗余。</p>
-<h4 id="函数的定义"><a href="#函数的定义" class="headerlink" title="函数的定义"></a>函数的定义</h4><p><code>Function</code> 函数名(【形参1】【,参数2】【,形参n……】){</p>
+<h2 id="第八章-函数"><a href="#第八章-函数" class="headerlink" title="第八章 函数"></a>第八章 函数</h2><h3 id="8-1函数介绍"><a href="#8-1函数介绍" class="headerlink" title="8.1函数介绍"></a>8.1函数介绍</h3><p><code>说明</code>：函数的作用在于对一个功能的封装，封装后在别的页面中引入并调用，可以节省代码量，可以冗余。</p>
+<h4 id="8-1-1函数的定义"><a href="#8-1-1函数的定义" class="headerlink" title="8.1.1函数的定义"></a>8.1.1函数的定义</h4><p><code>Function</code> 函数名(【形参1】【,参数2】【,形参n……】){</p>
 <p>​        要封装到函数的代码;</p>
 <p>​        【return 返回值】;</p>
 <p>}</p>
@@ -997,13 +998,13 @@
 
 
 
-<h4 id="函数的调用"><a href="#函数的调用" class="headerlink" title="函数的调用"></a>函数的调用</h4><p><code>说明</code>：直接使用需要调用的函数的名就可以了。</p>
+<h4 id="8-1-2函数的调用"><a href="#8-1-2函数的调用" class="headerlink" title="8.1.2函数的调用"></a>8.1.2函数的调用</h4><p><code>说明</code>：直接使用需要调用的函数的名就可以了。</p>
 <p>函数名(【实参1】【,实参2】【,实参n……】);</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">//2.调用函数并传递参数</span></span><br><span class="line">getSum(<span class="number">2</span>,<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
 
 
 
-<h4 id="函数的相关细节"><a href="#函数的相关细节" class="headerlink" title="函数的相关细节"></a>函数的相关细节</h4><p><code>1</code>.函数定义时的形参，不是一个具体的数值，而是需要接收“实参”的工具而已，形参必须是变量。</p>
+<h4 id="8-1-3函数的相关细节"><a href="#8-1-3函数的相关细节" class="headerlink" title="8.1.3函数的相关细节"></a>8.1.3函数的相关细节</h4><p><code>1</code>.函数定义时的形参，不是一个具体的数值，而是需要接收“实参”的工具而已，形参必须是变量。</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSum</span>(<span class="params">$num1,$num2</span>)</span></span><br></pre></td></tr></table></figure>
 
 
@@ -1018,49 +1019,49 @@
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getVal</span>(<span class="params">$num1,$num2</span>)</span>&#123;</span><br><span class="line">	$res1 = $num1+$num2;</span><br><span class="line">	$res2 = $num1-$num2;</span><br><span class="line">	<span class="keyword">return</span> $arr = <span class="keyword">array</span>($res1,$res2);</span><br><span class="line">&#125;</span><br><span class="line">$res = getVal(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">var_dump($res);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p><code>8</code>.返回值必须使用一个变量到函数的调用者这个位置进行接收。</p>
-<h3 id="函数的调用机制"><a href="#函数的调用机制" class="headerlink" title="函数的调用机制"></a>函数的调用机制</h3><h4 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h4><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getVal</span>(<span class="params">$num1,$num2</span>)</span>&#123;</span><br><span class="line">	$res = $num1+$num2;</span><br><span class="line">	<span class="keyword">return</span> $res;</span><br><span class="line">&#125;</span><br><span class="line">$res = getVal(<span class="number">10</span>,<span class="number">20</span>);</span><br><span class="line"><span class="keyword">echo</span> $res;</span><br><span class="line"><span class="meta">?&gt;</span>																	</span><br></pre></td></tr></table></figure>
+<h3 id="8-2函数的调用机制"><a href="#8-2函数的调用机制" class="headerlink" title="8.2函数的调用机制"></a>8.2函数的调用机制</h3><h4 id="8-2-1代码："><a href="#8-2-1代码：" class="headerlink" title="8.2.1代码："></a>8.2.1代码：</h4><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getVal</span>(<span class="params">$num1,$num2</span>)</span>&#123;</span><br><span class="line">	$res = $num1+$num2;</span><br><span class="line">	<span class="keyword">return</span> $res;</span><br><span class="line">&#125;</span><br><span class="line">$res = getVal(<span class="number">10</span>,<span class="number">20</span>);</span><br><span class="line"><span class="keyword">echo</span> $res;</span><br><span class="line"><span class="meta">?&gt;</span>																	</span><br></pre></td></tr></table></figure>
 
-<h4 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h4><p><code>1</code>.函数的调用者把实际的数据传递给函数的形参，这个时候的形参只能在函数内使用。</p>
+<h4 id="8-2-2说明："><a href="#8-2-2说明：" class="headerlink" title="8.2.2说明："></a>8.2.2说明：</h4><p><code>1</code>.函数的调用者把实际的数据传递给函数的形参，这个时候的形参只能在函数内使用。</p>
 <p><code>2</code>.函数在运行代码时会新建一个新空间来运行函数内的代码</p>
 <p><code>3</code>.运行代码后，如果有返回值，把结果返回给函数的调用者，这个时候运行函数的这个新的空间销毁</p>
-<h4 id="图解："><a href="#图解：" class="headerlink" title="图解："></a>图解：</h4><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/sss.png" alt="sss"></p>
-<h4 id="其他说明：引用传递"><a href="#其他说明：引用传递" class="headerlink" title="其他说明：引用传递"></a>其他说明：引用传递</h4><p><code>说明</code>：有的函数可以直接使用全局变量，这个时候是引用传递</p>
+<h4 id="8-2-3图解："><a href="#8-2-3图解：" class="headerlink" title="8.2.3图解："></a>8.2.3图解：</h4><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/sss.png" alt="sss"></p>
+<h4 id="8-2-4其他说明：引用传递"><a href="#8-2-4其他说明：引用传递" class="headerlink" title="8.2.4其他说明：引用传递"></a>8.2.4其他说明：引用传递</h4><p><code>说明</code>：有的函数可以直接使用全局变量，这个时候是引用传递</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$a = <span class="number">6</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">abc</span>(<span class="params">&amp;$a</span>)</span>&#123;</span><br><span class="line">	$a=<span class="number">3</span>;</span><br><span class="line">	<span class="keyword">echo</span> $a;</span><br><span class="line">&#125;</span><br><span class="line">abc($a);</span><br><span class="line"><span class="keyword">echo</span> $a;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/aaa-1603460098432.png" alt="aaa"></p>
-<h3 id="函数的封装性"><a href="#函数的封装性" class="headerlink" title="函数的封装性"></a>函数的封装性</h3><h4 id="封装的好处"><a href="#封装的好处" class="headerlink" title="封装的好处"></a>封装的好处</h4><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/dsfsfdsf.png" alt="dsfsfdsf"></p>
-<h3 id="可变函数"><a href="#可变函数" class="headerlink" title="可变函数"></a>可变函数</h3><p><code>说明</code>：就是一个变量如果加上括号，PHP的系统会解析成函数，这个变量的值必须是一个函数的名，否则报错，未定义了。</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/aaa.png" alt="aaa"></p>
+<h3 id="8-3函数的封装性"><a href="#8-3函数的封装性" class="headerlink" title="8.3函数的封装性"></a>8.3函数的封装性</h3><h4 id="8-3-2封装的好处"><a href="#8-3-2封装的好处" class="headerlink" title="8.3.2封装的好处"></a>8.3.2封装的好处</h4><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/dsfsfdsf.png" alt="dsfsfdsf"></p>
+<h3 id="8-4可变函数"><a href="#8-4可变函数" class="headerlink" title="8.4可变函数"></a>8.4可变函数</h3><p><code>说明</code>：就是一个变量如果加上括号，PHP的系统会解析成函数，这个变量的值必须是一个函数的名，否则报错，未定义了。</p>
 <p><code>案例</code>：</p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200918140429309.png" alt="image-20200918140429309"></p>
-<h3 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h3><p><code>说明</code>：在一个函数中调用另一个函数，这个时候称为“回调”;</p>
+<h3 id="8-5回调函数"><a href="#8-5回调函数" class="headerlink" title="8.5回调函数"></a>8.5回调函数</h3><p><code>说明</code>：在一个函数中调用另一个函数，这个时候称为“回调”;</p>
 <p><code>案例</code>：</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//回调函数</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSum</span>(<span class="params">$a,$b</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> sum($a,$b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">$num1,$num2</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> $num1+$num2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$res = getSum(<span class="number">3</span>,<span class="number">4</span>);</span><br><span class="line"><span class="keyword">echo</span> $res;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h3><p><code>说明</code>：匿名函数就是没有名称的函数，这个时候需要用一个变量来存储函数。</p>
+<h3 id="8-6匿名函数"><a href="#8-6匿名函数" class="headerlink" title="8.6匿名函数"></a>8.6匿名函数</h3><p><code>说明</code>：匿名函数就是没有名称的函数，这个时候需要用一个变量来存储函数。</p>
 <p><code>案例</code>：</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//普通方式</span></span><br><span class="line">$sum = <span class="function"><span class="keyword">function</span>(<span class="params">$num1,$num2</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> $num1+$num2;</span><br><span class="line">&#125;;</span><br><span class="line">$res = $sum(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line"><span class="keyword">echo</span> $res.<span class="string">&quot;&lt;br&gt;&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//回调方式</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSub</span>(<span class="params">$n1,$n2,$c</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> $c($n1,$n2);</span><br><span class="line">&#125;</span><br><span class="line">$res = getSub(<span class="number">3</span>,<span class="number">2</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$n1,$n2</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> $n1-$n2;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">echo</span> $res;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="内部函数"><a href="#内部函数" class="headerlink" title="内部函数"></a>内部函数</h3><p><code>说明</code>：在一个函数内部再定义函数，这个时候里面的函数只能在函数内使用，不能在外部使用，防止外部人调用函数，这种函数方式不多，面向对象中都是这种方式。</p>
+<h3 id="8-7内部函数"><a href="#8-7内部函数" class="headerlink" title="8.7内部函数"></a>8.7内部函数</h3><p><code>说明</code>：在一个函数内部再定义函数，这个时候里面的函数只能在函数内使用，不能在外部使用，防止外部人调用函数，这种函数方式不多，面向对象中都是这种方式。</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//内部函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getVal</span>(<span class="params">$n1,$n2</span>)</span>&#123;</span><br><span class="line">	<span class="comment">//需要制作一个 加法和 减法</span></span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">$n1,$n2</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> $n1+$n2;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">sub</span>(<span class="params">$n1,$n2</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> $n1-$n2;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">echo</span> sum($n1,$n2);</span><br><span class="line">	<span class="keyword">echo</span> sub($n1,$n2);</span><br><span class="line">&#125;</span><br><span class="line">getVal(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">sum(<span class="number">3</span>,<span class="number">5</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
 
 
-<h3 id="递归思想"><a href="#递归思想" class="headerlink" title="递归思想"></a>递归思想</h3><p><code>说明</code>：在一个函数内部再次有条件调用自己（当前函数），这个时候就称为“递归调用”，即自己调用自己。</p>
+<h3 id="8-8递归思想"><a href="#8-8递归思想" class="headerlink" title="8.8递归思想"></a>8.8递归思想</h3><p><code>说明</code>：在一个函数内部再次有条件调用自己（当前函数），这个时候就称为“递归调用”，即自己调用自己。</p>
 <p><code>代码</code>：</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">abc</span>(<span class="params">$a</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>($a &gt; <span class="number">2</span>)&#123;</span><br><span class="line">		abc(--$a);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">echo</span> $a; <span class="comment">//2 2 3</span></span><br><span class="line">&#125;</span><br><span class="line">abc(<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p><code>图解</code>：</p>
-<p><img src="/2020/09/26/php%E5%9F%BA%E7%A1%80/aaa-1600410816765.png" alt="aaa"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/aaa-1600410816765.png" alt="aaa"></p>
 <p><code>注意</code>：</p>
 <p><code>1</code>.递归调用必须有一个可以退出的条件，否则无法退出递归调用，就会成死归,也就是说必须逐渐的退出。</p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/aaaaa.png" alt="aaaaa"></p>
-<h3 id="网站布局的方式"><a href="#网站布局的方式" class="headerlink" title="网站布局的方式"></a>网站布局的方式</h3><h2 id="第九章-数组"><a href="#第九章-数组" class="headerlink" title="第九章 数组"></a>第九章 数组</h2><h3 id="数组的介绍"><a href="#数组的介绍" class="headerlink" title="数组的介绍"></a>数组的介绍</h3><p><code>说明</code>：一组（一堆）数据的集合，把多个数据进行组合，数组是由“元素”组成。</p>
+<h3 id="8-9网站布局的方式"><a href="#8-9网站布局的方式" class="headerlink" title="8.9网站布局的方式"></a>8.9网站布局的方式</h3><h2 id="第九章-数组"><a href="#第九章-数组" class="headerlink" title="第九章 数组"></a>第九章 数组</h2><h3 id="9-1数组的介绍"><a href="#9-1数组的介绍" class="headerlink" title="9.1数组的介绍"></a>9.1数组的介绍</h3><p><code>说明</code>：一组（一堆）数据的集合，把多个数据进行组合，数组是由“元素”组成。</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//方式一：</span></span><br><span class="line">$arr1 = <span class="keyword">array</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>);</span><br><span class="line">$arr2 = <span class="keyword">array</span>(<span class="string">&#x27;one&#x27;</span>,<span class="string">&#x27;two&#x27;</span>,<span class="string">&#x27;three&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
@@ -1074,7 +1075,7 @@
 
 
 
-<h3 id="数组的创建"><a href="#数组的创建" class="headerlink" title="数组的创建"></a>数组的创建</h3><h4 id="数组的分类"><a href="#数组的分类" class="headerlink" title="数组的分类"></a>数组的分类</h4><p><code>索引数组</code>：下标都是数字，且连续的递增的方式。</p>
+<h3 id="9-2数组的创建"><a href="#9-2数组的创建" class="headerlink" title="9.2数组的创建"></a>9.2数组的创建</h3><h4 id="数组的分类"><a href="#数组的分类" class="headerlink" title="数组的分类"></a>数组的分类</h4><p><code>索引数组</code>：下标都是数字，且连续的递增的方式。</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$arr1 = <span class="keyword">array</span>(<span class="number">3</span>,<span class="number">4</span>,<span class="number">56</span>,<span class="number">76</span>,<span class="number">7</span>,<span class="number">8</span>);</span><br><span class="line">var_dump($arr1);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p><code>关联数组</code>：下标都是字符串的</p>
@@ -1082,7 +1083,7 @@
 
 
 
-<h3 id="数组的使用"><a href="#数组的使用" class="headerlink" title="数组的使用"></a>数组的使用</h3><h4 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h4><p>​    获取到一个元素中的值；</p>
+<h3 id="9-3数组的使用"><a href="#9-3数组的使用" class="headerlink" title="9.3数组的使用"></a>9.3数组的使用</h3><h4 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h4><p>​    获取到一个元素中的值；</p>
 <p>​    写数组名(变量名)[下标];  //必须知道下标是什么，只能打印输出一个值</p>
 <h4 id="数组的遍历–遍历就是一个一个的自动获取"><a href="#数组的遍历–遍历就是一个一个的自动获取" class="headerlink" title="数组的遍历–遍历就是一个一个的自动获取"></a>数组的遍历–遍历就是一个一个的自动获取</h4><p>For循环遍历数组–只能遍历索引数组</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$arr1 = <span class="keyword">array</span>(<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>,<span class="string">&#x27;d&#x27;</span>);</span><br><span class="line">$arrlength = count($arr1);</span><br><span class="line">$maxoffset = $arrlength<span class="number">-1</span>;</span><br><span class="line"><span class="keyword">for</span>($i=<span class="number">0</span>;$i&lt;=$maxoffset;$i++)&#123;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&#x27;下标为：&#x27;</span> . $i . <span class="string">&#x27;=&gt;&#x27;</span>. $arr1[$i].<span class="string">&#x27;&lt;br&gt;&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
@@ -1099,7 +1100,7 @@
 
 
 
-<h3 id="几个数组函数"><a href="#几个数组函数" class="headerlink" title="几个数组函数"></a>几个数组函数</h3><p><code>list</code>()函数：</p>
+<h3 id="9-4几个数组函数"><a href="#9-4几个数组函数" class="headerlink" title="9.4几个数组函数"></a>9.4几个数组函数</h3><p><code>list</code>()函数：</p>
 <p>把数组中的值取出来给list中的变量，也就是说list中放变量，这个变量就可以获取数组的值；</p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20200918161243080.png" alt="image-20200918161243080"></p>
 <p>Count()：获取数组的长度</p>
@@ -1108,10 +1109,9 @@
 <p>print_r()：打印输出数组中键值对</p>
 <p>implode()：通过一个分隔符链接数组成为字符串</p>
 <p>explode()：通过个分割符把一个字符串分割成数组</p>
-<h3 id="二维数组及多维"><a href="#二维数组及多维" class="headerlink" title="二维数组及多维"></a>二维数组及多维</h3><p>在弱类型语言中是没有具体的一个创建多维数组的函数或变量等，通过一维数组的创建方式来组合成二维或多维数组。</p>
+<h3 id="9-5二维数组及多维"><a href="#9-5二维数组及多维" class="headerlink" title="9.5二维数组及多维"></a>9.5二维数组及多维</h3><p>在弱类型语言中是没有具体的一个创建多维数组的函数或变量等，通过一维数组的创建方式来组合成二维或多维数组。</p>
 <p>创建方式：一个数组的元素又是另一个数组，这个时候称为”二维数组“，如果一直往下的元素还是数组，这个时候称为”多维数组“.</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//创建二维数组</span></span><br><span class="line">$arr = <span class="keyword">array</span>(</span><br><span class="line">	<span class="number">0</span>=&gt;<span class="keyword">array</span>(<span class="string">&#x27;name&#x27;</span>=&gt;<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;age&#x27;</span>=&gt;<span class="number">16</span>,<span class="string">&#x27;sex&#x27;</span>=<span class="string">&#x27;boy&#x27;</span>);</span><br><span class="line">	<span class="number">1</span>=&gt;<span class="keyword">array</span>(<span class="string">&#x27;name&#x27;</span>=&gt;<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;age&#x27;</span>=&gt;<span class="number">11</span>,<span class="string">&#x27;sex&#x27;</span>=&gt;<span class="string">&#x27;girl&#x27;</span>);</span><br><span class="line">)</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
 
 ]]></content>
       <categories>
