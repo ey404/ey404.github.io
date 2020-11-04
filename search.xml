@@ -482,6 +482,20 @@
 <li>解题</li>
 </ul>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201022201125238.png" alt="image-20201022203949592"></p>
+<h2 id="网页跳转方式二"><a href="#网页跳转方式二" class="headerlink" title="网页跳转方式二"></a>网页跳转方式二</h2><ul>
+<li>题目</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027143812248.png" alt="image-20201027143812248"></p>
+<ul>
+<li>分析</li>
+</ul>
+<blockquote>
+<p>页面跳转很快，用burp抓包就可以了</p>
+</blockquote>
+<ul>
+<li>解题</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027143859103.png" alt="image-20201027143859103"></p>
 <h2 id="MD5简单碰撞器"><a href="#MD5简单碰撞器" class="headerlink" title="MD5简单碰撞器"></a>MD5简单碰撞器</h2><ul>
 <li>题目：</li>
 </ul>
@@ -550,6 +564,24 @@
 <p>把admin base64加密一下上传即可得到flag</p>
 </blockquote>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024195820163.png" alt="image-20201024195820163"></p>
+<h2 id="MD5加强碰撞器"><a href="#MD5加强碰撞器" class="headerlink" title="MD5加强碰撞器"></a>MD5加强碰撞器</h2><ul>
+<li>题目</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027135547721.png" alt="image-20201027135547721"></p>
+<blockquote>
+<p>源代码：</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">error_reporting(<span class="number">0</span>);</span><br><span class="line">header(<span class="string">&quot;Content-Type: text/html; charset=utf-8&quot;</span>);</span><br><span class="line">session_start();</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">isset</span>($_SESSION[<span class="string">&#x27;CHVGCGMM_login&#x27;</span>])) &#123;</span><br><span class="line">    header(<span class="string">&#x27;Location: panel.php&#x27;</span>);</span><br><span class="line">    <span class="keyword">die</span>(<span class="string">&#x27;登录成功！&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$p_username = $_POST[<span class="string">&#x27;username&#x27;</span>];</span><br><span class="line">$p_password = $_POST[<span class="string">&#x27;password&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">isset</span>($p_username) &amp;&amp; <span class="keyword">isset</span>($p_password)) &#123;</span><br><span class="line">    <span class="keyword">if</span> ($p_username == $p_password) <span class="keyword">die</span>(<span class="string">&#x27;用户名与密码不能相同！&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (md5($p_password) === md5($p_username)) &#123;</span><br><span class="line">        $_SESSION[<span class="string">&#x27;CHVGCGMM_login&#x27;</span>] = $p_username;</span><br><span class="line">        header(<span class="string">&#x27;Location: panel.php&#x27;</span>);</span><br><span class="line">        <span class="keyword">die</span>(<span class="string">&#x27;登录成功！&#x27;</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">die</span>(<span class="string">&#x27;密码不正确！&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>分析</li>
+</ul>
+<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line">当传入的值不是字符串而是数组的时候，md5（）函数不会报错，继续执行下去强等于<span class="comment">===成立</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>解题</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201027140513028.png" alt="image-20201027140513028"></p>
 ]]></content>
       <categories>
         <category>CTF</category>
