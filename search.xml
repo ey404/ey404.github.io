@@ -1756,10 +1756,12 @@
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210306171322015.png" alt="image-20210306171322015"></p>
 ]]></content>
       <categories>
-        <category>网络安全</category>
+        <category>内网渗透</category>
       </categories>
       <tags>
-        <tag>内网渗透</tag>
+        <tag>红队</tag>
+        <tag>域</tag>
+        <tag>攻防</tag>
       </tags>
   </entry>
 </search>
