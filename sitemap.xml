@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ey404.github.io/2021/03/08/%E8%AE%B0%E4%B8%80%E6%AC%A1IPC-%E6%B8%97%E9%80%8F/</loc>
+    
+    <lastmod>2021-03-08</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ey404.github.io/2021/03/06/ATT-CK%E7%BA%A2%E9%98%9F%E5%AE%9E%E6%88%98-%E4%B8%80/</loc>
     
     <lastmod>2021-03-08</lastmod>
@@ -152,6 +159,20 @@
   
   <url>
     <loc>https://ey404.github.io/tags/%E6%94%BB%E9%98%B2/</loc>
+    <lastmod>2021-03-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ey404.github.io/tags/IPC/</loc>
+    <lastmod>2021-03-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ey404.github.io/tags/shell/</loc>
     <lastmod>2021-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
