@@ -1728,7 +1728,7 @@
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210306162703717.png" alt="image-20210306162703717"></p>
 <h3 id="psexec使用凭证登陆到其他主机"><a href="#psexec使用凭证登陆到其他主机" class="headerlink" title="psexec使用凭证登陆到其他主机"></a>psexec使用凭证登陆到其他主机</h3><p>使用SMB建立连接</p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210306163335209.png" alt="image-20210306163335209"></p>
-<p>使用psexec登陆Server2009</p>
+<p>使用psexec登陆Server2003</p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210306163802428.png" alt="image-20210306163802428"></p>
 <p>Server03这里就登陆成功了</p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210306165923860.png" alt="image-20210306165923860"></p>
