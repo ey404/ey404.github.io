@@ -2006,4 +2006,259 @@
         <tag>面向对象</tag>
       </tags>
   </entry>
+  <entry>
+    <title>【内网渗透学习笔记】01、端口探测</title>
+    <url>/2021/04/01/intranet01/</url>
+    <content><![CDATA[<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p><strong>端口探测在渗透测试中信息收集以及威胁情报领域都有着很重要的应用</strong></p>
+<blockquote>
+<p>一个IP地址共有65535个端口，端口由操作系统分配管理的，每个端口按照协议又可以分为两种类型：TCP端口、UDP端口。一般使用<code>netstat</code>命令来查看系统端口的使用情况。</p>
+</blockquote>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">netstat -ano</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401100018558.png" alt="image-20210401100018558"></p>
+<blockquote>
+<p>在<code>0~65535</code>这些端口中，<code>0~1023</code>这1024个端口是系统的的保留端口，为一些关键服务所留的。想要绑定这些端口，需要具备系统的最高权限，而其它的端口只需要用户权限即可。 </p>
+</blockquote>
+<h2 id="端口扫描工具"><a href="#端口扫描工具" class="headerlink" title="端口扫描工具"></a>端口扫描工具</h2><ul>
+<li>nmap</li>
+</ul>
+<p>nmap是一个端口扫描器，用于主机发现、端口扫描、版本探测、OS系统检测等，支持多种模式扫描。</p>
+<p>几种常见扫描模式：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-sT		TCP扫描</span><br><span class="line">-sS		SYN扫描</span><br><span class="line">-sA		ACK扫描</span><br><span class="line">-sF		FIN扫描</span><br><span class="line">-sU		UDP扫描</span><br><span class="line">-sR		RPC扫描</span><br><span class="line">-sP		ICMP扫描</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>zmap</li>
+</ul>
+<p>Zmap是美国密歇根大学研究者开发出一款工具。在第22届USENIX安全研讨会，以超过nmap 1300倍的扫描速度声名鹊起。相比大名鼎鼎的nmap全网扫描速度是他最大的亮点。在千兆网卡状态下，45分钟内扫描全网络IPv4地址。</p>
+<p><code>example</code>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">zmap -p 80 (scan the Internet for hosts on tcp&#x2F;80 and output to stdout)</span><br><span class="line">zmap -N 5 -B 10M -p 80 (find 5 HTTP servers, scanning at 10 Mb&#x2F;s)</span><br><span class="line">zmap -p 80 10.0.0.0&#x2F;8 192.168.0.0&#x2F;16 -o (scan both subnets on tcp&#x2F;80)</span><br><span class="line">zmap -p 80 1.2.3.4 10.0.0.3 (scan 1.2.3.4, 10.0.0.3 on tcp&#x2F;80)</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>massscan</li>
+</ul>
+<p>masscan号称是世界上最快的扫描软件，可以在3分钟内扫描整个互联网端口。masscan不建立完整的TCP连接，收到SYN/ACK之后，发送RST结束连接。</p>
+<p><code>example</code>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">masscan -p80,8000-8100 10.0.0.0&#x2F;8 --rate&#x3D;10000</span><br><span class="line">scan some web ports on 10.x.x.x at 10kpps</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>arping</li>
+</ul>
+<p>arping用来向局域网内的其它主机发送ARP请求命令，它可以用来测试局域网内的某个IP是否已经被使用。</p>
+<p><code>usage</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">arping [-AbDfhqUV] [-c count] [-w deadline] [-s source] -I interface destination</span><br><span class="line">##</span><br><span class="line">-A：与-U参数类时，使用ARP REPLY包而非ARP REQUEST包</span><br><span class="line">-b：发送以太网广播帧，开始时使用广播地址，结束时使用单播地址</span><br><span class="line">-c:	发送指定的count个ARP REQUEST包后停止。</span><br><span class="line">-D:	用来检测IP地址有没有冲突，没有冲突返回0</span><br><span class="line">-f：收到的一个响应包后退出</span><br><span class="line">-h：显示帮助页</span><br><span class="line">-I：用来发送ARP REQUEST包的网络设备的名称</span><br><span class="line">-q:	quite模式，不显示输出</span><br><span class="line">-U：更新别的主机的ARP CACHE列表中的本机信息，不需要响应</span><br><span class="line">-V:	显示arping的版本号</span><br><span class="line">-w：设置超时时间，单位为秒</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>fping</li>
+</ul>
+<p>fping程序类似于ping（ping是通过ICMP[网络控制信息协议]协议回复请求以检测主机是否存在）</p>
+<p><code>example</code>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">fping -ag 10.7.0.0&#x2F;16 &gt; alive.txt</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>netdiscover</li>
+</ul>
+<p>netdiscover专用的二层发现工具。拥有主动和被动发现两种方式。</p>
+<p><code>usage</code>：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">netdiscover</span> <span class="selector-attr">[-i device]</span> <span class="selector-attr">[-r range | -l file | -p]</span> <span class="selector-attr">[-m file]</span> <span class="selector-attr">[-F filter]</span> <span class="selector-attr">[-s time]</span> <span class="selector-attr">[-c count]</span> <span class="selector-attr">[-n node]</span> <span class="selector-attr">[-dfPLNS]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>nbtscan</li>
+</ul>
+<p>nbtscan在局域网中可以获取到PC的真实IP地址和MAC地址。</p>
+<p><code>usage</code>：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">nbtscan</span> <span class="selector-attr">[-v]</span> <span class="selector-attr">[-d]</span> <span class="selector-attr">[-e]</span> <span class="selector-attr">[-l]</span> <span class="selector-attr">[-t timeout]</span> <span class="selector-attr">[-b bandwidth]</span> <span class="selector-attr">[-r]</span> <span class="selector-attr">[-q]</span> <span class="selector-attr">[-s separator]</span> <span class="selector-attr">[-m retransmits]</span> (-f filename)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="基于MSF的内网主机探测"><a href="#基于MSF的内网主机探测" class="headerlink" title="基于MSF的内网主机探测"></a>基于MSF的内网主机探测</h2><p>使用msf进行反弹shell进行内网渗透时，通过msf自带的扫描模块进行快速扫描。</p>
+<p>主机存活探测：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">auxiliary&#x2F;scanner&#x2F;discovery&#x2F;arp_sweep   ARP扫描 </span><br><span class="line">auxiliary&#x2F;scanner&#x2F;discovery&#x2F;udp_sweep   UDP扫描 </span><br><span class="line">auxiliary&#x2F;scanner&#x2F;netbios&#x2F;nbname        NETBIOS扫描 </span><br><span class="line">auxiliary&#x2F;scanner&#x2F;snmp&#x2F;snmp_enum        SNMP扫描 </span><br><span class="line">auxiliary&#x2F;scanner&#x2F;smb&#x2F;smb_version       SMB扫描 </span><br></pre></td></tr></table></figure>
+
+<p>端口扫描：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">auxiliary&#x2F;scanner&#x2F;portscan&#x2F;ack          TCP ACK端口扫描 </span><br><span class="line">auxiliary&#x2F;scanner&#x2F;portscan&#x2F;ftpbounce    FTP bounce端口扫描 </span><br><span class="line">auxiliary&#x2F;scanner&#x2F;portscan&#x2F;syn         SYN端口扫描 </span><br><span class="line">auxiliary&#x2F;scanner&#x2F;portscan&#x2F;tcp          TCP端口扫描   </span><br><span class="line">auxiliary&#x2F;scanner&#x2F;portscan&#x2F;xmas         TCP XMas端口扫描 </span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="常见的端口服务"><a href="#常见的端口服务" class="headerlink" title="常见的端口服务"></a>常见的端口服务</h2><p>每一个服务都有一个固定的默认端口最常见：</p>
+<ul>
+<li>系统端口</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>端口</th>
+<th>服务</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>21</td>
+<td>ftp</td>
+</tr>
+<tr>
+<td>22</td>
+<td>ssh</td>
+</tr>
+<tr>
+<td>23</td>
+<td>telnet</td>
+</tr>
+<tr>
+<td>25</td>
+<td>smtp</td>
+</tr>
+<tr>
+<td>80</td>
+<td>http</td>
+</tr>
+<tr>
+<td>110</td>
+<td>pop3</td>
+</tr>
+<tr>
+<td>135</td>
+<td>rpc</td>
+</tr>
+<tr>
+<td>139</td>
+<td>netbios</td>
+</tr>
+<tr>
+<td>445</td>
+<td>smb</td>
+</tr>
+</tbody></table>
+<ul>
+<li>常见的Web端口</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>端口</th>
+<th>服务</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>80</td>
+<td>apache/nginx</td>
+</tr>
+<tr>
+<td>8080</td>
+<td>tomcat</td>
+</tr>
+<tr>
+<td>5000</td>
+<td>flask</td>
+</tr>
+<tr>
+<td>3000</td>
+<td>nodejs</td>
+</tr>
+<tr>
+<td>8000</td>
+<td>django</td>
+</tr>
+<tr>
+<td>3000</td>
+<td>ruby on rails</td>
+</tr>
+<tr>
+<td>8080</td>
+<td>beego</td>
+</tr>
+<tr>
+<td>8888</td>
+<td>react</td>
+</tr>
+</tbody></table>
+<ul>
+<li>常见的各类数据库端口</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>端口</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>3306</td>
+<td>mysql</td>
+</tr>
+<tr>
+<td>1521</td>
+<td>oracle</td>
+</tr>
+<tr>
+<td>1433</td>
+<td>SQL-server</td>
+</tr>
+<tr>
+<td>5432</td>
+<td>PostgreSQL</td>
+</tr>
+<tr>
+<td>50000</td>
+<td>DB2</td>
+</tr>
+<tr>
+<td>5000</td>
+<td>sybase</td>
+</tr>
+<tr>
+<td>6379</td>
+<td>Redis</td>
+</tr>
+<tr>
+<td>27017</td>
+<td>mongoDB</td>
+</tr>
+<tr>
+<td>11211</td>
+<td>memcached</td>
+</tr>
+<tr>
+<td>60000</td>
+<td>HBase</td>
+</tr>
+</tbody></table>
+<h2 id="端口探测的原理"><a href="#端口探测的原理" class="headerlink" title="端口探测的原理"></a>端口探测的原理</h2><p>端口探测的状态</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">OPEN</span><br><span class="line">CLOSED</span><br><span class="line">FILTERD</span><br></pre></td></tr></table></figure>
+
+<p> <code>OPEN</code>：</p>
+<ul>
+<li>这个端口是开放的，可以被访问</li>
+<li>这个端口上有进程（应用程序监听）</li>
+</ul>
+<p><code>Filtered</code>：</p>
+<ul>
+<li>这个端口不会返回任何东西</li>
+<li>可能是被防火墙给过滤了</li>
+</ul>
+<p><code>Closed</code>：</p>
+<ul>
+<li>这个端口是可以被访问的</li>
+<li>这个端口上没有程序监听，但是会返回包</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>端口探测有着多种多样的方式，手动探测和nmap适合对一个单一或有限主机的扫描，而zmap、massscan适用于对于一整个C段或者整个内网的扫描。</p>
+]]></content>
+      <categories>
+        <category>内网学习笔记</category>
+      </categories>
+      <tags>
+        <tag>红队</tag>
+        <tag>端口探测</tag>
+        <tag>学习笔记</tag>
+        <tag>内网渗透</tag>
+      </tags>
+  </entry>
 </search>
