@@ -2063,6 +2063,15 @@
 
 
 <ul>
+<li>arp-scan</li>
+</ul>
+<p>发送ARP查询到指定的目标，并显示接收到的信息。</p>
+<p><code>example</code>:</p>
+<figure class="highlight brainfuck"><table><tr><td class="code"><pre><span class="line"><span class="comment">arp</span><span class="literal">-</span><span class="comment">scan</span> --<span class="comment">interface=eth0</span> --<span class="comment">localhost</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
 <li>netdiscover</li>
 </ul>
 <p>netdiscover专用的二层发现工具。拥有主动和被动发现两种方式。</p>
