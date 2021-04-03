@@ -6,7 +6,7 @@
   <link href="https://ey404.github.io/atom.xml" rel="self"/>
   
   <link href="https://ey404.github.io/"/>
-  <updated>2021-04-01T12:18:49.130Z</updated>
+  <updated>2021-04-03T07:00:53.415Z</updated>
   <id>https://ey404.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>intranet03</title>
+    <link href="https://ey404.github.io/2021/04/03/intranet03/"/>
+    <id>https://ey404.github.io/2021/04/03/intranet03/</id>
+    <published>2021-04-03T06:59:27.000Z</published>
+    <updated>2021-04-03T07:00:53.415Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="ʵ�ֹ���"><a href="#ʵ�ֹ���" class="headerlink" title="ʵ�ֹ���"></a>ʵ�ֹ���</h2><ol><li>�½�һ�������û�</li></ol><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">net</span> user hacker$ P@ssw0rd /add</span><br><span class="line"><span class="built_in">net</span> localgroup administrators hacker$ /add</span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403141500963.png" alt="image-20210403141500963"></p><blockquote><p>�û�����<code>$</code>��β��net user���޷���ȡ�������ڿ�����廹�ܿ���</p></blockquote><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403141948213.png" alt="image-20210403141948213"></p><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142029285.png" alt="image-20210403142029285"></p><ol start="2"><li>�ҵ�ע���·����<code>HKEY_LOCAL_MACHINE\SAM\SAM\Domains\Account\Users\Names</code>��<code>hacker$</code></li></ol><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142229174.png" alt="image-20210403142229174"></p><ol start="3"><li>��ʱ������Ա<code>Administrator</code>���Ͷ�Ӧ��Fֵ���Ƶ�<code>hacker$</code>���Ͷ�Ӧ��Fֵ</li></ol><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142509715.png" alt="image-20210403142509715"></p><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142607007.png" alt="image-20210403142607007"></p><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142807987.png" alt="image-20210403142807987"></p><ol start="4"><li>��hacker$��Ӧ������ֵ������</li></ol><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403143059455.png" alt="image-20210403143059455"></p><ol start="5"><li>�����н��û�ɾ��</li></ol><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">net</span> user hacker$ /<span class="built_in">del</span></span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403143345249.png" alt="image-20210403143345249"></p><ol start="6"><li>Ȼ���ٽ���������reg�ϲ�</li></ol><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403143444798.png" alt="image-20210403143444798"></p><ol start="7"><li>�ϲ����net user�޷��г����û�����������еı����û�����Ҳ�����ڸ��û�</li></ol><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403145457335.png" alt="image-20210403145457335"></p><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403145515913.png" alt="image-20210403145515913"></p><ol start="8"><li>Զ�̵�½�ɹ�</li></ol><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403145606553.png" alt="image-20210403145606553"></p><h2 id="С��"><a href="#С��" class="headerlink" title="С��"></a>С��</h2><p>��������û������Բ鿴ע���<code>HKEY_LOCAL_MACHINE\SAM\SAM\Domains\Account\Users\</code>,��ʱ�򿴲�������Ϊû��Ȩ�ޣ���Ҫ����Ȩ�ޡ������û��ĵ�½��¼����ͨ���鿴��־��ȡ��</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;ʵ�ֹ���&quot;&gt;&lt;a href=&quot;#ʵ�ֹ���&quot; class=&quot;headerlink&quot; title=&quot;ʵ�ֹ���&quot;&gt;&lt;/a&gt;ʵ�ֹ���&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;�½�һ�������û�&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highligh</summary>
+      
+    
+    
+    
+    <category term="����ѧϰ�ʼ�" scheme="https://ey404.github.io/categories/%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%D1%A7%CF%B0%EF%BF%BD%CA%BC%EF%BF%BD/"/>
+    
+    
+    <category term="�����û�" scheme="https://ey404.github.io/tags/%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BDu%EF%BF%BD/"/>
+    
+    <category term="���" scheme="https://ey404.github.io/tags/%EF%BF%BD%EF%BF%BD%EF%BF%BD/"/>
+    
+    <category term="ѧϰ�ʼ�" scheme="https://ey404.github.io/tags/%D1%A7%CF%B0%EF%BF%BD%CA%BC%EF%BF%BD/"/>
+    
+    <category term="������͸" scheme="https://ey404.github.io/tags/%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%CD%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>【内网渗透学习笔记】02、内网渗透中的certutil</title>

