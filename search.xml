@@ -2369,62 +2369,62 @@
       </tags>
   </entry>
   <entry>
-    <title>intranet03</title>
+    <title>【内网渗透学习笔记】03、Windows建立隐藏用户</title>
     <url>/2021/04/03/intranet03/</url>
-    <content><![CDATA[<h2 id="ʵ�ֹ���"><a href="#ʵ�ֹ���" class="headerlink" title="ʵ�ֹ���"></a>ʵ�ֹ���</h2><ol>
-<li>�½�һ�������û�</li>
+    <content><![CDATA[<h2 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h2><ol>
+<li>新建一个特殊用户</li>
 </ol>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> user hacker$ P@ssw0rd /add</span><br><span class="line"><span class="built_in">net</span> localgroup administrators hacker$ /add</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403141500963.png" alt="image-20210403141500963"></p>
 <blockquote>
-<p>�û�����<code>$</code>��β��net user���޷���ȡ�������ڿ�����廹�ܿ���</p>
+<p>用户名以<code>$</code>结尾在net user下无法获取，但是在控制面板还能看到</p>
 </blockquote>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403141948213.png" alt="image-20210403141948213"></p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142029285.png" alt="image-20210403142029285"></p>
 <ol start="2">
-<li>�ҵ�ע���·����<code>HKEY_LOCAL_MACHINE\SAM\SAM\Domains\Account\Users\Names</code>��<code>hacker$</code></li>
+<li>找到注册表路径下<code>HKEY_LOCAL_MACHINE\SAM\SAM\Domains\Account\Users\Names</code>的<code>hacker$</code></li>
 </ol>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142229174.png" alt="image-20210403142229174"></p>
 <ol start="3">
-<li>��ʱ������Ա<code>Administrator</code>���Ͷ�Ӧ��Fֵ���Ƶ�<code>hacker$</code>���Ͷ�Ӧ��Fֵ</li>
+<li>此时将管理员<code>Administrator</code>类型对应的F值复制到<code>hacker$</code>类型对应的F值</li>
 </ol>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142509715.png" alt="image-20210403142509715"></p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142607007.png" alt="image-20210403142607007"></p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142807987.png" alt="image-20210403142807987"></p>
 <ol start="4">
-<li>��hacker$��Ӧ������ֵ������</li>
+<li>将hacker$对应的两个值导出来</li>
 </ol>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403143059455.png" alt="image-20210403143059455"></p>
 <ol start="5">
-<li>�����н��û�ɾ��</li>
+<li>命令行将用户删除</li>
 </ol>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> user hacker$ /<span class="built_in">del</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403143345249.png" alt="image-20210403143345249"></p>
 <ol start="6">
-<li>Ȼ���ٽ���������reg�ϲ�</li>
+<li>然后再将导出来的reg合并</li>
 </ol>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403143444798.png" alt="image-20210403143444798"></p>
 <ol start="7">
-<li>�ϲ����net user�޷��г����û�����������еı����û�����Ҳ�����ڸ��û�</li>
+<li>合并完后net user无法列出此用户，控制面板中的本地用户和组也不存在该用户</li>
 </ol>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403145457335.png" alt="image-20210403145457335"></p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403145515913.png" alt="image-20210403145515913"></p>
 <ol start="8">
-<li>Զ�̵�½�ɹ�</li>
+<li>远程登陆成功</li>
 </ol>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403145606553.png" alt="image-20210403145606553"></p>
-<h2 id="С��"><a href="#С��" class="headerlink" title="С��"></a>С��</h2><p>��������û������Բ鿴ע���<code>HKEY_LOCAL_MACHINE\SAM\SAM\Domains\Account\Users\</code>,��ʱ�򿴲�������Ϊû��Ȩ�ޣ���Ҫ����Ȩ�ޡ������û��ĵ�½��¼����ͨ���鿴��־��ȡ��</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>针对隐藏用户，可以查看注册表<code>HKEY_LOCAL_MACHINE\SAM\SAM\Domains\Account\Users\</code>,有时候看不到是因为没有权限，需要分配权限。隐藏用户的登陆记录可以通过查看日志获取。</p>
 ]]></content>
       <categories>
-        <category>����ѧϰ�ʼ�</category>
+        <category>内网学习笔记</category>
       </categories>
       <tags>
-        <tag>�����û�</tag>
-        <tag>���</tag>
-        <tag>ѧϰ�ʼ�</tag>
-        <tag>������͸</tag>
+        <tag>红队</tag>
+        <tag>学习笔记</tag>
+        <tag>内网渗透</tag>
+        <tag>隐藏用户</tag>
       </tags>
   </entry>
 </search>
