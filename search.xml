@@ -931,76 +931,76 @@
       </tags>
   </entry>
   <entry>
-    <title>��������͸ѧϰ�ʼǡ�06����Ϣ�ռ�</title>
+    <title>【内网渗透学习笔记】06、信息收集</title>
     <url>/2021/04/12/intranet06/</url>
-    <content><![CDATA[<h2 id="j��"><a href="#j��" class="headerlink" title="ǰ��"></a>ǰ��</h2><p><em><u><strong>��͸�ı�������Ϣ�ռ�</strong></u></em></p>
-<h2 id="������Ϣ�ռ�"><a href="#������Ϣ�ռ�" class="headerlink" title="������Ϣ�ռ�"></a>������Ϣ�ռ�</h2><blockquote>
-<p>��������ϵͳ���û�Ȩ�ޡ�����ip�Ρ�ɱ���������˿ڿ���……</p>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><em><u><strong>渗透的本质是信息收集</strong></u></em></p>
+<h2 id="本机信息收集"><a href="#本机信息收集" class="headerlink" title="本机信息收集"></a>本机信息收集</h2><blockquote>
+<p>包括操作系统、用户权限、内网ip段、杀毒软件、端口开放……</p>
 </blockquote>
 <ul>
-<li>����ip��</li>
+<li>内网ip段</li>
 </ul>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ipconfig</span> /all</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412150323445.png" alt="image-20210412150323445"></p>
 <ul>
-<li>��ѯ����ϵͳ��������Ϣ</li>
+<li>查询操作系统、补丁信息</li>
 </ul>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">systeminfo</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412150423634.png" alt="image-20210412150423634"></p>
 <ul>
-<li>��ѯ��ϵ�ܹ�</li>
+<li>查询体系架构</li>
 </ul>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">%PROCESSOR_ARCHITECTURE%</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412150527487.png" alt="image-20210412150527487"></p>
 <ul>
-<li>��ѯ�Ѱ�װ�������汾��Ϣ</li>
+<li>查询已安装软件及版本信息</li>
 </ul>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">wmic product get name,version</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>��ѯ��������</li>
+<li>查询本机服务</li>
 </ul>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">wmic service list brief</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412150723699.png" alt="image-20210412150723699"></p>
 <ul>
-<li>��ѯ����</li>
+<li>查询进程</li>
 </ul>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">tasklist</span><br><span class="line">wmic process list brief</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412150818954.png" alt="image-20210412150818954"></p>
 <blockquote>
-<p>������ɱ����������</p>
+<p>常见的杀毒软件进程</p>
 </blockquote>
 <table>
 <thead>
 <tr>
-<th>������</th>
-<th>����</th>
+<th>进程名</th>
+<th>软件</th>
 </tr>
 </thead>
 <tbody><tr>
 <td>360sd.exe</td>
-<td>360ɱ��</td>
+<td>360杀毒</td>
 </tr>
 <tr>
 <td>360tray.exe</td>
-<td>360ʵʱ����</td>
+<td>360实时保护</td>
 </tr>
 <tr>
 <td>ZhuDongFangYu.exe</td>
-<td>360��������</td>
+<td>360主动防御</td>
 </tr>
 <tr>
 <td>KSafeTray.exe</td>
-<td>��ɽ��ʿ</td>
+<td>金山卫士</td>
 </tr>
 <tr>
 <td>SafeDogUpdateCenter.exe</td>
-<td>��ȫ��</td>
+<td>安全狗</td>
 </tr>
 <tr>
 <td>McAfee McShield.exe</td>
@@ -1012,11 +1012,11 @@
 </tr>
 <tr>
 <td>AVP.exe</td>
-<td>����˹��</td>
+<td>卡巴斯基</td>
 </tr>
 <tr>
 <td>avguard.exe</td>
-<td>С��ɡ</td>
+<td>小红伞</td>
 </tr>
 <tr>
 <td>bdagent.exe</td>
@@ -1024,105 +1024,105 @@
 </tr>
 </tbody></table>
 <ul>
-<li>�鿴�������ĳ�����Ϣ��</li>
+<li>查看已启动的程序信息：</li>
 </ul>
 <figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">wmic startup <span class="built_in">get</span> <span class="keyword">command</span>,<span class="title">caption</span></span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>�鿴��������ʱ��</li>
+<li>查看主机开机时间</li>
 </ul>
 <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> statistics workstation</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412151232852.png" alt="image-20210412151232852"></p>
 <ul>
-<li>�鿴�û��б�</li>
+<li>查看用户列表</li>
 </ul>
 <figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line">net <span class="keyword">user</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412151529571.png" alt="image-20210412151529571"></p>
 <ul>
-<li>�鿴���ع���Ա��Ϣ</li>
+<li>查看本地管理员信息</li>
 </ul>
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412151722650.png" alt="image-20210412151722650"></p>
 <ul>
-<li>�鿴�˿ڿ���</li>
+<li>查看端口开放</li>
 </ul>
 <figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">netstat -ano</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412151813985.png" alt="image-20210412151813985"></p>
 <ul>
-<li>�鿴����ǽ����</li>
+<li>查看防火墙配置</li>
 </ul>
 <figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">netsh<span class="built_in"> firewall </span>show config</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412151906341.png" alt="image-20210412151906341"></p>
 <ul>
-<li>�رշ���ǽ</li>
+<li>关闭防火墙</li>
 </ul>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">server2003֮ǰ��netsh firewall <span class="built_in">set</span> opmode disable</span><br><span class="line">server2003֮��netsh advfirewall <span class="built_in">set</span> allprofiles state off</span><br></pre></td></tr></table></figure>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">server2003之前：netsh firewall <span class="built_in">set</span> opmode disable</span><br><span class="line">server2003之后：netsh advfirewall <span class="built_in">set</span> allprofiles state off</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>����</li>
+<li>其它</li>
 </ul>
-<figure class="highlight gams"><table><tr><td class="code"><pre><span class="line"><span class="keyword">set</span>	�鿴��ǰ�����Ļ�����������</span><br><span class="line">ver	�鿴��ǰ������<span class="comment">nt</span>�ں˰汾����������</span><br><span class="line">winver	�鿴��ǰ������<span class="comment">nt</span>�ں˰汾��������</span><br><span class="line">fsutil <span class="comment">fsinfo drives</span>	�г���ǰ�����ϵ������̷�</span><br><span class="line">netshare	�鿴����</span><br><span class="line">dir /a-r-d /<span class="comment">s</span> /b	���ҵ�ǰ�û��ɶ�дĿ¼</span><br></pre></td></tr></table></figure>
+<figure class="highlight gams"><table><tr><td class="code"><pre><span class="line"><span class="keyword">set</span>	查看当前机器的环境变量配置</span><br><span class="line">ver	查看当前机器的<span class="comment">nt</span>内核版本（不弹窗）</span><br><span class="line">winver	查看当前机器的<span class="comment">nt</span>内核版本（弹窗）</span><br><span class="line">fsutil <span class="comment">fsinfo drives</span>	列出当前机器上的所有盘符</span><br><span class="line">netshare	查看共享</span><br><span class="line">dir /a-r-d /<span class="comment">s</span> /b	查找当前用户可读写目录</span><br></pre></td></tr></table></figure>
 
 
 
 <h2 id="SPN"><a href="#SPN" class="headerlink" title="SPN"></a>SPN</h2><blockquote>
-<p>SPN:�����������ơ�ʹ��Kerberos��Ϊ������ע��SPN����˿���������ɨ��SPN������Ѱ��������ע��ķ���SPNɨ����Թ����˿�ɨ��Ĳ�ȷ����̽�⶯����</p>
+<p>SPN:服务主体名称。使用Kerberos须为服务器注册SPN，因此可以在内网扫描SPN，快速寻找内网中注册的服务，SPN扫描可以规避像端口扫描的不确定性探测动作。</p>
 </blockquote>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">setspn -T domain.com -Q */*</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412152937579.png" alt="image-20210412152937579"></p>
-<h2 id="������Ϣ�ռ�-1"><a href="#������Ϣ�ռ�-1" class="headerlink" title="������Ϣ�ռ�"></a>������Ϣ�ռ�</h2><ul>
-<li>��ѯ��</li>
+<h2 id="域内信息收集"><a href="#域内信息收集" class="headerlink" title="域内信息收集"></a>域内信息收集</h2><ul>
+<li>查询域</li>
 </ul>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> view /domain</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>��ѯ�������м����</li>
+<li>查询域内所有计算机</li>
 </ul>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> view /domain:����</span><br></pre></td></tr></table></figure>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> view /domain:域名</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>��ѯ���������û���</li>
+<li>查询域内所有用户组</li>
 </ul>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> group/domain</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>�鿴�������Ա������б�</li>
+<li>查看所有域成员计算机列表</li>
 </ul>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> group &quot;domain computers&quot; /domain</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>��ȡ��������Ϣ</li>
+<li>获取域密码信息</li>
 </ul>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> accounts /domain</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>��ȡ��������Ϣ</li>
+<li>获取域信任信息</li>
 </ul>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">nltest /domain_trusts</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>������ػ�����</li>
+<li>查找域控机器名</li>
 </ul>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">nltest /DCLIST:����</span><br></pre></td></tr></table></figure>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">nltest /DCLIST:域名</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>�鿴���������</li>
+<li>查看域控主机名</li>
 </ul>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">nslookup -<span class="built_in">type</span>=SRV \_ladp._tcp</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
-        <category>����ѧϰ�ʼ�</category>
+        <category>内网学习笔记</category>
       </categories>
       <tags>
-        <tag>��Ϣ�ռ�</tag>
-        <tag>���</tag>
-        <tag>ѧϰ�ʼ�</tag>
-        <tag>������͸</tag>
+        <tag>红队</tag>
+        <tag>学习笔记</tag>
+        <tag>内网渗透</tag>
+        <tag>信息收集</tag>
       </tags>
   </entry>
   <entry>
